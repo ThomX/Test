@@ -1,0 +1,38 @@
+Inventaire de la salle maquette
+===============================
+
+Armoire (CC LAL) :
+------------------
+
+- châssis cPCI CA/PCI/CRATE.0007 (Soleil):
+ * CA/PCI/PP_SAI.0119
+ * CA/PCI/SAI_14B.0024
+ * CA/PCI/CPU.0139
+- PLC SIMATIC S7-300 (CC LAL)
+- Pfeiffer TPG300 (Vide LAL)
+- Varian Dual (Vide, interface profibus à Agilent)
+- panneau électronique sécurité vannes (CC LAL)
+- Libéra (soleil)
+- netgear 16 ports (CC LAL)
+- borne wifi (Gérard D.) ThomX/0164468560
+
+Vide (vide LAL)
+---------------
+
+- transformateur GPIB-RJ45 (CC LAL)
+- 2 pompes ioniques (tertiaire) Agilent (<10^-5)
+- 2 turbo pompes (secondaire) Pfeiffer HiPace 80 (10^-1 à 10^-7)
+- 2 jauges Pirani
+- 2 jauges Penning 
+- 1 vanne
+- alimentation pompe turbo DCU Pfeiffer
+- Agilent 4UHV (nouveau modèle pompe ionique) (prêt Agilent au vide LAL)
+- pompe primaire (atm à 10^-1)
+- pompe Varian (ex-Agilent) 
+
+
+Réseau (CC LAL)
+---------------
+
+- Netgear FS108 (8 port 100/100 Mbps fast ethernet switch FS108)
+- A COMPLETER

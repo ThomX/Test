@@ -1,0 +1,6 @@
+*.obj
+*.dll
+*.dll.manifest
+*.lib
+*.exp
+*.pdb

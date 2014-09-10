@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5CEA0DCF-675C-4C40-AF4E-D4FB4FEB9BFF}</ProjectGuid>
+    <RootNamespace>YAT</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">x86-build\lib\static\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">x64-build\lib\static\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debugx86\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debugx64\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">x86-build\lib\static\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">x64-build\lib\static\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">releasex86\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">releasex64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">yat</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">yatd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">yat</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">yatd</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;YAT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>x86-build\lib\static\yatd.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>x86-build\lib\static\yatd.lib</OutputFile>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_WINDOWS;YAT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>x64-build\lib\static\yatd.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Lib>
+      <OutputFile>x64-build\lib\static\yatd.lib</OutputFile>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;YAT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>x86-build\lib\static\yat.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Lib>
+      <OutputFile>x86-build\lib\static\yat.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_WINDOWS;YAT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>x64-build\lib\static\yat.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Lib>
+      <OutputFile>x64-build\lib\static\yat.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\bitsstream\BitsStream.cpp" />
+    <ClCompile Include="..\..\src\bitsstream\Endianness.cpp" />
+    <ClCompile Include="..\..\src\Exception.cpp" />
+    <ClCompile Include="..\..\src\file\FileName.cpp" />
+    <ClCompile Include="..\..\src\file\Win32FileImpl.cpp" />
+    <ClCompile Include="..\..\src\memory\MemBuf.cpp" />
+    <ClCompile Include="..\..\src\network\Address.cpp" />
+    <ClCompile Include="..\..\src\network\ClientSocket.cpp" />
+    <ClCompile Include="..\..\src\network\Socket.cpp" />
+    <ClCompile Include="..\..\src\network\SocketException.cpp" />
+    <ClCompile Include="..\..\src\plugin\PlugIn.cpp" />
+    <ClCompile Include="..\..\src\plugin\PlugInManager.cpp" />
+    <ClCompile Include="..\..\src\plugin\PlugInUnix.cpp" />
+    <ClCompile Include="..\..\src\plugin\PlugInWin32.cpp" />
+    <ClCompile Include="..\..\src\system\Win32SysUtilsImpl.cpp" />
+    <ClCompile Include="..\..\src\threading\Barrier.cpp" />
+    <ClCompile Include="..\..\src\threading\Message.cpp" />
+    <ClCompile Include="..\..\src\threading\MessageQ.cpp" />
+    <ClCompile Include="..\..\src\threading\SharedObject.cpp" />
+    <ClCompile Include="..\..\src\threading\SyncAccess.cpp" />
+    <ClCompile Include="..\..\src\threading\Task.cpp" />
+    <ClCompile Include="..\..\src\threading\WinNtThreadingImpl.cpp" />
+    <ClCompile Include="..\..\src\time\Time.cpp" />
+    <ClCompile Include="..\..\src\utils\Logging.cpp" />
+    <ClCompile Include="..\..\src\utils\String.cpp" />
+    <ClCompile Include="..\..\src\utils\StringTemplate.cpp" />
+    <ClCompile Include="..\..\src\utils\StringTokenizer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\yat\any\Any.h" />
+    <ClInclude Include="..\..\include\yat\any\GenericContainer.h" />
+    <ClInclude Include="..\..\include\yat\bitsstream\BitsRecord.h" />
+    <ClInclude Include="..\..\include\yat\bitsstream\BitsStream.h" />
+    <ClInclude Include="..\..\include\yat\bitsstream\Endianness.h" />
+    <ClInclude Include="..\..\include\yat\CommonHeader.h" />
+    <ClInclude Include="..\..\include\yat\config-linux.h" />
+    <ClInclude Include="..\..\include\yat\config-macosx.h" />
+    <ClInclude Include="..\..\include\yat\config-win32.h" />
+    <ClInclude Include="..\..\include\yat\Exception.h" />
+    <ClInclude Include="..\..\include\yat\file\FileName.h" />
+    <ClInclude Include="..\..\include\yat\Inline.h" />
+    <ClInclude Include="..\..\include\yat\LogHelper.h" />
+    <ClInclude Include="..\..\include\yat\memory\Allocator.h" />
+    <ClInclude Include="..\..\include\yat\memory\DataBuffer.h" />
+    <ClInclude Include="..\..\include\yat\memory\MemBuf.h" />
+    <ClInclude Include="..\..\include\yat\memory\SharedPtr.h" />
+    <ClInclude Include="..\..\include\yat\network\Address.h" />
+    <ClInclude Include="..\..\include\yat\network\ClientSocket.h" />
+    <ClInclude Include="..\..\include\yat\network\Socket.h" />
+    <ClInclude Include="..\..\include\yat\network\SocketException.h" />
+    <ClInclude Include="..\..\include\yat\plugin\IPlugInFactory.h" />
+    <ClInclude Include="..\..\include\yat\plugin\IPlugInInfo.h" />
+    <ClInclude Include="..\..\include\yat\plugin\IPlugInObject.h" />
+    <ClInclude Include="..\..\include\yat\plugin\IPlugInObjectWithAttr.h" />
+    <ClInclude Include="..\..\include\yat\plugin\PlugIn.h" />
+    <ClInclude Include="..\..\include\yat\plugin\PlugInManager.h" />
+    <ClInclude Include="..\..\include\yat\plugin\PlugInSymbols.h" />
+    <ClInclude Include="..\..\include\yat\plugin\PlugInTypes.h" />
+    <ClInclude Include="..\..\include\yat\Portability.h" />
+    <ClInclude Include="..\..\include\yat\system\SysUtils.h" />
+    <ClInclude Include="..\..\include\yat\TargetPlatform.h" />
+    <ClInclude Include="..\..\include\yat\threading\Barrier.h" />
+    <ClInclude Include="..\..\include\yat\threading\Condition.h" />
+    <ClInclude Include="..\..\include\yat\threading\Implementation.h" />
+    <ClInclude Include="..\..\include\yat\threading\impl\PosixThreadingImpl.h" />
+    <ClInclude Include="..\..\include\yat\threading\impl\WinNtThreadingImpl.h" />
+    <ClInclude Include="..\..\include\yat\threading\Message.h" />
+    <ClInclude Include="..\..\include\yat\threading\MessageQ.h" />
+    <ClInclude Include="..\..\include\yat\threading\Mutex.h" />
+    <ClInclude Include="..\..\include\yat\threading\Semaphore.h" />
+    <ClInclude Include="..\..\include\yat\threading\SharedObject.h" />
+    <ClInclude Include="..\..\include\yat\threading\SyncAccess.h" />
+    <ClInclude Include="..\..\include\yat\threading\Task.h" />
+    <ClInclude Include="..\..\include\yat\threading\Thread.h" />
+    <ClInclude Include="..\..\include\yat\threading\Utilities.h" />
+    <ClInclude Include="..\..\include\yat\time\Time.h" />
+    <ClInclude Include="..\..\include\yat\time\Timer.h" />
+    <ClInclude Include="..\..\include\yat\utils\Callback.h" />
+    <ClInclude Include="..\..\include\yat\utils\Logging.h" />
+    <ClInclude Include="..\..\include\yat\utils\NonCopyable.h" />
+    <ClInclude Include="..\..\include\yat\utils\ReferenceCounter.h" />
+    <ClInclude Include="..\..\include\yat\utils\Signal.h" />
+    <ClInclude Include="..\..\include\yat\utils\Singleton.h" />
+    <ClInclude Include="..\..\include\yat\utils\String.h" />
+    <ClInclude Include="..\..\include\yat\utils\StringTemplate.h" />
+    <ClInclude Include="..\..\include\yat\utils\StringTokenizer.h" />
+    <ClInclude Include="..\..\include\yat\utils\XString.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\yat\bitsstream\Endianness.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\Exception.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\memory\Allocator.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\memory\Allocator.tpp">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\memory\DataBuffer.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\memory\DataBuffer.tpp">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\network\Address.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\network\ClientSocket.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\network\Socket.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\Barrier.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\PosixConditionImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\PosixMutexImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\PosixSemaphoreImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\PosixThreadImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\PosixThreadingImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\WinNtConditionImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\WinNtMutexImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\WinNtSemaphoreImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\impl\WinNtThreadImpl.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\Message.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\MessageQ.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\SharedObject.i">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\include\yat\threading\Task.i">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

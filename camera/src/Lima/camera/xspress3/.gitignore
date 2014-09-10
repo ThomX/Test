@@ -1,0 +1,14 @@
+*.o
+*.P
+*.d
+*.so
+*.so.*
+*~
+*.swp
+\#*\#
+.\#*
+*target*
+html
+xspress3test
+Zr_mca15_pass0.d16
+

@@ -1,0 +1,1102 @@
+#%TITLE% limacore.mac
+#%NAME%
+# LIMA CCD core macros
+#
+#%DESCRIPTION% 
+# Macros for LIMA type CCDs. This macro sets implements basic functions to setup CCDs,
+# set/get all parameters. Other functionnalities can be found in %B%limatools.mac%B% ,
+# %B%limaacq.mac%B% , %B%limaroi.mac%B% . 
+#
+#%DEPENDENCIES%
+# This macro set automatically loads the following macros: %BR%
+# %B%limatools.mac%B% : tools to set/unset pseudo counters/motors and hold user level set/get macros%BR%
+# %B%limaacq.mac%B% : acquisition macros %BR%
+# %B%limaroi.mac%B% : manages software roi counters %BR%
+# %BR% User have to load detector specific macro set before setup : %BR%
+# %B%limampx.mac%B%, %B%limafrelon.mac%B%, %B%limapilatus.mac%B% depending on detector(s) used. %BR%
+# %BR%%B%WARNING%B% : macros are saved in a sub-folder called %B%lima%B%. 
+# You have to use \"jdo lima/limampx\" for instance.
+#
+#
+#%SETUP%
+# One generic setup macro has to be called first : %B%limasetup%B% .
+# %BR% Then, one setup macro has to be called for each LIMA CCD: %B%limaccdsetup%B% .
+# %BR% Example:
+# %BR% > limasetup
+# %BR% > limaccdsetup my_mpx 0 idxx/limaccd/mpx1 idxx/limamaxipix/mpx1
+# %BR% > limaccdsetup my_plt 1 idxx/limaccd/plt1 idxx/limapilatus/plt1 %BR%
+# %BR% The ccdname (here my_mpx or my_plt) will be used in all macros to 
+# reference one specific CCD if several CCDs are configured.
+#
+#%END%
+
+#%CATEGORY% Detection, Ccd
+
+#%LOG%
+#
+#$Revision: 1.2 $
+#$Log: limacore.mac,v $
+#Revision 1.2  2010/11/22 14:56:46  claustre
+#added RCS tags + woraround in limampx to force spec resync. on image format
+#change
+#
+
+#%IU%
+def _lima_error '{
+  tty_cntl("md")
+  printf("LIMA%s ERROR > ", ($#==1) ? sprintf("[%s]", $1) : "")
+  tty_cntl("me")
+}'
+
+#%IU%
+def _lima_trace '{
+  tty_cntl("md")
+  printf("LIMA%s > ", ($#==1) ? sprintf("[%s]", $1) : "")
+  tty_cntl("me")
+}'
+
+#%IU%
+def _lima_tango_error '{
+  tty_cntl("md")
+  printf("LIMA%s TANGO ERROR > ", ($#>=1) ? sprintf("[%s]", $1) : "")
+  tty_cntl("me")
+  printf("%s %s\n%s\n", TANGO_ERR, ($#==2) ? sprintf("on %s", $2) : "", TANGO_ERR_STACK[0]["desc"])
+}'
+  
+#%UU%
+#%MDESC%
+# Has to be called before any %B%limaccdsetup%B% to initialise global arrays.
+# %BR% Need no parameters.
+#
+def limasetup '{
+  global LIMA_DEV[]
+  list_test LIMA_DEV
+
+  # --- hook to ccd.mac setup menu
+  cdef("_user_ccd_private_menu", "_limamenu_ccdprivate\n", "lima")
+
+  # --- hook to ccd.mac to update cached resize operations
+  cdef("ccd_post_createarray", "_limacontrol_post_createarray(__ccd_u)\n", \
+       "lima")
+}'
+
+#%IU% (ccdname)
+#%MDESC%
+# Initialise parameter array and add lima_type parameter
+#
+def _lima_initconfig(ccdname) '{
+  local arrname
+  arrname= sprintf("LIMA_PARS_%s", ccdname)
+  global @arrname[]
+  list_init @arrname
+  LIMA_DEV[ccdname]["arrname"]= arrname
+
+  _limapar_addcontrol(ccdname, "lima_type", LP_READ, 1)
+  _limapar_addtext(ccdname, "lima_type", "Lima internal CCD type")
+
+  LIMA_DEV[ccdname]["in_resize"] = 0
+}'
+
+if (!(whatis("_limatype_init")&2))   rdef _limatype_init   ""
+if (!(whatis("_limatype_menu")&2))   rdef _limatype_menu   ""
+
+#%IU% (ccdname)
+#%MDESC%
+# Call initialisation for installed lima type macro
+#
+def _lima_inittypeconfig(ccdname) '{
+  local limatype
+  limatype= LIMA_DEV[ccdname]["type"]
+  _limatype_init
+  return (0)
+}'
+
+#%IU% (ccdname)
+#%MDESC%
+# Call menu for installed lima type macro
+#
+def _limamenu_config(ccdname) '{
+  local limatype
+  limatype= LIMA_DEV[ccdname]["type"]
+  _limatype_menu
+  return (0)
+}'
+
+#%IU% (limatype, setup_macro, menu_macro)
+#%MDESC%
+# Install hook for a specific CCD
+#%BR% %B%lima_type%B% [mandatory] : correspond to server attribute <lima_type> 
+#%BR% %B%setup_macro%B% [mandatory] : called by limaccdsetup and should initialise 
+# all camera specific parameters.
+#%BR% %B%menu_macro%B% [optionnal] : called by limamenu for camera specific parameters
+#
+def lima_addlimatype(limatype, setup_macro, menu_macro) '{
+  local cmd
+
+  cmd= sprintf("if (limatype == \"%s\") {%s(ccdname); return 1}\n", limatype, setup_macro)
+  cdef("_limatype_init", cmd, limatype)
+  if (menu_macro) {
+    cmd= sprintf("if (limatype == \"%s\") {%s(ccdname); return 1}\n", limatype, menu_macro)
+    cdef("_limatype_menu", cmd, limatype)
+  }
+}'
+ 
+#%UU% <ccdname> <ccd_unit> <control_device> <config_device>
+#%MDESC%
+# Has to be called for each LIMA CCD you want to configure
+# %BR% %B%ccd_name%B% : user name to refer to your CCD in all macros
+# %BR% %B%ccd_unit%B% : ccd unit from spec config
+# %BR% %B%control_device%B% : lima control tango device (generic)
+# %BR% %B%config_device%B% : lima configuration tango device (specific for each ccd type)
+#
+def limaccdsetup '{
+  local ccdname limatype arrname
+  if ($# != 4) {
+    print "Usage: $0 <ccd_name> <ccd_unit> <control_device> <config_device>"
+    exit
+  }
+
+  ccdname= "$1"
+  list_add(LIMA_DEV, ccdname)
+  LIMA_DEV[ccdname]["unit"]= int($2)
+  LIMA_DEV[ccdname]["control"]= "$3"
+  LIMA_DEV[ccdname]["config"]= "$4"
+
+  _lima_initconfig(ccdname)
+
+  limatype= _limapar_get(ccdname, "lima_type")
+  if (limatype<=0) {
+    _lima_error ccdname ; printf("Cannot get lima type\n")
+  } else {
+    LIMA_DEV[ccdname]["type"]= limatype
+    if (!_lima_inittypeconfig(ccdname)) {
+      _lima_error ccdname ; printf("No setup macro for ccd type <%s>\n", limatype)
+    } else {
+      arrname= LIMA_DEV[ccdname]["arrname"]
+      if (list_check(@arrname, "camera_type")>0) {
+        LIMA_DEV[ccdname]["camera_type"]= _limapar_get(ccdname, "camera_type")
+      } else {
+        LIMA_DEV[ccdname]["camera_type"]= LIMA_DEV[ccdname]["type"]
+      }
+      if (list_check(@arrname, "camera_model")>0) {
+        LIMA_DEV[ccdname]["camera_model"]= _limapar_get(ccdname, "camera_model")
+      } else {
+        LIMA_DEV[ccdname]["camera_model"]= "Unknown"
+      }
+    }
+  }
+
+  # -- for ccd.mac
+  CCD_DS_CONTR[LIMA_DEV[ccdname]["unit"]]= "LIMA"
+
+  setup_tail("limaccd", ccdname)
+}'
+
+#%UU% <ccdname>
+#%MDESC%
+# Remove all for a lima CCD :
+#%BR% - remove pseudo ROIs, motors, counters
+#%BR% - remove per ccd chained macros
+#%BR% - delete parameters global array
+#
+def limaccdunsetup '{
+  local ccdname
+  if (!$#) {
+    print "Usage: $0 <ccdname>"
+    exit
+  }
+  ccdname= "$1"
+  if (list_check(LIMA_DEV, ccdname)>0) {
+    _limaroi_reset(ccdname)
+    _limamot_reset(ccdname)
+    _limacnt_reset(ccdname)
+    cdef("", "", ccdname, "delete")
+    arrname= LIMA_DEV[ccdname]["arrname"]
+    unglobal @arrname
+  }
+  list_remove(LIMA_DEV, ccdname)
+}'
+
+#%UU%
+#%MDESC%
+# Print out a list of all configured LIMA CCD
+# %BR% The %B%active%B% CCD(S) are shown in bold with a leading \"*\"
+#
+def limalist '{
+  local iccd ccdname
+  if (list_n(LIMA_DEV)==0) {
+    printf("NO LIMA CCD configured !!\n")
+  } else {
+    _lima_showlist
+  }
+}'
+
+#%IU%
+#%MDESC%
+# Print out list of configured CCDs %BR%
+# Active CCDs are shown in %B%bold%B%
+#
+def _lima_showlist '{
+  local iccd ccdname
+
+  printf("\n   CCD_NAME TYPE       MODEL      (devices)\n")
+  printf(  "   -------- ---------- ---------- ---------\n")
+  for (iccd=1; iccd<=list_n(LIMA_DEV); iccd++) {
+    ccdname= list_item(LIMA_DEV, iccd)
+    active= LIMA_DEV[ccdname]["active"]
+    printf(" %s %-8.8s%s %-10.10s %-10.10s (%s, %s)\n", \
+            active ? sprintf("%c[1m*", 27) : " ", ccdname, \
+            active ? sprintf("%c[0m", 27) : "", \
+            LIMA_DEV[ccdname]["camera_type"], LIMA_DEV[ccdname]["camera_model"], \
+            LIMA_DEV[ccdname]["control"], LIMA_DEV[ccdname]["config"])
+  }
+}'
+
+#%IU% ()
+#%MDESC%
+# If only one LIMA CCD is configured, return its name,
+# otherwise present a menu to select one
+#
+def _lima_selectccd() '{
+  local first iccd ccdname
+
+  if (list_n(LIMA_DEV)==0) {
+    printf("NO LIMA CCD configured !!\n")
+    return (0)
+  }
+
+  if (list_n(LIMA_DEV)==1)
+    return list_item(LIMA_DEV, 1)
+
+  # --- guess default choise (first active or first setup)
+  first= 0
+  for (iccd=1; iccd<=list_n(LIMA_DEV); iccd++) {
+    ccdname= list_item(LIMA_DEV, iccd)
+    if (LIMA_DEV[ccdname]["active"]) {
+      first= ccdname
+      break
+    }
+  }
+  if (!first) {
+    first= list_item(LIMA_DEV, 1)
+  }
+  
+  _lima_showlist
+
+  ccdname= getval("\n\n\tSelect CCD NAME ---> ", first)
+  if (list_check(LIMA_DEV, ccdname)<=0) {
+    _lima_error ; printf("Invalid CCD NAME <%s>\n", ccdname)
+    return (0)
+  }
+  return ccdname
+}'
+
+#%UU% [\"all\" | <ccdname1>] [<ccdname2>] ... 
+#%MDESC%
+# Without parameters, print a list of configured CCDs, and ask which one(s)
+# need to be set active. %BR%
+# With one or several CCD names as parameters, add these CCDs to the list
+# of active CCDs.
+# With %B%\"all\"%B%, set all configured CCDs active.
+#
+def limaon '{
+  local iccd nccd ccds[] args ccdname
+
+  if ($#) {
+    args= "$*"
+  } else {
+    if (list_n(LIMA_DEV)>1) {
+      _lima_showlist
+      args= getval("\n\nCCD NAME(S) or \"all\" to activate ---> ", "")
+    } else {
+      args= list_item(LIMA_DEV, 1)
+    }
+  }
+  if (args) {
+    nccd= split(args, ccds)
+    if (ccds[0]=="all") {
+      for (iccd=1; iccd<=list_n(LIMA_DEV); iccd++) {
+        _lima_on(list_item(LIMA_DEV, iccd))
+      }
+    } else {
+      for (iccd=0; iccd<nccd; iccd++) {
+        _lima_on(ccds[iccd])
+      }
+    }
+  }
+  limause
+}'
+
+#%UU%
+#%MDESC%
+# Print a message on active CCDs
+#
+def limause '{
+  local ccds
+  ccds= _lima_getactivestring()
+  if (!ccds) {
+    _lima_trace; printf("No active ccd set !!\n")
+  } else {
+    _lima_trace; printf("Using <%s>\n", ccds)
+  }
+}'
+
+#%IU% (vals)
+#%MDESC% 
+# Get number and CCD names which are active
+#
+def _lima_getactive(vals) '{
+  local nval iccd ccdname
+  nval= 0
+  for (iccd=1; iccd<=list_n(LIMA_DEV); iccd++) {
+    ccdname= list_item(LIMA_DEV, iccd)
+    if (LIMA_DEV[ccdname]["active"]) {
+      vals[nval]= ccdname
+      nval++
+    }
+  }
+  vals["nb"]= nval
+  return (nval)
+}'
+
+#%IU% (ccdname)
+#%MDESC%
+# Set active flag for input ccdname
+#
+def _lima_on(ccdname) '{
+  if (list_check(LIMA_DEV, ccdname)<=0) {
+    _lima_error ; printf("Invalid CCD NAME <%s>\n", ccdname)
+  } else {
+    LIMA_DEV[ccdname]["active"]= 1
+  }
+}' 
+
+#%IU% (ccdname)
+# Unset active flag for input ccdname
+#
+def _lima_off(ccdname) '{
+  if (list_check(LIMA_DEV, ccdname)<=0) {
+    _lima_error ; printf("Invalid CCD NAME <%s>\n", ccdname)
+  } else {
+    LIMA_DEV[ccdname]["active"]= 0
+  }
+}'
+
+#%UU% [\"all\" | <ccdname1>] [<ccdname2>] ... 
+#%MDESC%
+# Without parameters, print a list of configured CCDs, and ask which one(s)
+# should be removed from active list. %BR%
+# With one or several CCD names as parameters, remove these CCDs from the list
+# of active CCDs. %BR%
+# With %B%\"all\"%B%, empty active CCD list
+#
+def limaoff '{
+  local iccd nccd ccds[] args ccdname
+
+  if ($#) {
+    args= "$*"
+  } else {
+    if (list_n(LIMA_DEV)>1) {
+      _lima_showlist
+      args= getval("\n\nCCD NAME(S) or \"all\" to set OFF ---> ", "")
+    } else {
+      args= list_item(LIMA_DEV, 1)
+    }
+  }
+  if (args) {
+    nccd= split(args, ccds)
+    if (ccds[0]=="all") {
+      for (iccd=1; iccd<=list_n(LIMA_DEV); iccd++) {
+        _lima_off(list_item(LIMA_DEV, iccd))
+      }
+    } else {
+      for (iccd=0; iccd<nccd; iccd++) {
+        _lima_off(ccds[iccd])
+      }
+    }
+  }
+  limause
+}'
+
+#%IU% ()
+#%MDESC%
+# Get a string with all active CCD names 
+#
+def _lima_getactivestring() '{
+  local iccd ccdname active
+  active= ""
+  for (iccd=1; iccd<=list_n(LIMA_DEV); iccd++) {
+    ccdname= list_item(LIMA_DEV, iccd)
+    if (LIMA_DEV[ccdname]["active"]) {
+      if (active) active= active " " ccdname
+      else active= ccdname
+    }
+  }
+  return active
+}'
+
+#%IU%
+#%MDESC%
+# Put name(s) of active CCDs in input array and return number of active CCDs.
+#
+def _lima_getactivelist(ccds) '{
+  local iccd ccdname nccd
+  nccd= 0
+  for (iccd=1; iccd<=list_n(LIMA_DEV); iccd++) {
+    ccdname= list_item(LIMA_DEV, iccd)
+    if (LIMA_DEV[ccdname]["active"]) {
+      ccds[nccd]= ccdname
+      nccd++
+    }
+  }
+  return nccd
+}'
+
+#%IU% (ccdunit)
+#%MDESC%
+# Return lima ccd name from spec ccd unit in config
+#
+def _lima_getccdname(ccdunit) '{
+  local iccd ccdname
+  for (iccd=1; iccd<=list_n(LIMA_DEV); iccd++) {
+    ccdname= list_item(LIMA_DEV, iccd)
+    if (LIMA_DEV[ccdname]["unit"]==ccdunit)
+      return ccdname
+  }
+  return 0
+}'
+
+# ---------------------------------------------------------
+# LIMAPAR functions
+# ---------------------------------------------------------
+
+
+#%IU% (ccdname, version)
+#%MDESC%
+# Initialise parameters for standard ccd control interface.
+# %BR% For now, version is not taken into account.
+#
+def _limapar_controlinit(ccdname, version) '{
+
+  # --- model  
+  _limapar_addcontrol(ccdname, "camera_type", LP_READ, 1)
+  _limapar_addcontrol(ccdname, "camera_model", LP_READ, 1)
+  _limapar_addcontrol(ccdname, "camera_pixelsize", LP_READ, 2, "double")
+
+  _limapar_addtext(ccdname, "camera_type", "Camera Type")
+  _limapar_addtext(ccdname, "camera_model", "Camera Model")
+  _limapar_addtext(ccdname, "camera_pixelsize", "Camera Pixel Size")
+
+  # --- acquisition
+  _limapar_addcontrol(ccdname, "acq_mode", LP_RW|LP_LIST|LP_CB, 1)
+  _limapar_addcontrol(ccdname, "acq_nb_frames", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "acq_expo_time", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "latency_time", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "valid_ranges", LP_RW, 4,"double")
+  _limapar_addcontrol(ccdname, "acq_trigger_mode", LP_RW|LP_LIST, 1)
+  _limapar_addcontrol(ccdname, "acq_status", LP_READ, 1)
+
+  _limapar_addtext(ccdname, "acq_mode", "Acquisition mode")
+  _limapar_addtext(ccdname, "acq_nb_frames", "Number of frames")
+  _limapar_addtext(ccdname, "acq_expo_time", "Exposure time [sec]")
+  _limapar_addtext(ccdname, "latency_time", "Latency Time between frames [sec]")
+  _limapar_addtext(ccdname, "valid_ranges", "Valid ranges for timing,[min-expo,max-expo,min-latency,max-latency]")
+  _limapar_addtext(ccdname, "acq_trigger_mode", "Acquisition trigger mode")
+  _limapar_addtext(ccdname, "acq_status", "Acquisition status")
+
+  # --- concatenation mode
+  _limapar_addcontrol(ccdname, "concat_nb_frames", LP_RW, 1)
+  _limapar_addtext(ccdname, "concat_nb_frames", "Concatenation number of frames")
+
+  # --- accumulation mode
+  _limapar_addcontrol(ccdname, "acc_max_expo_time", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "acc_time_mode", LP_RW|LP_LIST, 1)
+  _limapar_addcontrol(ccdname, "acc_nb_frames", LP_READ|LP_CNT, 1)
+  _limapar_addcontrol(ccdname, "acc_expo_time", LP_READ|LP_CNT, 1)
+  _limapar_addcontrol(ccdname, "acc_live_time", LP_READ|LP_CNT, 1)
+  _limapar_addcontrol(ccdname, "acc_dead_time", LP_READ|LP_CNT, 1)
+  _limapar_addcontrol(ccdname, "acc_saturated_active", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "acc_saturated_threshold", LP_RW|LP_MOT, 1)
+
+  _limapar_addtext(ccdname, "acc_max_expo_time", "Accumulation Maximum exposure time/frame [sec]")
+  _limapar_addtext(ccdname, "acc_nb_frames", "Accumulation number of frames")
+  _limapar_addtext(ccdname, "acc_time_mode", "Accumulation time mode")
+  _limapar_addtext(ccdname, "acc_expo_time", "Accumulation effective exposure time/frame [sec]")
+  _limapar_addtext(ccdname, "acc_live_time", "Accumulation total live time [sec]")
+  _limapar_addtext(ccdname, "acc_dead_time", "Accumulation total dead time [sec]")
+  _limapar_addtext(ccdname, "acc_saturated_active", "Activate accumulation saturation detection")
+  _limapar_addtext(ccdname, "acc_saturated_threshold", "Accumulation saturation detection threshold")
+
+  # --- image
+  _limapar_addcontrol(ccdname, "image_type", LP_READ, 1)
+  # _limapar_addcontrol(ccdname, "image_width", LP_READ, 1)
+  # _limapar_addcontrol(ccdname, "image_height", LP_READ, 1)
+  _limapar_addcontrol(ccdname, "image_sizes", LP_READ, 4, "ulong")
+  _limapar_addcontrol(ccdname, "image_bin", LP_RW, 2, "ulong")
+  _limapar_addcontrol(ccdname, "image_flip", LP_RW, 2, "ushort")
+  _limapar_addcontrol(ccdname, "image_rotation", LP_RW|LP_LIST, 1)
+  _limapar_addcontrol(ccdname, "image_roi", LP_RW, 4, "ulong")
+
+  _limapar_addtext(ccdname, "image_type", "Image lima data type")
+  # _limapar_addtext(ccdname, "image_width", "Width of image")
+  # _limapar_addtext(ccdname, "image_height", "Height of image")
+  _limapar_addtext(ccdname, "image_sizes", "Image size [Depth, X, Y]")
+  _limapar_addtext(ccdname, "image_bin", "Image binning [X,Y]")
+  _limapar_addtext(ccdname, "image_flip", "Image flipping [X,Y]")
+  _limapar_addtext(ccdname, "image_rotation", "Image rotation")
+  _limapar_addtext(ccdname, "image_roi", "Image ROI [X,Y,W,H]")
+
+  # --- shared memory
+  _limapar_addcontrol(ccdname, "shared_memory_active", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "shared_memory_names", LP_RW, 2)
+
+  _limapar_addtext(ccdname, "shared_memory_active", "Shared memory active")
+  _limapar_addtext(ccdname, "shared_memory_names", "Shared memeory names")
+
+  # --- shutter
+  _limapar_addcontrol(ccdname, "shutter_mode", LP_RW|LP_LIST, 1)
+  _limapar_addcontrol(ccdname, "shutter_close_time", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "shutter_open_time", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "shutter_manual_state", LP_READ, 1)
+
+  _limapar_addtext(ccdname, "shutter_mode", "Shutter control mode")
+  _limapar_addtext(ccdname, "shutter_close_time", "Shutter closing time [sec]")
+  _limapar_addtext(ccdname, "shutter_open_time", "Shutter opening time [sec]")
+  _limapar_addtext(ccdname, "shutter_manual_state", \
+                            "Shutter state in manual mode")
+
+  # --- status
+  _limapar_addcontrol(ccdname, "last_image_acquired", LP_READ, 1)
+  _limapar_addcontrol(ccdname, "last_base_image_ready", LP_READ, 1)
+  _limapar_addcontrol(ccdname, "last_image_ready", LP_READ|LP_CNT, 1)
+  _limapar_addcontrol(ccdname, "last_counter_ready", LP_READ, 1)
+  _limapar_addcontrol(ccdname, "last_image_saved", LP_READ|LP_CNT, 1)
+  _limapar_addcontrol(ccdname, "ready_for_next_acq", LP_READ, 1)
+  _limapar_addcontrol(ccdname, "ready_for_next_image", LP_READ, 1)
+
+  _limapar_addtext(ccdname, "last_image_acquired", "Last image acquired")
+  _limapar_addtext(ccdname, "last_base_image_ready", "Last base image ready")
+  _limapar_addtext(ccdname, "last_image_ready", "Last image ready")
+  _limapar_addtext(ccdname, "last_counter_ready", "Last counter ready")
+  _limapar_addtext(ccdname, "last_image_saved", "Last image saved")
+  _limapar_addtext(ccdname, "ready_for_next_acq", "Is server ready for next acquisition")
+  _limapar_addtext(ccdname, "ready_for_next_image", \
+      "Is server ready for next image in current acquisition")
+
+  # --- saving
+  _limapar_addcontrol(ccdname, "saving_mode", LP_RW|LP_LIST, 1)
+  _limapar_addcontrol(ccdname, "saving_format", LP_RW|LP_LIST, 1)
+  _limapar_addcontrol(ccdname, "saving_index_format", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "saving_frame_per_file", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "saving_directory", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "saving_prefix", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "saving_suffix", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "saving_next_number", LP_RW, 1)
+  _limapar_addcontrol(ccdname, "saving_overwrite_policy", LP_RW|LP_LIST, 1)
+  _limapar_addcontrol(ccdname, "saving_header_delimiter", LP_RW, 3)
+  _limapar_addcontrol(ccdname, "saving_common_header", LP_RW, 65535)
+
+  _limapar_addtext(ccdname, "saving_mode", "Saving mode")
+  _limapar_addtext(ccdname, "saving_format", "Saving file format")
+  _limapar_addtext(ccdname, "saving_index_format", "Saving index format")
+  _limapar_addtext(ccdname, "saving_frame_per_file", "Number of images saved per file")
+  _limapar_addtext(ccdname, "saving_directory", "Saving directory")
+  _limapar_addtext(ccdname, "saving_prefix", "Filename prefix")
+  _limapar_addtext(ccdname, "saving_suffix", "Filename suffix")
+  _limapar_addtext(ccdname, "saving_next_number", "Filename next number")
+  _limapar_addtext(ccdname, "saving_overwrite_policy", "File overwriting policy")
+  _limapar_addtext(ccdname, "saving_header_delimiter", "Delimiter used in file headers")
+  _limapar_addtext(ccdname, "saving_common_header", "Common header added to all files")
+
+  _limapar_addcontrol_cb(ccdname, "_limacontrol_setpar")
+
+}'
+
+#%IU%
+#%MDESC%
+# callback on parameter set
+#
+def _limacontrol_setpar(ccdname, parname, value) '{
+ if (parname == "acq_mode") {
+   #need to inform SPEC about image type change
+   local unit
+   unit  = LIMA_DEV[ccdname]["unit"]
+   image_par(unit, "resize") 
+   LIMA_DEV[ccdname]["in_resize"] = 1
+   ccd_createarray unit
+   LIMA_DEV[ccdname]["in_resize"] = 0
+ }
+}'
+
+#%IU%
+#%MDESC%
+# callback from ccd.mac to update parameter change
+#
+def _limacontrol_post_createarray(ccdunit) '{
+  local ccdname nbin[] nroi[]
+
+  ccdname = _lima_getccdname(ccdunit)
+  if (LIMA_DEV[ccdname]["in_resize"])
+    return 0
+
+  nbin[0] = image_par(ccdunit, "col_bin")
+  nbin[1] = image_par(ccdunit, "row_bin")
+  _limapar_set(ccdname, "image_bin", nbin, -1)
+
+  nroi[0] = image_par(ccdunit, "col_beg")
+  nroi[1] = image_par(ccdunit, "row_beg")
+  nroi[2] = image_par(ccdunit, "col_end") + 1 - image_par(ccdunit, "col_beg")
+  nroi[3] = image_par(ccdunit, "row_end") + 1 - image_par(ccdunit, "row_beg")
+  if ((nroi[0] == 0) && (nroi[1] == 0) && \
+      (nroi[2] >= image_par(ccdunit, "cols")) && \
+      (nroi[3] >= image_par(ccdunit, "rows"))) {
+    nroi[2] = image_par(ccdunit, "cols")
+    nroi[3] = image_par(ccdunit, "rows")
+  }
+  _limapar_set(ccdname, "image_roi", nroi, -1)
+}'
+
+constant LP_READ 0x01
+constant LP_WRITE 0x02
+constant LP_RW LP_READ|LP_WRITE
+constant LP_LIST 0x04
+constant LP_CB 0x08
+constant LP_MOT 0x10
+constant LP_CNT 0x20
+
+#%IU% (ccdname, devtype, parname, property, parsize, partype)
+#%MDESC%
+# %BR% %B%ccdname%B% : lima ccd name
+# %BR% %B%devtype%B% : lima device type (\"control\" or \"config\")
+# %BR% %B%parname%B% : parameter name (= device attribute name)
+# %BR% %B%property%B% : property of parameter attribute
+# %BR% \t* %B%LP_READ%B% (0x01) = read parameter allowed
+# %BR% \t* %B%LP_WRITE%B% (0x02) = write parameter allowed
+# %BR% \t* %B%LP_RW%B% (0x01|0x02) = read and write parameter allowed
+# %BR% \t* %B%LP_LIST%B% (0x04) = string-list parameter type
+# %BR% \t* %B%LP_CB%B% (0x08) = callback macro called after parameter has been set
+# %BR% \t* %B%LP_MOT%B% (0x10) = can be set as pseudo-motor
+# %BR% \t* %B%LP_CNT%B% (0x20) = can be set as pseudo-counter
+# %BR% %B%parsize%B% : max size in case of array attribute
+# %BR% %B%partype%B% : spec data type in case of array attribute
+#
+def _limapar_add(ccdname, devtype, parname, property, parsize, partype) '{
+  local arrname
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  list_add(@arrname, parname)
+  @arrname[parname]["devtype"]= devtype
+  @arrname[parname]["property"]= property
+  @arrname[parname]["size"]= (parsize==0) ? 1 : parsize
+  if (parsize > 1) {
+    @arrname[parname]["type"]= partype
+  }
+}'
+
+#%IU% (ccdname, parname, property, parsize, partype)
+#%MDESC%
+# Shortcut to _limapar_add for %B%control%B% parameters
+#
+def _limapar_addcontrol(ccdname, parname, property, parsize, partype) '{
+  _limapar_add(ccdname, "control", parname, property, parsize, partype)
+}'
+
+#%IU% (ccdname, parname, property, parsize, partype)
+#%MDESC%
+# Shortcut to _limapar_add for %B%config%B% parameters
+#
+def _limapar_addconfig(ccdname, parname, property, parsize, partype) '{
+  _limapar_add(ccdname, "config", parname, property, parsize, partype)
+}'
+
+#%IU% (ccdname, parname, desctxt)
+#%MDESC%
+# Add a description text for a parameters.
+#
+def _limapar_addtext(ccdname, parname, desctxt) '{
+  local arrname
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  @arrname[parname]["desc"]= desctxt
+}'
+
+if (!(whatis("_limapar_control_callback")&2))   rdef _limapar_control_callback ""
+if (!(whatis("_limapar_config_callback")&2))   rdef _limapar_config_callback ""
+
+#%IU% (devtype, ccdname, parname, value)
+#%MDESC%
+# Callback after parameter has been set. 
+# Call the callback macro depending on parameter <devtype> (control or config)
+#
+def _limapar_set_callback(devtype, ccdname, parname, value) '{
+  if (devtype=="control")
+    _limapar_control_callback
+  if (devtype=="config")
+    _limapar_config_callback
+  return (0)
+}'
+
+#%IU% (ccdname, macroname)
+#%MDESC%
+# Install callback for standard %B%control%B% parameters
+def _limapar_addcontrol_cb(ccdname, macroname) '{
+  cmd= sprintf("if (ccdname==\"%s\") { %s(ccdname, parname, value); return (1) }\n", \
+                ccdname, macroname)
+  cdef("_limapar_control_callback", cmd, ccdname)
+}'
+
+#%IU% (ccdname, macroname)
+#%MDESC%
+# Install callback for %B%config%B% parameters
+def _limapar_addconfig_cb(ccdname, macroname) '{
+  local cmd
+  cmd= sprintf("if (ccdname==\"%s\") { %s(ccdname, parname, value); return (1) }\n", \
+              ccdname, macroname)
+  cdef("_limapar_config_callback", cmd, ccdname)
+}'
+
+#%IU% (parsize, partype)
+def _limapar_initarr(parsize, partype) '{
+  unglobal LIMA_VALS
+  if (partype == "ushort")
+    global ushort array LIMA_VALS[parsize]
+  else if (partype == "short")
+    global short array LIMA_VALS[parsize]
+  else if (partype == "ulong")
+    global ulong array LIMA_VALS[parsize]
+  else if (partype == "long")
+    global long array LIMA_VALS[parsize]
+  else if (partype == "float")
+    global float array LIMA_VALS[parsize]
+  else if (partype == "double")
+    global double array LIMA_VALS[parsize]
+  else 
+    global LIMA_VALS[]
+}'
+
+#%IU% (ccdname, parname)
+def _limapar_getdevname(ccdname, parname) '{
+  local arrname
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  devtype= @arrname[parname]["devtype"]
+  return LIMA_DEV[ccdname][devtype]
+}'
+
+#%IU% (ccdname, parname, vals)
+#%MDESC%
+# Fill ass. array <vals> with possible string values of <parname>
+# and return number of values.
+#
+def _limapar_getvaluelist(ccdname, parname, vals) '{
+  local devname arrname
+  devname= _limapar_getdevname(ccdname, parname)
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  if (@arrname[parname]["property"]&LP_LIST) {
+     nval= tango_io(devname, "getAttrStringValueList", parname, vals)
+     return (TANGO_ERR ? -1 : nval)
+  } else {
+     return (0)
+  }
+}'
+
+#%IU% (ccdname, devtype, propmask, vals)
+#%MDESC%
+# Return list of parameters which has a given property in vals.
+#
+def _limapar_list(ccdname, devtype, propmask, vals) '{
+  local ipar arrname parname
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  nval= 0
+  for (ipar=1; ipar<=list_n(@arrname); ipar++) {
+    parname= list_item(@arrname, ipar)
+    if ((@arrname[parname]["devtype"]==devtype)&& \
+       ((!propmask) || (@arrname[parname]["property"]&propmask))) {
+        vals[nval++]= parname
+    }
+  }
+  return nval
+}'
+
+#%IU% (ccdname, parname, lastvalue)
+#%MDESC%
+# Ask user to enter new value for <parname>.
+# Parameter if set only if user-entered value differ from <lastvalue>
+#
+def _limapar_ask(ccdname, parname, lastvalue) '{
+  local arrname txt
+  local idx value
+  local nval vals[] ival ians
+
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  txt= @arrname[parname]["desc"]
+  if (!txt) txt= parname
+
+  if (@arrname[parname]["property"]&LP_LIST) {
+    nval= _limapar_getvaluelist(ccdname, parname, vals)
+    printf("%s :\n", txt)
+    for (ival=0; ival<nval; ival++) {
+      if (vals[ival]==lastvalue) {
+        ians= ival
+      }
+      printf(" (%d) %s\n", ival, vals[ival])
+    }
+    ians= getval(">> Your choice", ians)
+    if ((ians>=0)&&(ians<nval)) {
+      value= vals[ians]
+    } else {
+      value= lastvalue
+    }
+  } else {
+    value= getval(txt, lastvalue)
+  }
+  if (value != lastvalue) {
+    _limapar_set(ccdname, parname, value)
+    return (1)
+  }
+  return (0)
+}'
+ 
+#%IU% (ccdname, parname, paridx)
+def _limapar_get(ccdname, parname, paridx) '{
+  local devname arrname parsize partype
+  local nval value
+
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  devname= _limapar_getdevname(ccdname, parname)
+  parsize= @arrname[parname]["size"]
+  partype= @arrname[parname]["type"]
+  
+  if (parsize > 1) {
+    _limapar_initarr(parsize, partype)
+    nval= tango_get(devname, parname, LIMA_VALS)
+    if (TANGO_ERR == "API_EmptyDeviceAttribute")
+      return (-1)
+    if (paridx!=-1) {
+      if ((paridx<0)||(paridx>=nval)) {
+        _lima_error; printf("Index out-of-range for <%s>\n", parname)
+        return (-1)
+      } else {
+        return LIMA_VALS[paridx]
+      }
+    }
+    return nval
+  } else {
+    value= tango_get(devname, parname)
+    if (TANGO_ERR == "API_EmptyDeviceAttribute")
+      return (-1)
+    return value
+  }
+}'
+
+#%IU% (ccdname, parname, value, paridx)
+def _limapar_set(ccdname, parname, value, paridx) '{
+  local devname arrname parsize partype hascb setval
+ 
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  devname= _limapar_getdevname(ccdname, parname)
+  parsize= @arrname[parname]["size"]
+  partype= @arrname[parname]["type"]
+ 
+  if (!(@arrname[parname]["property"]&LP_WRITE)) {
+    _lima_error ccdname; printf("<%s> is read-only\n", parname)
+    return 0
+  }
+
+  if ((parsize > 1)&&(paridx!=-1)) {
+    _limapar_initarr(parsize, partype)
+    nval= tango_get(devname, parname, LIMA_VALS)
+    if (TANGO_ERR == "API_EmptyDeviceAttribute") {
+      _lima_error ccdname; printf("Cannot read <%s> before assignment\n", parname)
+      return 0
+    }
+    if ((paridx<0)||(paridx>=nval)) {
+      _lima_error ccdname; printf("Index out-of-range for <%s>\n", parname) 
+      return 0
+    }
+    LIMA_VALS[paridx]= value
+    tango_put(devname, parname, LIMA_VALS)
+
+    if (@arrname[parname]["property"]&LP_CB) {
+      if (!_limapar_set_callback(@arrname[parname]["devtype"], ccdname, parname, LIMA_VALS)) {
+        _lima_error ccdname; printf("Callback macros on <%s> FAILED.\n", parname)
+        return 0
+      }
+    }
+  } else {
+    tango_put(devname, parname, value)
+    if (@arrname[parname]["property"]&LP_CB) {
+      if (!_limapar_set_callback(@arrname[parname]["devtype"], ccdname, parname, value)) {
+        _lima_error ccdname; printf("Callback macro on <%s> FAILED.\n", parname)
+        return 0
+      }
+    }
+  }
+
+  return 1
+}'
+
+# -----------------------------------------------------------------------------
+# LIMA MENU 
+# -----------------------------------------------------------------------------
+
+#%UU% [<ccdname>]
+#%MDESC%
+# Display lima control menu for <ccdname> or select one <ccdname> and display menu.
+#
+def limamenu '{
+  local ccdname
+  if ($#==0) {
+    ccdname= _lima_selectccd()
+    if (ccdname)
+      _limamenu_control(ccdname)
+  } else {
+    ccdname= "$1"
+    if (list_check(LIMA_DEV, ccdname)<=0) {
+      _lima_error ; printf("Invalid LIMA CCD <%s>\n", ccdname)
+    } else {
+      _limamenu_control(ccdname)
+    }
+  }
+}'
+
+#%UU% [<ccdname>]
+#%MDESC%
+# Display lima config for <ccdname> or select one <ccdname> and display menu.
+def limaconfigmenu '{
+  local ccdname
+  if ($#==0) {
+    ccdname= _lima_selectccd()
+    if (ccdname)
+      _limamenu_config(ccdname)
+  } else {
+    ccdname= "$1"
+    if (list_check(LIMA_DEV, ccdname)<=0) {
+      _lima_error ; printf("Invalid LIMA CCD <%s>\n", ccdname)
+    } else {
+      _limamenu_config(ccdname)
+    }
+  }
+}'
+
+#%IU%
+#%MDESC%
+# Hook to ccd.mac menu
+#
+def _limamenu_ccdprivate '{
+  if (CCD_DS_CONTR[CCD_U]=="LIMA") {
+    ccdname= _lima_getccdname(CCD_U)
+    _limamenu_control(ccdname)
+    option= 0
+  }
+}'
+
+#%IU%
+#%MDESC%
+# Lima control standard menu
+#
+def _limamenu_control(ccdname) '{
+  local nl option
+  local items[] parname
+
+  option= 1
+
+  items["acq_mode"]= ""
+  items["latency_time"]= 0
+  items["acc_max_expo_time"]= 0
+  items["shutter_mode"]= ""
+  items["shutter_manual_state"]= ""
+  items["shutter_open_time"]= 0
+  items["shutter_close_time"]= 0
+
+  while (option) {
+
+    for (parname in items) {
+      items[parname]= _limapar_get(ccdname, parname)
+    }
+
+    nl= _limamenu_printtitle(ccdname, "Control", "control")
+
+    tty_move(0, nl++, "(1) Acquisition :")
+    _limamenu_printitem(ccdname, "acq_mode", items["acq_mode"], nl++, 11)
+    _limamenu_printitem(ccdname, "latency_time", \
+                                 items["latency_time"], nl++, 12)
+    _limamenu_printitem(ccdname, "acc_max_expo_time", \
+                                 items["acc_max_expo_time"], nl++, 13)
+    nl++
+    
+    tty_move(0, nl++, "(2) Shutter :")
+    _limamenu_printitem(ccdname, "shutter_mode", \
+                                 items["shutter_mode"], nl++, 21)
+    _limamenu_printitem(ccdname, "shutter_manual_state", \
+                                 items["shutter_manual_state"], nl++, 22)
+    _limamenu_printitem(ccdname, "shutter_open_time", \
+                                 items["shutter_open_time"], nl++, 23)
+    _limamenu_printitem(ccdname, "shutter_close_time", \
+                                 items["shutter_close_time"], nl++, 24)
+    nl++
+
+    tty_move(0, nl++, "(3) ROI counters Menu ....................... >>")
+    tty_move(0, nl++, "(4) Detector Configuration Menu ............. >>")
+
+    option= getval("\n\n\tOption ---> ", 0)
+    printf("\n\n")
+
+    if ((option==1)||(option==11)) {
+      _limapar_ask(ccdname, "acq_mode", items["acq_mode"])
+      input("___ Press Enter ___")
+    }
+    if ((option==1)||(option==12))
+      _limapar_ask(ccdname, "latency_time", items["latency_time"])
+    if ((option==1)||(option==13))
+      _limapar_ask(ccdname, "acc_max_expo_time", items["acc_max_expo_time"])
+
+    if ((option==2)||(option==21)) 
+      _limapar_ask(ccdname, "shutter_mode", items["shutter_mode"])
+    if ((option==2)||(option==22)) 
+      _limapar_ask(ccdname, "shutter_manual_state", \
+                            items["shutter_manual_state"])
+    if ((option==2)||(option==23))
+      _limapar_ask(ccdname, "shutter_open_time", items["shutter_open_time"])
+    if ((option==2)||(option==24))
+      _limapar_ask(ccdname, "shutter_close_time", items["shutter_close_time"])
+
+    if (option==3)
+      _limaroi_menu(ccdname)
+    if (option==4) 
+      _limamenu_config(ccdname)
+  }
+}'
+
+#%IU% (ccdname, title, devtype)
+def _limamenu_printtitle(ccdname, title, devtype) '{
+  local nl
+  tty_cntl("ho")
+  tty_cntl("cd")
+
+  tty_move(10,nl++, sprintf("\[md\]< LIMA %s %s >\[me\]", ccdname, title))
+  tty_move(10,nl++, sprintf("Camera: \[md\]%s - %s\[me\]", \
+      LIMA_DEV[ccdname]["camera_type"], LIMA_DEV[ccdname]["camera_model"]))
+  if (devtype) {
+    tty_move(10,nl++, sprintf("Device: %s", LIMA_DEV[ccdname][devtype]))
+  }
+  nl+=2
+  return nl
+}'
+
+#%IU% (ccdname, parname, value, nl, option)
+def _limamenu_printitem(ccdname, parname, value, nl, option) '{
+  local arrname txt
+  arrname= LIMA_DEV[ccdname]["arrname"]
+  txt= @arrname[parname]["desc"]
+  if (!txt) txt= parname
+  txt= txt " "
+  while (length(txt)<35) { txt= txt "." }
+  tty_move(5,nl, sprintf("(%d) %s = \[md\]%s\[me\]", option, txt, value))
+}'
+
+jtdo ("lima/limatools")
+jtdo ("lima/limaacq")
+jtdo ("lima/limaroi")
+
+#%MACROS%
+#%IMACROS%
+#%TOC%
+#%AUTHOR% E.Papillon, $Revision: 1.2 $, $Date: 2010/11/22 14:56:46 $

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>fr.soleil.lib.Lima</groupId>
+        <artifactId>Camera</artifactId>
+        <version>1.1.9</version>
+    </parent>
+
+    <groupId>fr.soleil.lib.Lima.Camera</groupId>
+    <artifactId>LimaRoperScientific-${aol}-shared-${mode}</artifactId>
+    <packaging>nar</packaging>
+
+    <name>LimaRoperScientific</name>    <!-- use for the name of executable -->
+    <description>This module controls the RoperScientific Camera</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.roperscientific</groupId>
+            <artifactId>Pvcam-${aol}-shared-${mode}</artifactId>
+						<version>2.7.5</version>
+        </dependency>
+		</dependencies>
+		
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.freehep</groupId>
+                <artifactId>freehep-nar-plugin</artifactId>
+
+                <configuration>
+								<!--
+										<specificConfigurations>
+											<specificConfiguration>
+												<id>Win32 static</id>
+												<activation>
+													<os>Windows</os>
+													<libraryType>static</libraryType>
+												</activation>
+												
+												<cpp>
+														<systemIncludePaths>
+																<systemIncludePath></systemIncludePath>                            
+														</systemIncludePaths>
+														<defines>
+														</defines>
+
+														<options>
+																<option>-w</option>
+														</options>
+												</cpp>
+												<linker>
+														<libs>
+																<lib>
+																		<name>Pvcam32</name>
+																		<type>static</type>
+																		<directory></directory>
+																</lib>
+														</libs>
+												</linker>
+										
+											</specificConfiguration>
+
+											<specificConfiguration>
+												<id>Linux shared</id>
+												<activation>
+													<os>Linux</os>
+													<libraryType>shared</libraryType>													
+												</activation>
+
+												<cpp>
+														<systemIncludePaths>
+																<systemIncludePath></systemIncludePath>
+																
+														</systemIncludePaths>
+														<defines>
+														
+														</defines>
+														
+														<options>
+																<option>-w</option>
+														</options>
+												</cpp>
+												<linker>
+														<libs>
+																<lib>
+																		<name>pvcam</name>
+																		<type>shared</type>
+																		<directory></directory>
+																</lib>
+														</libs>
+												</linker>
+											</specificConfiguration>
+										</specificConfigurations>					
+								-->
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+
+
+</project>

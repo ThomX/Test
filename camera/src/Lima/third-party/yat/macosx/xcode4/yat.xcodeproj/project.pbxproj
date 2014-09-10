@@ -1,0 +1,870 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		37438E8E139A077500FFE333 /* yat-i386 */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 37438E8F139A077500FFE333 /* Build configuration list for PBXAggregateTarget "yat-i386" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "yat-i386";
+			productName = yat;
+		};
+		37F7D105139A0BE400E2A86A /* yat-x86_64 */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 37F7D106139A0BE400E2A86A /* Build configuration list for PBXAggregateTarget "yat-x86_64" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "yat-x86_64";
+			productName = yat;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXFileReference section */
+		375B88E31439C56E00DB8C76 /* BitsStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitsStream.h; sourceTree = "<group>"; };
+		37D55C0E1438521200F5CC85 /* FileName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileName.h; sourceTree = "<group>"; };
+		37D55C101438525600F5CC85 /* MemBuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemBuf.h; sourceTree = "<group>"; };
+		37D55C111438529300F5CC85 /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
+		37D55C13143852AF00F5CC85 /* SysUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysUtils.h; sourceTree = "<group>"; };
+		37D55C14143852E400F5CC85 /* SyncAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncAccess.h; sourceTree = "<group>"; };
+		37D55C151438532B00F5CC85 /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
+		37D55C161438532B00F5CC85 /* StringTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringTemplate.h; sourceTree = "<group>"; };
+		37D55C171438534900F5CC85 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		37D55C191438539F00F5CC85 /* FileName.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileName.cpp; sourceTree = "<group>"; };
+		37D55C1A1438539F00F5CC85 /* PosixFileImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PosixFileImpl.cpp; sourceTree = "<group>"; };
+		37D55C1C1438540400F5CC85 /* Logging.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logging.cpp; sourceTree = "<group>"; };
+		37D55C1D1438540400F5CC85 /* String.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String.cpp; sourceTree = "<group>"; };
+		37D55C1E1438540400F5CC85 /* StringTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringTemplate.cpp; sourceTree = "<group>"; };
+		37D55C1F1438540400F5CC85 /* StringTokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringTokenizer.cpp; sourceTree = "<group>"; };
+		37D55C211438542B00F5CC85 /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
+		37D55C231438544D00F5CC85 /* PosixSysUtilsImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PosixSysUtilsImpl.cpp; sourceTree = "<group>"; };
+		37D55C251438548A00F5CC85 /* SyncAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SyncAccess.cpp; sourceTree = "<group>"; };
+		37D55C27143854B500F5CC85 /* MemBuf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemBuf.cpp; sourceTree = "<group>"; };
+		37F7D133139A150600E2A86A /* BitsStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitsStream.cpp; sourceTree = "<group>"; };
+		37F7D134139A150600E2A86A /* Endianness.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Endianness.cpp; sourceTree = "<group>"; };
+		37F7D137139A150600E2A86A /* common_target.opt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = common_target.opt; sourceTree = "<group>"; };
+		37F7D138139A150600E2A86A /* tango.opt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tango.opt; sourceTree = "<group>"; };
+		37F7D13A139A150600E2A86A /* common_target.opt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = common_target.opt; sourceTree = "<group>"; };
+		37F7D13B139A150600E2A86A /* tango.opt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tango.opt; sourceTree = "<group>"; };
+		37F7D13C139A150600E2A86A /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
+		37F7D13D139A150600E2A86A /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.am; path = ../Makefile.am; sourceTree = "<group>"; };
+		37F7D13F139A150600E2A86A /* Makefile.linux */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.linux; path = ../Makefile.linux; sourceTree = "<group>"; };
+		37F7D140139A150600E2A86A /* Makefile.macosx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.macosx; path = ../Makefile.macosx; sourceTree = "<group>"; };
+		37F7D142139A150600E2A86A /* Makefile.vc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.vc; path = ../Makefile.vc; sourceTree = "<group>"; };
+		37F7D144139A150600E2A86A /* Address.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Address.cpp; sourceTree = "<group>"; };
+		37F7D145139A150600E2A86A /* ClientSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientSocket.cpp; sourceTree = "<group>"; };
+		37F7D146139A150600E2A86A /* Socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Socket.cpp; sourceTree = "<group>"; };
+		37F7D147139A150600E2A86A /* SocketException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketException.cpp; sourceTree = "<group>"; };
+		37F7D14C139A150600E2A86A /* PlugIn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlugIn.cpp; sourceTree = "<group>"; };
+		37F7D14D139A150600E2A86A /* PlugInManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlugInManager.cpp; sourceTree = "<group>"; };
+		37F7D14E139A150600E2A86A /* PlugInUnix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlugInUnix.cpp; sourceTree = "<group>"; };
+		37F7D14F139A150600E2A86A /* PlugInWin32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlugInWin32.cpp; sourceTree = "<group>"; };
+		37F7D151139A150600E2A86A /* Barrier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Barrier.cpp; sourceTree = "<group>"; };
+		37F7D152139A150600E2A86A /* Message.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Message.cpp; sourceTree = "<group>"; };
+		37F7D153139A150600E2A86A /* MessageQ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MessageQ.cpp; sourceTree = "<group>"; };
+		37F7D154139A150600E2A86A /* PosixThreadingImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PosixThreadingImpl.cpp; sourceTree = "<group>"; };
+		37F7D155139A150600E2A86A /* SharedObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SharedObject.cpp; sourceTree = "<group>"; };
+		37F7D156139A150600E2A86A /* Task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Task.cpp; sourceTree = "<group>"; };
+		37F7D157139A150600E2A86A /* WinNtThreadingImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WinNtThreadingImpl.cpp; sourceTree = "<group>"; };
+		37F7D161139A155200E2A86A /* Any.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Any.h; sourceTree = "<group>"; };
+		37F7D162139A155200E2A86A /* GenericContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericContainer.h; sourceTree = "<group>"; };
+		37F7D164139A155200E2A86A /* BitsRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitsRecord.h; sourceTree = "<group>"; };
+		37F7D166139A155200E2A86A /* Endianness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endianness.h; sourceTree = "<group>"; };
+		37F7D168139A155200E2A86A /* CommonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
+		37F7D169139A155200E2A86A /* config-linux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "config-linux.h"; path = "../../include/yat/config-linux.h"; sourceTree = "<group>"; };
+		37F7D16A139A155200E2A86A /* config-macosx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "config-macosx.h"; path = "../../include/yat/config-macosx.h"; sourceTree = "<group>"; };
+		37F7D16B139A155200E2A86A /* config-win32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "config-win32.h"; path = "../../include/yat/config-win32.h"; sourceTree = "<group>"; };
+		37F7D16C139A155200E2A86A /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		37F7D16D139A155200E2A86A /* Exception.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = Exception.i; sourceTree = "<group>"; };
+		37F7D16E139A155200E2A86A /* Inline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inline.h; sourceTree = "<group>"; };
+		37F7D16F139A155200E2A86A /* LogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogHelper.h; sourceTree = "<group>"; };
+		37F7D171139A155200E2A86A /* Allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Allocator.h; sourceTree = "<group>"; };
+		37F7D172139A155200E2A86A /* Allocator.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = Allocator.i; sourceTree = "<group>"; };
+		37F7D173139A155200E2A86A /* Allocator.tpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Allocator.tpp; sourceTree = "<group>"; };
+		37F7D174139A155200E2A86A /* DataBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBuffer.h; sourceTree = "<group>"; };
+		37F7D175139A155200E2A86A /* DataBuffer.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = DataBuffer.i; sourceTree = "<group>"; };
+		37F7D176139A155200E2A86A /* DataBuffer.tpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataBuffer.tpp; sourceTree = "<group>"; };
+		37F7D177139A155200E2A86A /* SharedPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedPtr.h; sourceTree = "<group>"; };
+		37F7D179139A155200E2A86A /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		37F7D17A139A155200E2A86A /* Address.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = Address.i; sourceTree = "<group>"; };
+		37F7D17B139A155200E2A86A /* ClientSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientSocket.h; sourceTree = "<group>"; };
+		37F7D17C139A155200E2A86A /* ClientSocket.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = ClientSocket.i; sourceTree = "<group>"; };
+		37F7D17D139A155200E2A86A /* Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Socket.h; sourceTree = "<group>"; };
+		37F7D17E139A155200E2A86A /* Socket.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = Socket.i; sourceTree = "<group>"; };
+		37F7D17F139A155200E2A86A /* SocketException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketException.h; sourceTree = "<group>"; };
+		37F7D181139A155200E2A86A /* IPlugInFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlugInFactory.h; sourceTree = "<group>"; };
+		37F7D182139A155200E2A86A /* IPlugInInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlugInInfo.h; sourceTree = "<group>"; };
+		37F7D183139A155200E2A86A /* IPlugInObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlugInObject.h; sourceTree = "<group>"; };
+		37F7D184139A155200E2A86A /* IPlugInObjectWithAttr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPlugInObjectWithAttr.h; sourceTree = "<group>"; };
+		37F7D185139A155200E2A86A /* PlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugIn.h; sourceTree = "<group>"; };
+		37F7D186139A155200E2A86A /* PlugInManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugInManager.h; sourceTree = "<group>"; };
+		37F7D187139A155200E2A86A /* PlugInSymbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugInSymbols.h; sourceTree = "<group>"; };
+		37F7D188139A155200E2A86A /* PlugInTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugInTypes.h; sourceTree = "<group>"; };
+		37F7D189139A155200E2A86A /* Portability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Portability.h; sourceTree = "<group>"; };
+		37F7D18C139A155200E2A86A /* Barrier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barrier.h; sourceTree = "<group>"; };
+		37F7D18D139A155200E2A86A /* Barrier.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = Barrier.i; sourceTree = "<group>"; };
+		37F7D18E139A155200E2A86A /* Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Condition.h; sourceTree = "<group>"; };
+		37F7D190139A155200E2A86A /* PosixConditionImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = PosixConditionImpl.i; sourceTree = "<group>"; };
+		37F7D191139A155200E2A86A /* PosixMutexImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = PosixMutexImpl.i; sourceTree = "<group>"; };
+		37F7D192139A155200E2A86A /* PosixSemaphoreImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = PosixSemaphoreImpl.i; sourceTree = "<group>"; };
+		37F7D193139A155200E2A86A /* PosixThreadImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = PosixThreadImpl.i; sourceTree = "<group>"; };
+		37F7D194139A155200E2A86A /* PosixThreadingImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosixThreadingImpl.h; sourceTree = "<group>"; };
+		37F7D195139A155200E2A86A /* PosixThreadingImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = PosixThreadingImpl.i; sourceTree = "<group>"; };
+		37F7D196139A155200E2A86A /* WinNtConditionImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = WinNtConditionImpl.i; sourceTree = "<group>"; };
+		37F7D197139A155200E2A86A /* WinNtMutexImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = WinNtMutexImpl.i; sourceTree = "<group>"; };
+		37F7D198139A155200E2A86A /* WinNtSemaphoreImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = WinNtSemaphoreImpl.i; sourceTree = "<group>"; };
+		37F7D199139A155200E2A86A /* WinNtThreadImpl.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = WinNtThreadImpl.i; sourceTree = "<group>"; };
+		37F7D19A139A155200E2A86A /* WinNtThreadingImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinNtThreadingImpl.h; sourceTree = "<group>"; };
+		37F7D19B139A155200E2A86A /* Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Implementation.h; sourceTree = "<group>"; };
+		37F7D19C139A155200E2A86A /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		37F7D19D139A155200E2A86A /* Message.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = Message.i; sourceTree = "<group>"; };
+		37F7D19E139A155200E2A86A /* MessageQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageQ.h; sourceTree = "<group>"; };
+		37F7D19F139A155200E2A86A /* MessageQ.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = MessageQ.i; sourceTree = "<group>"; };
+		37F7D1A0139A155200E2A86A /* Mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mutex.h; sourceTree = "<group>"; };
+		37F7D1A1139A155200E2A86A /* Semaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Semaphore.h; sourceTree = "<group>"; };
+		37F7D1A2139A155200E2A86A /* SharedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedObject.h; sourceTree = "<group>"; };
+		37F7D1A3139A155200E2A86A /* SharedObject.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = SharedObject.i; sourceTree = "<group>"; };
+		37F7D1A4139A155200E2A86A /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		37F7D1A5139A155200E2A86A /* Task.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = Task.i; sourceTree = "<group>"; };
+		37F7D1A6139A155200E2A86A /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
+		37F7D1A7139A155200E2A86A /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		37F7D1A9139A155200E2A86A /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		37F7D1AB139A155200E2A86A /* Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Callback.h; sourceTree = "<group>"; };
+		37F7D1AC139A155200E2A86A /* NonCopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NonCopyable.h; sourceTree = "<group>"; };
+		37F7D1AD139A155200E2A86A /* ReferenceCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceCounter.h; sourceTree = "<group>"; };
+		37F7D1AE139A155200E2A86A /* Signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
+		37F7D1AF139A155200E2A86A /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		37F7D1B0139A155200E2A86A /* StringTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringTokenizer.h; sourceTree = "<group>"; };
+		37F7D1B1139A155200E2A86A /* XString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XString.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		375B88E11439B99800DB8C76 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D169139A155200E2A86A /* config-linux.h */,
+				37F7D16A139A155200E2A86A /* config-macosx.h */,
+				37F7D16B139A155200E2A86A /* config-win32.h */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		37D55C0D1438521200F5CC85 /* file */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C0E1438521200F5CC85 /* FileName.h */,
+			);
+			path = file;
+			sourceTree = "<group>";
+		};
+		37D55C12143852AF00F5CC85 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C13143852AF00F5CC85 /* SysUtils.h */,
+			);
+			path = system;
+			sourceTree = "<group>";
+		};
+		37D55C181438539F00F5CC85 /* file */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C191438539F00F5CC85 /* FileName.cpp */,
+				37D55C1A1438539F00F5CC85 /* PosixFileImpl.cpp */,
+			);
+			path = file;
+			sourceTree = "<group>";
+		};
+		37D55C201438542B00F5CC85 /* time */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C211438542B00F5CC85 /* Time.cpp */,
+			);
+			path = time;
+			sourceTree = "<group>";
+		};
+		37D55C221438544D00F5CC85 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C231438544D00F5CC85 /* PosixSysUtilsImpl.cpp */,
+			);
+			path = system;
+			sourceTree = "<group>";
+		};
+		37D55C26143854B500F5CC85 /* memory */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C27143854B500F5CC85 /* MemBuf.cpp */,
+			);
+			path = memory;
+			sourceTree = "<group>";
+		};
+		37D9FC7A13995D1D007B503A = {
+			isa = PBXGroup;
+			children = (
+				375B88E11439B99800DB8C76 /* config */,
+				37F7D135139A150600E2A86A /* build */,
+				37F7D15B139A155200E2A86A /* include */,
+				37F7D120139A150500E2A86A /* src */,
+			);
+			sourceTree = "<group>";
+		};
+		37F7D120139A150500E2A86A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D132139A150600E2A86A /* bitsstream */,
+				37F7D13C139A150600E2A86A /* Exception.cpp */,
+				37D55C181438539F00F5CC85 /* file */,
+				37F7D143139A150600E2A86A /* network */,
+				37D55C26143854B500F5CC85 /* memory */,
+				37F7D14B139A150600E2A86A /* plugin */,
+				37D55C221438544D00F5CC85 /* system */,
+				37D55C201438542B00F5CC85 /* time */,
+				37F7D150139A150600E2A86A /* threading */,
+				37F7D158139A150600E2A86A /* utils */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		37F7D132139A150600E2A86A /* bitsstream */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D133139A150600E2A86A /* BitsStream.cpp */,
+				37F7D134139A150600E2A86A /* Endianness.cpp */,
+			);
+			path = bitsstream;
+			sourceTree = "<group>";
+		};
+		37F7D135139A150600E2A86A /* build */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D13D139A150600E2A86A /* Makefile.am */,
+				37F7D13F139A150600E2A86A /* Makefile.linux */,
+				37F7D140139A150600E2A86A /* Makefile.macosx */,
+				37F7D142139A150600E2A86A /* Makefile.vc */,
+				37F7D136139A150600E2A86A /* linux */,
+				37F7D139139A150600E2A86A /* macosx */,
+			);
+			name = build;
+			path = ../../src/build;
+			sourceTree = "<group>";
+		};
+		37F7D136139A150600E2A86A /* linux */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D137139A150600E2A86A /* common_target.opt */,
+				37F7D138139A150600E2A86A /* tango.opt */,
+			);
+			path = linux;
+			sourceTree = "<group>";
+		};
+		37F7D139139A150600E2A86A /* macosx */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D13A139A150600E2A86A /* common_target.opt */,
+				37F7D13B139A150600E2A86A /* tango.opt */,
+			);
+			path = macosx;
+			sourceTree = "<group>";
+		};
+		37F7D143139A150600E2A86A /* network */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D144139A150600E2A86A /* Address.cpp */,
+				37F7D145139A150600E2A86A /* ClientSocket.cpp */,
+				37F7D146139A150600E2A86A /* Socket.cpp */,
+				37F7D147139A150600E2A86A /* SocketException.cpp */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		37F7D14B139A150600E2A86A /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D14C139A150600E2A86A /* PlugIn.cpp */,
+				37F7D14D139A150600E2A86A /* PlugInManager.cpp */,
+				37F7D14E139A150600E2A86A /* PlugInUnix.cpp */,
+				37F7D14F139A150600E2A86A /* PlugInWin32.cpp */,
+			);
+			path = plugin;
+			sourceTree = "<group>";
+		};
+		37F7D150139A150600E2A86A /* threading */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D151139A150600E2A86A /* Barrier.cpp */,
+				37F7D152139A150600E2A86A /* Message.cpp */,
+				37F7D153139A150600E2A86A /* MessageQ.cpp */,
+				37F7D154139A150600E2A86A /* PosixThreadingImpl.cpp */,
+				37F7D155139A150600E2A86A /* SharedObject.cpp */,
+				37D55C251438548A00F5CC85 /* SyncAccess.cpp */,
+				37F7D156139A150600E2A86A /* Task.cpp */,
+				37F7D157139A150600E2A86A /* WinNtThreadingImpl.cpp */,
+			);
+			path = threading;
+			sourceTree = "<group>";
+		};
+		37F7D158139A150600E2A86A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C1C1438540400F5CC85 /* Logging.cpp */,
+				37D55C1D1438540400F5CC85 /* String.cpp */,
+				37D55C1E1438540400F5CC85 /* StringTemplate.cpp */,
+				37D55C1F1438540400F5CC85 /* StringTokenizer.cpp */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		37F7D15B139A155200E2A86A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D15F139A155200E2A86A /* yat */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = "<group>";
+		};
+		37F7D15F139A155200E2A86A /* yat */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D160139A155200E2A86A /* any */,
+				37F7D163139A155200E2A86A /* bitsstream */,
+				37F7D168139A155200E2A86A /* CommonHeader.h */,
+				37F7D16C139A155200E2A86A /* Exception.h */,
+				37F7D16D139A155200E2A86A /* Exception.i */,
+				37D55C0D1438521200F5CC85 /* file */,
+				37F7D16E139A155200E2A86A /* Inline.h */,
+				37F7D16F139A155200E2A86A /* LogHelper.h */,
+				37F7D170139A155200E2A86A /* memory */,
+				37F7D178139A155200E2A86A /* network */,
+				37F7D180139A155200E2A86A /* plugin */,
+				37F7D189139A155200E2A86A /* Portability.h */,
+				37D55C12143852AF00F5CC85 /* system */,
+				37F7D18B139A155200E2A86A /* threading */,
+				37F7D1A8139A155200E2A86A /* time */,
+				37F7D1AA139A155200E2A86A /* utils */,
+			);
+			path = yat;
+			sourceTree = "<group>";
+		};
+		37F7D160139A155200E2A86A /* any */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D161139A155200E2A86A /* Any.h */,
+				37F7D162139A155200E2A86A /* GenericContainer.h */,
+			);
+			path = any;
+			sourceTree = "<group>";
+		};
+		37F7D163139A155200E2A86A /* bitsstream */ = {
+			isa = PBXGroup;
+			children = (
+				375B88E31439C56E00DB8C76 /* BitsStream.h */,
+				37F7D164139A155200E2A86A /* BitsRecord.h */,
+				37F7D166139A155200E2A86A /* Endianness.h */,
+			);
+			path = bitsstream;
+			sourceTree = "<group>";
+		};
+		37F7D170139A155200E2A86A /* memory */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D171139A155200E2A86A /* Allocator.h */,
+				37F7D172139A155200E2A86A /* Allocator.i */,
+				37F7D173139A155200E2A86A /* Allocator.tpp */,
+				37F7D174139A155200E2A86A /* DataBuffer.h */,
+				37F7D175139A155200E2A86A /* DataBuffer.i */,
+				37F7D176139A155200E2A86A /* DataBuffer.tpp */,
+				37D55C101438525600F5CC85 /* MemBuf.h */,
+				37F7D177139A155200E2A86A /* SharedPtr.h */,
+			);
+			path = memory;
+			sourceTree = "<group>";
+		};
+		37F7D178139A155200E2A86A /* network */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D179139A155200E2A86A /* Address.h */,
+				37F7D17A139A155200E2A86A /* Address.i */,
+				37F7D17B139A155200E2A86A /* ClientSocket.h */,
+				37F7D17C139A155200E2A86A /* ClientSocket.i */,
+				37F7D17D139A155200E2A86A /* Socket.h */,
+				37F7D17E139A155200E2A86A /* Socket.i */,
+				37F7D17F139A155200E2A86A /* SocketException.h */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		37F7D180139A155200E2A86A /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D181139A155200E2A86A /* IPlugInFactory.h */,
+				37F7D182139A155200E2A86A /* IPlugInInfo.h */,
+				37F7D183139A155200E2A86A /* IPlugInObject.h */,
+				37F7D184139A155200E2A86A /* IPlugInObjectWithAttr.h */,
+				37F7D185139A155200E2A86A /* PlugIn.h */,
+				37F7D186139A155200E2A86A /* PlugInManager.h */,
+				37F7D187139A155200E2A86A /* PlugInSymbols.h */,
+				37F7D188139A155200E2A86A /* PlugInTypes.h */,
+			);
+			path = plugin;
+			sourceTree = "<group>";
+		};
+		37F7D18B139A155200E2A86A /* threading */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C14143852E400F5CC85 /* SyncAccess.h */,
+				37F7D18C139A155200E2A86A /* Barrier.h */,
+				37F7D18D139A155200E2A86A /* Barrier.i */,
+				37F7D18E139A155200E2A86A /* Condition.h */,
+				37F7D18F139A155200E2A86A /* impl */,
+				37F7D19B139A155200E2A86A /* Implementation.h */,
+				37F7D19C139A155200E2A86A /* Message.h */,
+				37F7D19D139A155200E2A86A /* Message.i */,
+				37F7D19E139A155200E2A86A /* MessageQ.h */,
+				37F7D19F139A155200E2A86A /* MessageQ.i */,
+				37F7D1A0139A155200E2A86A /* Mutex.h */,
+				37F7D1A1139A155200E2A86A /* Semaphore.h */,
+				37F7D1A2139A155200E2A86A /* SharedObject.h */,
+				37F7D1A3139A155200E2A86A /* SharedObject.i */,
+				37F7D1A4139A155200E2A86A /* Task.h */,
+				37F7D1A5139A155200E2A86A /* Task.i */,
+				37F7D1A6139A155200E2A86A /* Thread.h */,
+				37F7D1A7139A155200E2A86A /* Utilities.h */,
+			);
+			path = threading;
+			sourceTree = "<group>";
+		};
+		37F7D18F139A155200E2A86A /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				37F7D190139A155200E2A86A /* PosixConditionImpl.i */,
+				37F7D191139A155200E2A86A /* PosixMutexImpl.i */,
+				37F7D192139A155200E2A86A /* PosixSemaphoreImpl.i */,
+				37F7D193139A155200E2A86A /* PosixThreadImpl.i */,
+				37F7D194139A155200E2A86A /* PosixThreadingImpl.h */,
+				37F7D195139A155200E2A86A /* PosixThreadingImpl.i */,
+				37F7D196139A155200E2A86A /* WinNtConditionImpl.i */,
+				37F7D197139A155200E2A86A /* WinNtMutexImpl.i */,
+				37F7D198139A155200E2A86A /* WinNtSemaphoreImpl.i */,
+				37F7D199139A155200E2A86A /* WinNtThreadImpl.i */,
+				37F7D19A139A155200E2A86A /* WinNtThreadingImpl.h */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		37F7D1A8139A155200E2A86A /* time */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C111438529300F5CC85 /* Time.h */,
+				37F7D1A9139A155200E2A86A /* Timer.h */,
+			);
+			path = time;
+			sourceTree = "<group>";
+		};
+		37F7D1AA139A155200E2A86A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				37D55C171438534900F5CC85 /* Logging.h */,
+				37D55C151438532B00F5CC85 /* String.h */,
+				37D55C161438532B00F5CC85 /* StringTemplate.h */,
+				37F7D1AB139A155200E2A86A /* Callback.h */,
+				37F7D1AC139A155200E2A86A /* NonCopyable.h */,
+				37F7D1AD139A155200E2A86A /* ReferenceCounter.h */,
+				37F7D1AE139A155200E2A86A /* Signal.h */,
+				37F7D1AF139A155200E2A86A /* Singleton.h */,
+				37F7D1B0139A155200E2A86A /* StringTokenizer.h */,
+				37F7D1B1139A155200E2A86A /* XString.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		37438E70139A06FD00FFE333 /* yat-static-x86_64 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ./Makefile.macosx $(ACTION) $(YAT_BUILD_OPTIONS) PROJECT_TYPE=STATIC_LIB ARCH_TYPE=x86_64";
+			buildConfigurationList = 37438E71139A06FD00FFE333 /* Build configuration list for PBXLegacyTarget "yat-static-x86_64" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = ../../src;
+			dependencies = (
+			);
+			name = "yat-static-x86_64";
+			passBuildSettingsInEnvironment = 1;
+			productName = yat;
+		};
+		37438E7A139A072000FFE333 /* yat-shared-i386 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ./Makefile.macosx $(ACTION) $(YAT_BUILD_OPTIONS) PROJECT_TYPE=SHARED_LIB ARCH_TYPE=i386";
+			buildConfigurationList = 37438E7B139A072000FFE333 /* Build configuration list for PBXLegacyTarget "yat-shared-i386" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = ../../src;
+			dependencies = (
+			);
+			name = "yat-shared-i386";
+			passBuildSettingsInEnvironment = 1;
+			productName = yat;
+		};
+		37438E84139A073200FFE333 /* yat-shared-x86_64 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ./Makefile.macosx $(ACTION) $(YAT_BUILD_OPTIONS) PROJECT_TYPE=SHARED_LIB  ARCH_TYPE=x86_64";
+			buildConfigurationList = 37438E85139A073200FFE333 /* Build configuration list for PBXLegacyTarget "yat-shared-x86_64" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = ../../src;
+			dependencies = (
+			);
+			name = "yat-shared-x86_64";
+			passBuildSettingsInEnvironment = 1;
+			productName = yat;
+		};
+		37D9FC8113995D1D007B503A /* yat-static-i386 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f ./Makefile.macosx $(ACTION) $(YAT_BUILD_OPTIONS) PROJECT_TYPE=STATIC_LIB ARCH_TYPE=i386";
+			buildConfigurationList = 37D9FC8413995D1D007B503A /* Build configuration list for PBXLegacyTarget "yat-static-i386" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = ../../src;
+			dependencies = (
+			);
+			name = "yat-static-i386";
+			passBuildSettingsInEnvironment = 1;
+			productName = yat;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		37D9FC7C13995D1D007B503A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = none;
+			};
+			buildConfigurationList = 37D9FC7F13995D1D007B503A /* Build configuration list for PBXProject "yat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 37D9FC7A13995D1D007B503A;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37438E8E139A077500FFE333 /* yat-i386 */,
+				37D9FC8113995D1D007B503A /* yat-static-i386 */,
+				37438E7A139A072000FFE333 /* yat-shared-i386 */,
+				37F7D105139A0BE400E2A86A /* yat-x86_64 */,
+				37438E70139A06FD00FFE333 /* yat-static-x86_64 */,
+				37438E84139A073200FFE333 /* yat-shared-x86_64 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		37438E79139A06FD00FFE333 /* yat-debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "yat-static-x86_64";
+				YAT_BUILD_OPTIONS = "RELEASE_TYPE=DEBUG";
+			};
+			name = "yat-debug";
+		};
+		37438E83139A072000FFE333 /* yat-debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "yat-shared-i386";
+				YAT_BUILD_OPTIONS = "RELEASE_TYPE=DEBUG";
+			};
+			name = "yat-debug";
+		};
+		37438E8D139A073200FFE333 /* yat-debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "yat-shared-x86_64";
+				YAT_BUILD_OPTIONS = "RELEASE_TYPE=DEBUG";
+			};
+			name = "yat-debug";
+		};
+		37438E97139A077500FFE333 /* yat-debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "yat-debug";
+		};
+		37A3C7FD13995FE800CD9217 /* yat-debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG_;
+				GCC_VERSION = 4.2;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = "yat-debug";
+		};
+		37A3C7FE13995FE800CD9217 /* yat-debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				YAT_BUILD_OPTIONS = "RELEASE_TYPE=DEBUG";
+			};
+			name = "yat-debug";
+		};
+		37F7D10E139A0BE400E2A86A /* yat-debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "yat-x86_64";
+			};
+			name = "yat-debug";
+		};
+		37F7D10F139A0F3500E2A86A /* yat-release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG_;
+				GCC_VERSION = 4.2;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = "yat-release";
+		};
+		37F7D110139A0F3500E2A86A /* yat-release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "yat-release";
+		};
+		37F7D111139A0F3500E2A86A /* yat-release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				YAT_BUILD_OPTIONS = "RELEASE_TYPE=OPTIMIZED";
+			};
+			name = "yat-release";
+		};
+		37F7D112139A0F3500E2A86A /* yat-release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "yat-shared-i386";
+				YAT_BUILD_OPTIONS = "RELEASE_TYPE=OPTIMIZED";
+			};
+			name = "yat-release";
+		};
+		37F7D113139A0F3500E2A86A /* yat-release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "yat-x86_64";
+			};
+			name = "yat-release";
+		};
+		37F7D114139A0F3500E2A86A /* yat-release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "yat-static-x86_64";
+				YAT_BUILD_OPTIONS = "RELEASE_TYPE=OPTIMIZED";
+			};
+			name = "yat-release";
+		};
+		37F7D115139A0F3500E2A86A /* yat-release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "yat-shared-x86_64";
+				YAT_BUILD_OPTIONS = "RELEASE_TYPE=OPTIMIZED";
+			};
+			name = "yat-release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37438E71139A06FD00FFE333 /* Build configuration list for PBXLegacyTarget "yat-static-x86_64" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37438E79139A06FD00FFE333 /* yat-debug */,
+				37F7D114139A0F3500E2A86A /* yat-release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "yat-debug";
+		};
+		37438E7B139A072000FFE333 /* Build configuration list for PBXLegacyTarget "yat-shared-i386" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37438E83139A072000FFE333 /* yat-debug */,
+				37F7D112139A0F3500E2A86A /* yat-release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "yat-debug";
+		};
+		37438E85139A073200FFE333 /* Build configuration list for PBXLegacyTarget "yat-shared-x86_64" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37438E8D139A073200FFE333 /* yat-debug */,
+				37F7D115139A0F3500E2A86A /* yat-release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "yat-debug";
+		};
+		37438E8F139A077500FFE333 /* Build configuration list for PBXAggregateTarget "yat-i386" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37438E97139A077500FFE333 /* yat-debug */,
+				37F7D110139A0F3500E2A86A /* yat-release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "yat-debug";
+		};
+		37D9FC7F13995D1D007B503A /* Build configuration list for PBXProject "yat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A3C7FD13995FE800CD9217 /* yat-debug */,
+				37F7D10F139A0F3500E2A86A /* yat-release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "yat-debug";
+		};
+		37D9FC8413995D1D007B503A /* Build configuration list for PBXLegacyTarget "yat-static-i386" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A3C7FE13995FE800CD9217 /* yat-debug */,
+				37F7D111139A0F3500E2A86A /* yat-release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "yat-debug";
+		};
+		37F7D106139A0BE400E2A86A /* Build configuration list for PBXAggregateTarget "yat-x86_64" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37F7D10E139A0BE400E2A86A /* yat-debug */,
+				37F7D113139A0F3500E2A86A /* yat-release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "yat-debug";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37D9FC7C13995D1D007B503A /* Project object */;
+}

@@ -1,0 +1,122 @@
+#%NAME% 
+#  Specific macros for Lima Simulator detector 
+#%CATEGORY% Detection, Ccd
+
+#%LOG%
+#
+#$Revision: $
+#
+
+def limasimulatorsetup(ccdname) '{
+
+  # --- common control init
+  _limapar_controlinit(ccdname, 0)
+
+  # --- parameter definition
+  _limapar_addconfig(ccdname, "fill_type",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "grow_factor", LP_RW, 1, "double")
+  _limapar_addconfig(ccdname, "rotation_axis",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "diffraction_pos", LP_RW, 2, "double")
+  _limapar_addconfig(ccdname, "diffraction_speed", LP_RW, 2, "double")
+  _limapar_addconfig(ccdname, "rotation_angle", LP_RW, 1, "double")
+  _limapar_addconfig(ccdname, "rotation_speed", LP_RW, 1, "double")
+
+  _limapar_addtext(ccdname, "fill_type", "Image filling type")
+  _limapar_addtext(ccdname, "grow_factor", "Intensity grow factor in scan")
+  _limapar_addtext(ccdname, "rotation_axis", "Peak rotation axis")
+  _limapar_addtext(ccdname, "diffraction_pos", "Peak position for diffraction")
+  _limapar_addtext(ccdname, "diffraction_speed", "Peak speed for diffraction")
+  _limapar_addtext(ccdname, "rotation_angle", "Peak rotation angle (deg)")
+  _limapar_addtext(ccdname, "rotation_speed", "Peak rotation speed (deg/frm)")
+
+  # --- callback macro on parameter set
+  #_limapar_addconfig_cb(ccdname, "_limasimulator_setpar")
+
+  # --- parameter description
+}'
+
+lima_addlimatype("Simulator", "limasimulatorsetup", "limasimulatormenu")
+
+def _limasimulator_setpar(ccdname, parname, value) '{
+  _lima_trace ccdname; printf("CB on <%s>\n", parname)
+  if (parname == "config_name") {
+   #need to inform SPEC about possible image type change
+   local unit
+   unit  = LIMA_DEV[ccdname]["unit"]
+   sleep(1)
+   # need to call twice "resize" otherwise spec does update
+   # the image_par() parameters (row_end,row_beg,col_end,col_beg) 
+   image_par(unit, "resize")
+   image_par(unit, "resize")
+   ccd_createarray unit
+  }
+
+}'
+
+def limasimulatormenu(ccdname) '{
+  local items[] parname aux_str
+  local nl option 
+
+  option= 1
+
+  items["fill_type"] = ""
+  items["grow_factor"] = ""
+  items["rotation_axis"] = ""
+  items["diffraction_pos"] = ""
+  items["diffraction_speed"] = ""
+  items["rotation_angle"] = ""
+  items["rotation_speed"] = ""
+
+  while (option) {
+
+    for (parname in items) {
+      items[parname]= _limapar_get(ccdname, parname)
+      if ((parname == "diffraction_pos") || (parname == "diffraction_speed"))
+          items[parname]= sprintf("[%s, %s]", LIMA_VALS[0], LIMA_VALS[1])
+    }
+
+    nl= _limamenu_printtitle(ccdname, "Configuration", "config")
+
+    tty_move(0, nl++, "(1) Configuration :")
+    _limamenu_printitem(ccdname, "fill_type", items["fill_type"], nl++, 11)
+    _limamenu_printitem(ccdname, "grow_factor", items["grow_factor"], nl++, 12)
+    _limamenu_printitem(ccdname, "rotation_axis", \
+                                 items["rotation_axis"], nl++, 13)
+    _limamenu_printitem(ccdname, "diffraction_pos", \
+                                 items["diffraction_pos"], nl++, 14)
+    _limamenu_printitem(ccdname, "diffraction_speed", \
+                                 items["diffraction_speed"], nl++, 15)
+    _limamenu_printitem(ccdname, "rotation_angle", \
+                                 items["rotation_angle"],  nl++, 16)
+    _limamenu_printitem(ccdname, "rotation_speed", \
+                                 items["rotation_speed"],  nl++, 17)
+    ++nl
+
+    option= getval("\n\n\tOption ---> ", 0)
+    printf("\n\n")
+
+    if((option==1) || (option==11))
+      _limapar_ask(ccdname, "fill_type",items["fill_type"])
+    if((option==1) || (option==12))
+      _limapar_ask(ccdname, "grow_factor",items["grow_factor"])
+    if((option==1) || (option==13))
+      _limapar_ask(ccdname, "rotation_axis",items["rotation_axis"])
+    if((option==1) || (option==14) || (option==15)) {
+      parname = (option==14) ? "diffraction_pos" : "diffraction_speed"
+      aux_str = sprintf("Diffraction peak %%s %s", (option==14) ? "pos" : \
+                                                                  "speed")
+      _limapar_get(ccdname, parname, -1)
+      LIMA_VALS[0] = getval(sprintf(aux_str, "X"), LIMA_VALS[0])
+      LIMA_VALS[1] = getval(sprintf(aux_str, "Y"), LIMA_VALS[1])
+      _limapar_set(ccdname, parname, LIMA_VALS, -1)
+    }
+    if((option==1) || (option==16)) 
+      _limapar_ask(ccdname, "rotation_angle",items["rotation_angle"])
+    if((option==1) || (option==17)) 
+      _limapar_ask(ccdname, "rotation_speed",items["rotation_speed"])
+  }
+}'
+#%MACROS%
+#%IMACROS%
+#%TOC%
+#%AUTHOR% A.Homs, $Revision: $, $Date: $

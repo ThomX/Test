@@ -1,0 +1,447 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<Title> Tango Device Server User's Guide </Title>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#7F00FF" ALINK="#FF0000">
+
+<P><!-------TITLE------></P>
+
+<TABLE BORDER="0" WIDTH="100%">
+    <TR>
+        <TD ALIGN="left">
+			<A HREF="http://www.esrf.fr/" TARGET=new>
+			<IMG SRC="http://www.esrf.fr/gifs/logo/80.gif" BORDER=0 Height="60"></A>
+		</Td>
+        <TD ALIGN="center">
+			<A HREF="http://www.elettra.trieste.it/" TARGET=new>
+			<IMG SRC="http://www.esrf.fr/computing/cs/tango/elettra_logo.gif" BORDER=0 Height="60"></A>
+
+		</Td>
+        <TD ALIGN="center">
+			<A HREF="http://www.synchrotron-soleil.fr/" TARGET=new>
+			<IMG SRC="http://www.esrf.fr/computing/cs/tango/soleil_logo.gif" BORDER=0 Height="60"></A>
+		</Td>
+        <TD ALIGN="right">
+			<A HREF="http://www.cells.es/" TARGET=new>
+			<IMG SRC="http://www.esrf.fr/computing/cs/tango/alba.jpg" BORDER=0 Height="54"></A>
+		</Td>
+        <TD ALIGN="right">
+			<A HREF="http://www.desy.de/html/home/index_eng.html" TARGET=new>
+			<IMG SRC="http://www.esrf.fr/computing/cs/tango/desy.gif" BORDER=0 Height="60"></A>
+		</Td>
+    	 <Td>
+			<H2><FONT COLOR="#7F00FF">
+			<Center><A HREF="http://www.tango-controls.org/" TARGET="_top">
+					 TANGO </a> <Br> Device Server
+			</Center></FONT>
+		</Td>
+    </TR>
+</TABLE>
+
+<HR WIDTH="100%"></H5>
+<Br>
+<center>
+<h1>
+LimaDetector		<Br>
+Properties Description 		<Br> <Br>
+LimaDetector Class	<Br>
+</h1>
+<b>
+Revision:  - Author: 
+</b>
+</center>
+
+
+<Center>
+<Br> <Br> <Br> 
+<Table Border=2 Cellpadding=3 CELLSPACING=0 WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<Td COLSPAN=3> <Font Size=+2><Center><b>Device Properties</b></td></Font></Center>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<Td><Center><b>Property name</b></td></Center>
+<Td><Center><b>Property type</b></td></Center>
+<Td><Center><b>Description</b></td></Center>
+<Tr><Td><b><a href=#Dev_DefaultValues>DetectorDescription </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Detector user-defined text to identify the engine.</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>DetectorType </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Define the type of the connected Detector .<BR>
+Availables types :<BR>
+- AdscCCD<BR>
+- BaslerCCD<BR>
+- MarCCD<BR>
+- Pco<BR>
+- PerkinElmer<BR>
+- PilatusPixelDetector<BR>
+- ProsilicaCCD<BR>
+- PrincetonCCD<BR>
+- SimulatorCCD<BR>
+- XpadPixelDetector<BR>
+
+</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>DetectorPixelDepth </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_USHORT</Font></Td>
+<Td><Font Size=-1>Define the pixel depth of the detector : <br>
+Availables values : <br>
+- 8 <br>
+- 16<br>
+- 32<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>DetectorVideoMode </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Define the format of video stream: <br>
+Availables values :<br>
+- NONE<BR>
+- Y8 <BR>
+- Y16<BR>
+- Y32<BR>
+- Y64<BR>
+- RGB555<BR>
+- RGB565<BR>
+- RGB24<BR>
+- RGB32<BR>
+- BGR24<BR>
+- BGR32<BR>
+- BAYER_RG8<BR>
+- BAYER_RG16<BR>
+- I420<BR>
+- YUV411<BR>
+- YUV422<BR>
+- YUV444<BR>
+<br>
+Nota:<br>
+This property is usefull only for detectors having video capabilities.<BR>
+Otherwise, use only NONE.</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>FileFormat </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Define the format of image files :<BR>
+Availables values :<br>
+- EDF<BR>
+- NXS<BR>
+- RAW<BR>
+</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>FilePrefix </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Define the prefix used for the image files name.</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>FileIndexPattern </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Define the pattern of the index used for image files names.<br>
+<br>
+Nota :<br>
+%04d mean that file name index will be end with exactly  4 digits filled by '0' if necessary .<br>
+</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>FileNbFrames </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_LONG</Font></Td>
+<Td><Font Size=-1>Define the amount of frames stored in the target file.<br>
+If Nexus file, this is the NbAcqPerFile.</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>FileTargetPath </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Define the Path where Files will be generated, only when savingFile is checked.
+
+</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>DebugModules </a></b></Td>
+<Td><Font Size=-1>Array of string</Font></Td>
+<Td><Font Size=-1>Define modules that we need to have some debug traces.<BR>
+Availables values :<BR>
+- None<BR>
+- Hardware<BR>
+- Control<BR>
+- Common<BR>
+- Camera<BR></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>DebugLevels </a></b></Td>
+<Td><Font Size=-1>Array of string</Font></Td>
+<Td><Font Size=-1>Define Lima verbose level of traces.<BR>
+Availables values :<BR>
+- Fatal<BR>
+- Error<BR>
+- Warning<BR>
+- Trace<BR>
+- Funct<BR>
+- Param<BR>
+- Return<BR>
+- Always<BR></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>DebugFormats </a></b></Td>
+<Td><Font Size=-1>Array of string</Font></Td>
+<Td><Font Size=-1>Define Lima traces format.<BR>
+Availables values :<BR>
+- DateTime<BR>
+- Thread<BR>
+- Module<BR>
+- Obj<BR>
+- Funct<BR>
+- FileLine<BR></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedRoi </a></b></Td>
+<Td><Font Size=-1>Array of short</Font></Td>
+<Td><Font Size=-1>Memorize/Define the Region of Interest of the Acquisition: <br>
+origin X<br>
+origin Y<br>
+Width<br>
+Height<br>
+<br>
+Nota:<br>
+if any roi value is <0, then we consider all detector area as Roi.</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedBinningH </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_USHORT</Font></Td>
+<Td><Font Size=-1>Memorize/Define the Binning Horizontal value of the Acquisition<br>
+</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedBinningV </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_USHORT</Font></Td>
+<Td><Font Size=-1>Memorize/Define the Binning Vertical value of the Acquisition<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedAcquisitionMode </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Memorize/Define the acquisitionMode attribute at Init device<br>
+Availables values :<br>
+- SINGLE<br>
+- ACCUMULATION<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedTriggerMode </a></b></Td>
+<Td><Font Size=-1>string</Font></Td>
+<Td><Font Size=-1>Memorize/Define the triggerMode attribute at Init device<br>
+Availables values :<br>
+- INTERNAL_SINGLE<br>
+- EXTERNAL_SINGLE<br>
+- EXTERNAL_MULTI<br>
+- EXTERNAL_GATE<br>
+- INTERNAL_MULTI<br>
+- EXTERNAL_START_STOP<br>
+- EXTERNAL_READOUT<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedShutterMode </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_STRING</Font></Td>
+<Td><Font Size=-1>Memorize/Define the shutterMode attribute at Init device<br>
+Availables values :<br>
+- MANUAL<br>
+- AUTO_FRAME<br>
+- AUTO_SEQUENCE</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedShutterOpenTime </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_DOUBLE</Font></Td>
+<Td><Font Size=-1>Memorize/Define the shutterOpenTime attribute at Init device<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedShutterCloseTime </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_DOUBLE</Font></Td>
+<Td><Font Size=-1>Memorize/Define the shutterCloseTime attribute at Init device<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedExposureTime </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_DOUBLE</Font></Td>
+<Td><Font Size=-1>Memorize/Define the exposureTime attribute  at Init device<br>
+</Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedExposureAccTime </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_DOUBLE</Font></Td>
+<Td><Font Size=-1>Memorize/Define the exposureAccTime attribute at Init device<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedLatencyTime </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_DOUBLE</Font></Td>
+<Td><Font Size=-1>Memorize/Define the latencyTime attribute  at Init device<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedNbFrames </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_LONG</Font></Td>
+<Td><Font Size=-1>Memorize/Define the nbFrames attribute  at Init device<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedFileGeneration </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_BOOLEAN</Font></Td>
+<Td><Font Size=-1>Memorize/Define the fileGeneration attribute at Init device<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedFlipX </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_BOOLEAN</Font></Td>
+<Td><Font Size=-1>Memorize/Define the flipX attribute at Init device<br></Font></Td></Tr>
+
+<Tr><Td><b><a href=#Dev_DefaultValues>MemorizedFlipY </a></b></Td>
+<Td><Font Size=-1>Tango::DEV_BOOLEAN</Font></Td>
+<Td><Font Size=-1>Memorize/Define the flipY attribute at Init device<br></Font></Td></Tr>
+
+</Table>
+
+</Center>
+<Br><Br><Br>
+<Br><Br><Br>
+
+<A name=Dev_DefaultValues><!---  ---></a>
+<Font Size=+1>Device Properties Default Values:</Font><Br>
+<Table Border=2 Cellpadding=2 CELLSPACING=2>
+    <tr BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+        <Td><b>Property Name</b></td>
+        <td><b>Default Values</b></td>
+    </Tr>
+    <Tr>
+        <Td>DetectorDescription</Td>
+        <td>This is my Simulator</td>
+    </Tr>
+    <Tr>
+        <Td>DetectorType</Td>
+        <td>SimulatorCCD</td>
+    </Tr>
+    <Tr>
+        <Td>DetectorPixelDepth</Td>
+        <td>16</td>
+    </Tr>
+    <Tr>
+        <Td>DetectorVideoMode</Td>
+        <td>NONE</td>
+    </Tr>
+    <Tr>
+        <Td>FileFormat</Td>
+        <td>NXS</td>
+    </Tr>
+    <Tr>
+        <Td>FilePrefix</Td>
+        <td>Image</td>
+    </Tr>
+    <Tr>
+        <Td>FileIndexPattern</Td>
+        <td>%06d</td>
+    </Tr>
+    <Tr>
+        <Td>FileNbFrames</Td>
+        <td>1</td>
+    </Tr>
+    <Tr>
+        <Td>FileTargetPath</Td>
+        <td>./data</td>
+    </Tr>
+    <Tr>
+        <Td>DebugModules</Td>
+        <td>	Hardware<Br>
+	Control<Br>
+	Common<Br>
+	Camera</td>
+    </Tr>
+    <Tr>
+        <Td>DebugLevels</Td>
+        <td>	Fatal<Br>
+	Error<Br>
+	Warning</td>
+    </Tr>
+    <Tr>
+        <Td>DebugFormats</Td>
+        <td>	DateTime<Br>
+	Funct</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedRoi</Td>
+        <td>-1, -1, -1, -1</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedBinningH</Td>
+        <td>1</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedBinningV</Td>
+        <td>1</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedAcquisitionMode</Td>
+        <td>SINGLE</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedTriggerMode</Td>
+        <td>INTERNAL_SINGLE</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedShutterMode</Td>
+        <td>MANUAL</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedShutterOpenTime</Td>
+        <td>1000</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedShutterCloseTime</Td>
+        <td>1000</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedExposureTime</Td>
+        <td>1000</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedExposureAccTime</Td>
+        <td>100</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedLatencyTime</Td>
+        <td>0</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedNbFrames</Td>
+        <td>1</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedFileGeneration</Td>
+        <td>false</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedFlipX</Td>
+        <td>false</td>
+    </Tr>
+    <Tr>
+        <Td>MemorizedFlipY</Td>
+        <td>false</td>
+    </Tr>
+</Table>
+
+<Br><Br><Br>
+<Center><b>
+There is no Class properties.<Br><Br>
+</Center></b>
+<Br> <Br> <Br> 
+
+<!--- html Footer --->
+
+<Center>
+<Font size=-1>
+<br>
+<br>
+<TABLE BORDER="1" WIDTH="100%">
+    <Tr>
+		<!--- Hosted by Sourceforge --->
+        <Td Align="Center">
+			<Font size=-1>
+			<b>TANGO</b> is an open source project hosted by :<br>
+			<A href="http://sourceforge.net" Target="new">
+					<IMG title="Sourceforge logo"
+						alt="Sourceforge logo small"
+						src="http://www.esrf.fr/computing/cs/tango/sourceforge.gif"
+						border=0> </a>
+			</Font>
+		</Td>
+		<!--- 2 Sourceforge Repositories --->
+		<Td Align="Center">
+			<Font size=-1>
+			Core and Tools :
+			<a href="http://tango-cs.cvs.sourceforge.net/tango-cs/" Target="new">
+			CVS repository</a> on
+			<a href="https://sourceforge.net/projects/tango-cs" Target=new>
+			tango-cs project</a>
+
+			<br>
+
+			Device Servers :
+			<a href="http://tango-ds.cvs.sourceforge.net/tango-ds/" Target="new">
+					CVS repository</a> on
+			<a href="https://sourceforge.net/projects/tango-ds" Target=new>
+					tango-ds project</a>
+			</Font>
+		</Td>
+    </Tr>
+</Table>
+</Font>
+</Center>
+</body>
+</html>

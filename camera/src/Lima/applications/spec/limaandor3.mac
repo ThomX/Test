@@ -1,0 +1,107 @@
+#%NAME% 
+#  Specific macros for Lima Andor3 detector 
+#%CATEGORY% Detection, Ccd
+
+#%LOG%
+#
+#$Revision: $
+#
+
+def limaandor3setup(ccdname) '{
+
+  # --- common control init
+  _limapar_controlinit(ccdname, 0)
+
+  # --- parameter definition
+
+  _limapar_addconfig(ccdname, "cooling_status",LP_READ,1)
+  _limapar_addconfig(ccdname, "cooler",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "temperature_sp", LP_RW|LP_MOT, 1)
+  _limapar_addconfig(ccdname, "temperature", LP_READ, 1)
+  _limapar_addconfig(ccdname, "adc_gain",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "adc_rate",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "fan_speed",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "electronic_shutter_mode",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "destride_active",LP_RW|LP_LIST,1)
+  
+  
+
+  # --- parameter description
+  _limapar_addtext(ccdname, "cooler", "Cooler Mode")
+  _limapar_addtext(ccdname, "cooling_status", "Cooling Status")
+  _limapar_addtext(ccdname, "temperature_sp", "Temperature set-point")  
+  _limapar_addtext(ccdname, "temperature", "Sensor Temperature")  
+  _limapar_addtext(ccdname, "adc_gain", "Preamplifier gain")
+  _limapar_addtext(ccdname, "adc_rate", "Adc Readout Rate")
+  _limapar_addtext(ccdname, "fan_speed", "Fan speed")
+  _limapar_addtext(ccdname, "electronic_shutter_mode", "Electronic shutter mode")
+  _limapar_addtext(ccdname, "destride_active", "Destride reconstruction activate")
+
+
+}'
+
+lima_addlimatype("Andor3", "limaandor3setup", "limaandor3menu")
+
+
+def limaandor3menu(ccdname) '{
+  local items[] parname
+  local nl option
+  
+  items["cooling_status"] = ""
+  items["cooler"] = ""
+  items["temperature_sp"] = -1
+  items["temperature"] = -1
+  items["fan_speed"] = ""
+  items["adc_gain"] = "" 
+  items["adc_rate"] = "" 
+  items["electronic_shutter_mode"] = "" 
+  items["destride_active"] = "" 
+  
+  option= 1
+  
+  while (option) {
+    
+    for (parname in items) {
+      items[parname]= _limapar_get(ccdname, parname)
+    }
+    nl = _limamenu_printtitle(ccdname, "Configuration", "config")
+    
+    tty_move(0, nl, "(1) Temperature Control :")
+    tty_move(25, nl++, sprintf(" Sensor @  \[md\]%d\[me\] C", items["temperature"]))
+    tty_move(4, nl++, sprintf(" (r)  Status \[md\]%s\[me\]", items["cooling_status"]))
+    _limamenu_printitem(ccdname, "cooler", items["cooler"], nl++,11)
+    _limamenu_printitem(ccdname, "temperature_sp", items["temperature_sp"], nl++,12)
+    _limamenu_printitem(ccdname, "fan_speed", items["fan_speed"], nl++,13)
+    nl++
+
+    tty_move(0, nl++, "(2) Expert setting :")
+    _limamenu_printitem(ccdname, "Adc Gain", items["adc_gain"], nl++,21)
+    _limamenu_printitem(ccdname, "Adc Rate", items["adc_rate"], nl++,22)
+    _limamenu_printitem(ccdname, "Electronic shutter mode", items["electronic_shutter_mode"], nl++,23)
+    _limamenu_printitem(ccdname, "Destride active", items["destride_active"], nl++,24)
+    option= getval("\n\n\tOption ---> ", 0)
+    printf("\n\n")
+
+
+    if(option=="r")
+      continue
+    if((option==1) || (option==11))
+      _limapar_ask(ccdname, "cooler",items["cooler"])
+    if((option==1) || (option==12))
+      _limapar_ask(ccdname, "temperature_sp",items["temperature_sp"])
+    if((option==1) || (option==13))
+      _limapar_ask(ccdname, "fan_speed",items["fan_speed"])
+    if((option==2) || (option==21))
+      _limapar_ask(ccdname, "adc_gain",items["adc_gain"])
+    if((option==2) || (option==22))
+      _limapar_ask(ccdname, "adc_rate",items["adc_rate"])
+    if((option==2) || (option==23))
+      _limapar_ask(ccdname, "electronic_shutter_mode",items["electronic_shutter_mode"])
+    if((option==2) || (option==24))
+      _limapar_ask(ccdname, "destride_active",items["destride_active"])
+  }
+}'
+#%MACROS%
+#%IMACROS%
+#%TOC%
+#%AUTHOR% L.Claustre, $Revision: $, $Date: $

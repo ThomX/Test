@@ -1,0 +1,5 @@
+*~
+*.o
+image_test
+gldisplay_test
+simu_gldisplay_test

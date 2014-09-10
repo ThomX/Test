@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+       <groupId>fr.soleil</groupId>
+       <artifactId>super-pom-C-CPP-device</artifactId>
+       <version>RELEASE</version>
+   </parent>
+   <groupId>fr.soleil.device</groupId>
+   <artifactId>yat-allocator-test-${aol}-${mode}</artifactId>
+   <version>1.0.0-SNAPSHOT</version>
+   <packaging>nar</packaging>
+   <name>AllocatorTester</name>
+   <description>a yat::Allocators test</description>
+   <build>
+       <plugins>
+           <plugin>
+               <groupId>org.freehep</groupId>
+               <artifactId>freehep-nar-plugin</artifactId>
+                  <configuration>
+                    <cpp>
+                        <includePaths>
+                          <includePath>${project.basedir}/src</includePath>
+                        </includePaths>
+                        <options>
+                            <option>-Wno-uninitialized</option>
+                            <option>-Wno-unused-parameter</option>
+                            <option>-Wno-unused-variable</option>
+                        </options>
+                    </cpp>  
+                </configuration>  
+           </plugin>
+       </plugins>
+   </build>
+  <scm>
+    <connection>${scm.connection.svn.tango-cs}:share/yat</connection>
+    <developerConnection>${scm.developerConnection.svn.tango-cs}:share/yat</developerConnection>
+    <url>${scm.url.svn.tango-cs}/share/yat</url>
+  </scm>
+   <dependencies>
+       <dependency>
+           <groupId>fr.soleil.lib</groupId>
+           <artifactId>YAT-${aol}-${library}-${mode}</artifactId>
+           <version>1.7.2</version>
+       </dependency>
+   </dependencies>
+   <developers>
+       <developer>
+           <id>leclercq</id>
+           <name>leclercq</name>
+           <url>http://controle/</url>
+           <organization>Synchrotron Soleil</organization>
+           <organizationUrl>http://www.synchrotron-soleil.fr</organizationUrl>
+           <roles>
+               <role>manager</role>
+           </roles>
+           <timezone>1</timezone>
+       </developer>
+   </developers>
+</project>

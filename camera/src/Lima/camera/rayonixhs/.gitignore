@@ -1,0 +1,12 @@
+build.debug
+build.release
+*.ctb
+*.pff
+.cproject
+.project
+*.log
+@eaDir/
+*~
+test/test
+test/test.o
+test/test.P

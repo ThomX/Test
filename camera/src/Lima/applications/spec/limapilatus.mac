@@ -1,0 +1,67 @@
+
+def limapilatussetup(ccdname) '{
+
+  # --- common control init
+  _limapar_controlinit(ccdname, 0)
+
+  # --- parameter definition
+  _limapar_addconfig(ccdname, "threshold_gain", LP_RW|LP_LIST, 1)
+  _limapar_addconfig(ccdname, "threshold", LP_RW, 1,"long")
+  _limapar_addconfig(ccdname, "energy_threshold", LP_RW|LP_MOT, 1,"double")
+  _limapar_addconfig(ccdname, "fill_mode",LP_RW|LP_LIST,1)
+
+  # --- parameter description
+  _limapar_addtext(ccdname, "threshold_gain", "Threshold Gain")
+  _limapar_addtext(ccdname, "threshold", "Threshold value in (eV)")
+  _limapar_addtext(ccdname, "fill_mode", "Pixel Gap Filling")
+  _limapar_addtext(ccdname, "energy_threshold", "Energy Threshold (keV)")
+}'
+
+lima_addlimatype("Pilatus", "limapilatussetup", "limapilatusmenu")
+
+def limapilatusmenu(ccdname) '{
+  local items[] parname
+  local nl option
+
+  items["threshold_gain"] = ""
+  items["threshold"] = -1
+  items["energy_threshold"] = -1
+  items["fill_mode"] = "OFF"
+
+  
+  option= 1
+
+  while (option) {
+
+    for (parname in items) {
+      items[parname]= _limapar_get(ccdname, parname)
+    }
+
+    nl= _limamenu_printtitle(ccdname, "Configuration", "config")
+
+    tty_move(0, nl++, "(1) Calibration Basic:")
+    _limamenu_printitem(ccdname, "energy_threshold", items["energy_threshold"], nl++, 11)
+    _limamenu_printitem(ccdname, "fill_mode", items["fill_mode"], nl++, 12)
+    nl++
+
+    tty_move(0, nl++, "Calibration Expert:")
+    _limamenu_printitem(ccdname, "threshold", items["threshold"], nl++, 21)
+    _limamenu_printitem(ccdname, "threshold_gain", items["threshold_gain"], nl++, 22)
+    nl++
+
+    option= getval("\n\n\tOption ---> (0=quit, 2=refresh) ", 0)
+    printf("\n\n")
+
+    if ((option==1)||(option==11))
+      _limapar_ask(ccdname, "energy_threshold", items["energy_threshold"])
+    if ((option==1)||(option==12))
+      _limapar_ask(ccdname, "fill_mode", items["fill_mode"])
+
+
+    if (option==21)
+      _limapar_ask(ccdname, "threshold", items["threshold"])
+    else if (option==22)
+      _limapar_ask(ccdname, "threshold_gain", items["threshold_gain"])
+  }
+}'
+

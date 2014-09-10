@@ -1,0 +1,116 @@
+#%NAME% 
+#  Specific macros for Lima Frelon detector 
+#%CATEGORY% Detection, Ccd
+
+#%LOG%
+#
+#$Revision: $
+#
+
+def limafrelonsetup(ccdname) '{
+
+  # --- common control init
+  _limapar_controlinit(ccdname, 0)
+
+  # --- parameter definition
+  _limapar_addconfig(ccdname, "espia_dev_nb", LP_READ, 1)
+  _limapar_addconfig(ccdname, "image_mode",LP_RW|LP_LIST|LP_CB,1)
+  _limapar_addconfig(ccdname, "input_channel",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "roi_mode",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "roi_bin_offset",LP_RW,1,"long")
+  _limapar_addconfig(ccdname, "e2v_correction",LP_RW|LP_LIST,1)
+  _limapar_addconfig(ccdname, "spb2_config",LP_RW|LP_LIST,1)
+
+  # --- callback macro on parameter set
+  _limapar_addconfig_cb(ccdname, "_limafrelon_setpar")
+
+  # --- parameter description
+  _limapar_addtext(ccdname, "espia_dev_nb", "Espia board number")
+  _limapar_addtext(ccdname, "image_mode", "Image mode")
+  _limapar_addtext(ccdname, "input_channel", "Input channel(s)")
+  _limapar_addtext(channel, "roi_mode","Roi mode")
+  _limapar_addtext(channel, "roi_bin_offset","Roi bin offset")
+  _limapar_addtext(channel, "e2v_correction","Correction E2V")
+  _limapar_addtext(channel, "spb2_config","SPB2 read mode")
+}'
+
+lima_addlimatype("Frelon", "limafrelonsetup", "limafrelonmenu")
+
+def _limafrelon_setpar(ccdname, parname, value) '{
+  #_lima_trace ccdname; printf("CB on <%s>\n", parname)
+  if (parname == "image_mode") {
+   #need to inform SPEC about possible image type change
+   local unit
+   unit  = LIMA_DEV[ccdname]["unit"]
+   sleep(1)
+   # need to call twice "resize" otherwise spec does update
+   # the image_par() parameters (row_end,row_beg,col_end,col_beg) 
+   image_par(unit, "resize")
+   image_par(unit, "resize")
+   ccd_createarray unit
+  }
+
+}'
+
+def limafrelonmenu(ccdname) '{
+  local items[] parname
+  local nl option
+
+  items["espia_dev_nb"] = -1
+  items["image_mode"] = "FULL FRAME"
+  items["roi_mode"] = "NONE"
+  items["roi_bin_offset"] = -1
+  items["e2v_correction"] = "OFF"
+  items["input_channel"] = "1-2-3-4"
+  items["spb2_config"] = "PRECISION"
+  option= 1
+
+  while (option) {
+
+    for (parname in items) {
+      items[parname]= _limapar_get(ccdname, parname)
+    }
+
+    nl= _limamenu_printtitle(ccdname, "Configuration", "config")
+
+    tty_move(0, nl++, "(1) Information :")
+    _limamenu_printitem(ccdname, "espia_dev_nb", items["espia_dev_nb"], nl++, 11)
+    ++nl
+
+    tty_move(0, nl++, "(2) Configuration :")
+    _limamenu_printitem(ccdname, "image_mode", items["image_mode"], nl++,21)
+    _limamenu_printitem(ccdname, "input_channel", items["input_channel"], nl++,22)
+    _limamenu_printitem(ccdname, "roi_mode",items["roi_mode"], nl++,23)
+    _limamenu_printitem(ccdname, "roi_bin_offset",items["roi_bin_offset"],nl++,24)
+    _limamenu_printitem(ccdname, "e2v_correction",items["e2v_correction"],nl++,25)
+    _limamenu_printitem(ccdname, "spb2_config",items["spb2_config"],nl++,26)
+    nl++
+
+    tty_move(0, nl++, "(3) Reset Link")
+    nl++
+
+    option= getval("\n\n\tOption ---> ", 0)
+    printf("\n\n")
+
+    if((option==2) || (option==21))
+      _limapar_ask(ccdname, "image_mode",items["image_mode"])
+    if((option==2) || (option==22))
+      _limapar_ask(ccdname, "input_channel",items["input_channel"])
+    if((option==2) || (option==23))
+      _limapar_ask(ccdname, "roi_mode",items["roi_mode"])
+    if((option==2) || (option==24))
+      _limapar_ask(ccdname, "roi_bin_offset",items["roi_bin_offset"])
+    if((option==2) || (option==25))
+      _limapar_ask(ccdname, "e2v_correction",items["e2v_correction"])
+    if((option==2) || (option==26))
+      _limapar_ask(ccdname, "spb2_config",items["spb2_config"])
+
+
+    if(option==3)
+      tango_io(LIMA_DEV[ccdname]["config"], "resetLink")
+  }
+}'
+#%MACROS%
+#%IMACROS%
+#%TOC%
+#%AUTHOR% E.Papillon, $Revision: $, $Date: $

@@ -1,0 +1,110 @@
+#%NAME% 
+#  Specific macros for Lima pco detector 
+#%CATEGORY% Detection, Ccd
+
+#%LOG%
+#
+#$Revision: $
+#
+
+#=====================================================================
+#=====================================================================
+def limapcosetup(ccdname) '{
+
+  # --- common control init
+  _limapar_controlinit(ccdname, 0)
+
+  # --- parameter definition & description
+  _limapar_addconfig(ccdname, "pixelRate",LP_RW|LP_LIST,1)
+  _limapar_addtext(ccdname, "pixelRate", "Pco Edge pixel rate (MHz)")
+
+  _limapar_addconfig(ccdname, "camInfo",LP_READ,1)
+  _limapar_addtext(ccdname, "camInfo", "Pco general cam info")
+
+  _limapar_addconfig(ccdname, "camType",LP_READ,1)
+  _limapar_addtext(ccdname, "camType", "Pco cam info")
+
+  _limapar_addconfig(ccdname, "rollingShutter",LP_RW|LP_LIST,1)
+  _limapar_addtext(ccdname, "rollingShutter", "Pco Edge Rolling/Global shutter")
+
+  _limapar_addconfig(ccdname, "maxNbImages",LP_READ,1)
+  _limapar_addtext(ccdname, "maxNbImages", "Maximum number of images")
+
+  _limapar_addconfig(ccdname, "frameRate",LP_READ,1)
+  _limapar_addtext(ccdname, "frameRate", "Frame Rate (Hz)")
+
+  _limapar_addconfig(ccdname, "cocRunTime",LP_READ,1)
+  _limapar_addtext(ccdname, "cocRunTime", "Frame run time (sec)")
+
+
+
+}'
+
+#=====================================================================
+#=====================================================================
+lima_addlimatype("Pco", "limapcosetup", "limapcomenu")
+
+
+#=====================================================================
+#=====================================================================
+def limapcomenu(ccdname) '{
+  local items[] parname
+  local nl option
+  local tabSpc ; tabSpc = 5
+  
+  items["pixelRate"] = ""
+  items["rollingShutter"] = ""
+  option= 1
+
+  while (option) {
+
+    for (parname in items) {
+      items[parname]= _limapar_get(ccdname, parname)
+    }
+
+    nl= _limamenu_printtitle(ccdname, "Configuration", "config")
+
+    tty_move(0, nl++, "Camera information:")
+    msg = _limapar_get(ccdname, "camType")
+    tty_move(tabSpc, nl++, msg)
+    nl++
+    
+    tty_move(0, nl++, "(1) Configuration :")
+    _limamenu_printitem(ccdname, "pixelRate", items["pixelRate"], nl++,11)
+    _limamenu_printitem(ccdname, "rollingShutter", items["rollingShutter"], nl++,12)
+    nl++
+
+    option= getval("\n\n\tOption ---> ", 0)
+    printf("\n\n")
+
+    if(option==11){
+      _limapar_ask(ccdname, "pixelRate",items["pixelRate"])
+
+    } else if(option==12){
+      _limapar_ask(ccdname, "rollingShutter",items["rollingShutter"])
+      
+      p "Waiting for change the shutter (about 15s) ...."
+      sleep(3)
+      while( (s=_limapar_get(ccdname, "acq_status")) != "Ready"){ printf("+"); sleep(1);}
+      p
+      sleep(1)
+
+    for (parname in items) {
+      items[parname]= _limapar_get(ccdname, parname)
+    }
+
+    }
+    
+
+  }
+}'
+
+#=====================================================================
+#=====================================================================
+
+
+
+#%MACROS%
+#%IMACROS%
+#%TOC%
+#%AUTHOR% E.Petitdemange, $Revision: $, $Date: $

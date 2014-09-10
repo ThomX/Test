@@ -1,0 +1,11 @@
+*.ncb
+*.suo
+*.swp
+*.bck
+*.bak
+*~
+*target*
+*.vcproj.*user
+*.tmp
+PcoGitVersion.*
+[0-9]*

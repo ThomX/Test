@@ -1,0 +1,5 @@
+SHELL = /bin/sh
+CFLAGS_OS = -Wall -O -DUSE_PTHREADS
+OSTYPE = darwin
+
+include Mkfile

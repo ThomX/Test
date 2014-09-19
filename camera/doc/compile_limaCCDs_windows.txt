@@ -1,0 +1,1521 @@
+Setting environment for using Microsoft Visual Studio 2008 x86 tools.
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+Using solution cache file "libprocesslib.sln.cache" for configuration "Release|Win32" and tools version "3.5".
+Build started 16/09/2014 14:30:14.
+Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln" on node 0 (build target(s)).
+Building with tools version "3.5".
+Target "ValidateSolutionConfiguration" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln":
+Task "Error" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' != 'true')).
+Task "Warning" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' == 'true')).
+Using "Message" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Building solution configuration "Release|Win32".
+Done executing task "Message".
+Done building target "ValidateSolutionConfiguration" in project "libprocesslib.sln".
+Target "ValidateToolsVersions" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln":
+Task "Error" skipped, due to false condition; ('$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')) was evaluated as ('3.5' == '2.0' and ('' != '2.0' and '' != '')).
+Done building target "ValidateToolsVersions" in project "libprocesslib.sln".
+Target "Build" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln":
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel0) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel0) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel0) != '') was evaluated as ( != '').
+Using "CallTarget" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Using "VCBuild" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libprocesslib, Configurationÿ: Release|Win32
+  libprocesslib - … jour
+
+Done executing task "VCBuild".
+Done building target "libprocesslib" in project "libprocesslib.sln".
+Done executing task "CallTarget".
+Done building target "Build" in project "libprocesslib.sln".
+Done Building Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln" (build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.89
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+Using solution cache file "LimaCore.sln.cache" for configuration "Release|Win32" and tools version "3.5".
+Build started 16/09/2014 14:30:15.
+Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln" on node 0 (build target(s)).
+Building with tools version "3.5".
+Target "ValidateSolutionConfiguration" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "Error" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{A4B703A6-C50F-442F-8952-54FB8EA51FF3}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' != 'true')).
+Task "Warning" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{A4B703A6-C50F-442F-8952-54FB8EA51FF3}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' == 'true')).
+Using "Message" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Building solution configuration "Release|Win32".
+Done executing task "Message".
+Done building target "ValidateSolutionConfiguration" in project "LimaCore.sln".
+Target "ValidateToolsVersions" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "Error" skipped, due to false condition; ('$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')) was evaluated as ('3.5' == '2.0' and ('' != '2.0' and '' != '')).
+Done building target "ValidateToolsVersions" in project "LimaCore.sln".
+Target "Build" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel0) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel0) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel0) != '') was evaluated as ( != '').
+Using "CallTarget" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Using "VCBuild" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libprocesslib, Configurationÿ: Release|Win32
+  libprocesslib - … jour
+
+Done executing task "VCBuild".
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Done building target "libprocesslib" in project "LimaCore.sln".
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libconfig++" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libconfig++, Configurationÿ: Release|Win32
+  libconfig++ - … jour
+
+Done executing task "VCBuild".
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Done building target "libconfig++" in project "LimaCore.sln".
+Done executing task "CallTarget".
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel1) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel1) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel1) != '') was evaluated as ( != '').
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" skipped. Previously built successfully.
+Target "libconfig++" skipped. Previously built successfully.
+Target "LibLimaCore" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Using "CreateItem" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Using "ResolveVCProjectOutput" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\Release\libprocesslib.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\libconfig\lib\libconfig++.Release\libconfig++.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Using "CreateTemporaryVCProject" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateTemporaryVCProject"
+  MSBuild cr‚e un fichier projet VC temporaire "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj" pour le projet "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.vcproj" en rempla‡ant les r‚f‚rences de projet par des r‚f‚rences d'assembly. Cette ‚tape est n‚cessaire pour r‚soudre les r‚f‚rences de projet contenues dans ce projet. Pour ‚viter cette ‚tape … l'avenir, utilisez des r‚f‚rences de fichier et non des r‚f‚rences de projet dans ce projet.
+Done executing task "CreateTemporaryVCProject".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: LibLimaCore, Configurationÿ: Release|Win32
+  LibLimaCore - … jour
+
+Done executing task "VCBuild".
+Using "Delete" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Delete"
+  Suppression du fichier "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj".
+  Commandeÿ:
+  del "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj"
+Done executing task "Delete".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Done building target "LibLimaCore" in project "LimaCore.sln".
+Done executing task "CallTarget".
+Done building target "Build" in project "LimaCore.sln".
+Done Building Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln" (build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.15
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+MSBUILD : error MSB1009: Le fichier projet n'existe pas.
+Commutateurÿ:ÿLibLimaSPS_IMAGE.sln
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+Using solution cache file "LibLimaBASLER.sln.cache" for configuration "Release|Win32" and tools version "3.5".
+Build started 16/09/2014 14:30:18.
+Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln" on node 0 (build target(s)).
+Building with tools version "3.5".
+Target "ValidateSolutionConfiguration" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "Error" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{3E1490E7-66C0-4E77-9746-0632466FF270}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{A4B703A6-C50F-442F-8952-54FB8EA51FF3}">Release_Win7_Sync|Win32</ProjectConfiguration><ProjectConfiguration Project="{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' != 'true')).
+Task "Warning" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{3E1490E7-66C0-4E77-9746-0632466FF270}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{A4B703A6-C50F-442F-8952-54FB8EA51FF3}">Release_Win7_Sync|Win32</ProjectConfiguration><ProjectConfiguration Project="{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' == 'true')).
+Using "Message" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Building solution configuration "Release|Win32".
+Done executing task "Message".
+Done building target "ValidateSolutionConfiguration" in project "LibLimaBASLER.sln".
+Target "ValidateToolsVersions" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "Error" skipped, due to false condition; ('$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')) was evaluated as ('3.5' == '2.0' and ('' != '2.0' and '' != '')).
+Done building target "ValidateToolsVersions" in project "LibLimaBASLER.sln".
+Target "Build" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel0) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel0) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel0) != '') was evaluated as ( != '').
+Using "CallTarget" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Using "VCBuild" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libprocesslib, Configurationÿ: Release|Win32
+  libprocesslib - … jour
+
+Done executing task "VCBuild".
+Done building target "libprocesslib" in project "LibLimaBASLER.sln".
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libconfig++" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libconfig++, Configurationÿ: Release|Win32
+  libconfig++ - … jour
+
+Done executing task "VCBuild".
+Done building target "libconfig++" in project "LibLimaBASLER.sln".
+Done executing task "CallTarget".
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel1) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel1) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel1) != '') was evaluated as ( != '').
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" skipped. Previously built successfully.
+Target "libconfig++" skipped. Previously built successfully.
+Target "LibLimaCore" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Using "CreateItem" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Using "ResolveVCProjectOutput" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\Release\libprocesslib.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\libconfig\lib\libconfig++.Release\libconfig++.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Using "CreateTemporaryVCProject" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateTemporaryVCProject"
+  MSBuild cr‚e un fichier projet VC temporaire "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj" pour le projet "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.vcproj" en rempla‡ant les r‚f‚rences de projet par des r‚f‚rences d'assembly. Cette ‚tape est n‚cessaire pour r‚soudre les r‚f‚rences de projet contenues dans ce projet. Pour ‚viter cette ‚tape … l'avenir, utilisez des r‚f‚rences de fichier et non des r‚f‚rences de projet dans ce projet.
+Done executing task "CreateTemporaryVCProject".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj "Release_Win7_Sync|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: LibLimaCore, Configurationÿ: Release_Win7_Sync|Win32
+  LibLimaCore - … jour
+
+Done executing task "VCBuild".
+Using "Delete" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Delete"
+  Suppression du fichier "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj".
+  Commandeÿ:
+  del "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj"
+Done executing task "Delete".
+Done building target "LibLimaCore" in project "LibLimaBASLER.sln".
+Done executing task "CallTarget".
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel2) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel2) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel2) != '') was evaluated as ( != '').
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" skipped. Previously built successfully.
+Target "LibLimaCore" skipped. Previously built successfully.
+Target "LibLimaBasler" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\Release\libprocesslib.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\Release\LibLimaCore.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject"
+  MSBuild cr‚e un fichier projet VC temporaire "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.tmp_Release_Win32.vcproj" pour le projet "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.vcproj" en rempla‡ant les r‚f‚rences de projet par des r‚f‚rences d'assembly. Cette ‚tape est n‚cessaire pour r‚soudre les r‚f‚rences de projet contenues dans ce projet. Pour ‚viter cette ‚tape … l'avenir, utilisez des r‚f‚rences de fichier et non des r‚f‚rences de projet dans ce projet.
+Done executing task "CreateTemporaryVCProject".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.tmp_Release_Win32.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: LibLimaBasler, Configurationÿ: Release|Win32
+  LibLimaBasler - … jour
+
+Done executing task "VCBuild".
+Task "Delete"
+  Suppression du fichier "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.tmp_Release_Win32.vcproj".
+  Commandeÿ:
+  del "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.tmp_Release_Win32.vcproj"
+Done executing task "Delete".
+Done building target "LibLimaBasler" in project "LibLimaBASLER.sln".
+Done executing task "CallTarget".
+Done building target "Build" in project "LibLimaBASLER.sln".
+Done Building Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln" (build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.43
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+MSBUILD : error MSB1009: Le fichier projet n'existe pas.
+Commutateurÿ:ÿLibLimaCONFIG.sln
+C:\Python27\Lib\site-packages\PyQt4\sip -g -e -c . -b processlib.sbf processlib_tmp.sip
+C:\Python27\Lib\site-packages\PyQt4\sip -g -e -c . -t WIN32_PLATFORM -b limacore.sbf limacore_tmp.sip
+C:\Python27\Lib\site-packages\PyQt4\sip -g -e -c . -t WIN32_PLATFORM -b limabasler.sbf limabasler_tmp.sip
+File siplimabaslerBaslerCamera.cpp was modified
+File siplimabaslerBaslerInterface.cpp was modified
+	cl -c /I..\core\include /I..\tasks\include /I..\core\include\WindowSpecific /IC:\Python27\Lib\site-packages\PyQt4\include /IC:\Python27\lib\site-packages\numpy\core\include /EHsc -nologo -Zm200 -Zc:wchar_t- -O2 -MD -W3 -w34100 -w34189 -DNDEBUG -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -I. -I..\core\include -IC:\Python27\include -Fo @C:\Users\PCServer\AppData\Local\Temp\nm2A27.tmp
+sipprocesslibcmodule.cpp
+sipprocesslibTasksSoftRoi.cpp
+sipprocesslibTasksRotation.cpp
+sipprocesslibTasksRoiCounterTask.cpp
+sipprocesslibTasksRoiCounterResult.cpp
+sipprocesslibTasksRoiCounterManager.cpp
+sipprocesslibTasksRoi2SpectrumTask.cpp
+sipprocesslibTasksRoi2SpectrumResult.cpp
+sipprocesslibTasksRoi2SpectrumManager.cpp
+sipprocesslibTasksPeakFinderTask.cpp
+sipprocesslibTasksPeakFinderResult.cpp
+sipprocesslibTasksPeakFinderManager.cpp
+sipprocesslibTasksMask.cpp
+sipprocesslibTasksFlip.cpp
+sipprocesslibTasksFlatfieldCorrection.cpp
+sipprocesslibTasksBpmTask.cpp
+.\sipprocesslibTasksBpmTask.cpp(392) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+.\sipprocesslibTasksBpmTask.cpp(421) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+.\sipprocesslibTasksBpmTask.cpp(450) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+.\sipprocesslibTasksBpmTask.cpp(479) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+.\sipprocesslibTasksBpmTask.cpp(537) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+sipprocesslibTasksBpmResult.cpp
+.\sipprocesslibTasksBpmResult.cpp(149) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+sipprocesslibTasksBpmManager.cpp
+sipprocesslibTasksBinning.cpp
+sipprocesslibTasksBackgroundSubstraction.cpp
+G‚n‚ration de code en cours...
+Compilation en cours...
+sipprocesslibTasks.cpp
+sipprocesslibPoolThreadMgr.cpp
+sipprocesslibTaskMgrEventCallback.cpp
+sipprocesslibTaskMgr.cpp
+sipprocesslibSinkTaskBase.cpp
+sipprocesslibLinkTask.cpp
+sipprocesslibTaskEventCallback.cpp
+sipprocesslibDataHeaderContainer.cpp
+sipprocesslibData.cpp
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+sipprocesslibData_HeaderContainer_itemIterator.cpp
+G‚n‚ration de code en cours...
+	link /NOLOGO /DLL /MANIFEST /MANIFESTFILE:processlib.pyd.manifest /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" /INCREMENTAL:NO /OUT:processlib.pyd @C:\Users\PCServer\AppData\Local\Temp\nm88F9.tmp
+   Création de la bibliothèque processlib.lib et de l'objet processlib.exp
+	mt -nologo -manifest processlib.pyd.manifest -outputresource:processlib.pyd;2
+	cl -c /EHsc /DWITH_CONFIG -I"." -I"..\core" -I"..\..\third-party\Processlib\sip" -I"C:\Python27\lib\site-packages\numpy\core\include" -I"C:\Python27\Lib\site-packages\PyQt4\include" -I"..\..\third-party\Processlib\core\include" -I"..\..\third-party\Processlib\tasks\include" -I"..\..\third-party\Processlib\core\include\WindowSpecific" -I"..\..\common\include" -I"..\..\hardware\include" -I"..\..\control\include" -I"..\..\control\software_operation\include" -nologo -Zm200 -Zc:wchar_t- -O2 -MD -W3 -w34100 -w34189 -DNDEBUG -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -I. -I..\core -I..\..\third-party\Processlib\sip -IC:\Python27\lib\site-packages\numpy\core\include -IC:\Python27\Lib\site-packages\PyQt4\include -I..\..\third-party\Processlib\core\include -I..\..\third-party\Processlib\tasks\include -I..\..\third-party\Processlib\core\include\WindowSpecific -I..\..\common\include -I..\..\hardware\include -I..\..\control\include -I..\..\control\software_operation\include -IC:\Python27\include -Fo @C:\Users\PCServer\AppData\Local\Temp\nm8A7E.tmp
+lima_init_numpy.cpp
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacorecmodule.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreSoftUserSinkTask.cpp
+deprecated use new methods set
+siplimacoreSoftUserLinkTask.cpp
+deprecated use new methods set
+siplimacoreSoftCallback.cpp
+deprecated use new methods set
+siplimacoreSoftOpSoftRoi.cpp
+deprecated use new methods set
+siplimacoreSoftOpRoi2Spectrum.cpp
+deprecated use new methods set
+siplimacoreSoftOpRoiCounter.cpp
+deprecated use new methods set
+siplimacoreSoftOpMask.cpp
+deprecated use new methods set
+siplimacoreSoftOpFlip.cpp
+deprecated use new methods set
+siplimacoreSoftOpFlatfieldCorrection.cpp
+deprecated use new methods set
+siplimacoreSoftOpBpm.cpp
+deprecated use new methods set
+siplimacoreSoftOpBinning.cpp
+deprecated use new methods set
+siplimacoreSoftOpPeakFinder.cpp
+deprecated use new methods set
+siplimacorestdlist0100TasksPeakFinderResult.cpp
+deprecated use new methods set
+siplimacoreSoftOpBackgroundSubstraction.cpp
+deprecated use new methods set
+siplimacoreSoftOpKey.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoi2SpectrumRoiNameAndMode.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoi2SpectrumRoiNameAndTask.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoi2SpectrumRoiNameAndRoi.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacorestdlist0100SoftOpRoi2SpectrumRoiNameAndResults.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndTask.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndType.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndArcRoi.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndRoi.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndResults.cpp
+deprecated use new methods set
+siplimacoreSoftOpExternalMgr.cpp
+deprecated use new methods set
+siplimacoreCtVideoAutoGainModeList.cpp
+deprecated use new methods set
+siplimacoreCtVideoImageCallback.cpp
+deprecated use new methods set
+siplimacoreCtVideoImage.cpp
+deprecated use new methods set
+siplimacoreCtVideoParameters.cpp
+deprecated use new methods set
+siplimacoreCtVideo.cpp
+deprecated use new methods set
+siplimacoreCtShutter.cpp
+deprecated use new methods set
+siplimacoreCtSavingParameters.cpp
+deprecated use new methods set
+siplimacoreCtSaving.cpp
+deprecated use new methods set
+siplimacoreHeaderValue.cpp
+deprecated use new methods set
+siplimacoreHeaderMap.cpp
+deprecated use new methods set
+siplimacoreCtImage.cpp
+deprecated use new methods set
+siplimacoreCtHwBinRoiFlip.cpp
+deprecated use new methods set
+siplimacoreCtSwBinRoiFlip.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacoreCtEvent.cpp
+deprecated use new methods set
+siplimacoreCtControlStatus.cpp
+deprecated use new methods set
+siplimacoreCtControlImageStatusCallback.cpp
+deprecated use new methods set
+siplimacoreCtControlImageStatus.cpp
+deprecated use new methods set
+siplimacoreCtControl.cpp
+deprecated use new methods set
+siplimacoreCtConfigModuleTypeCallback.cpp
+deprecated use new methods set
+siplimacoreCtConfig.cpp
+deprecated use new methods set
+siplimacoreSetting.cpp
+deprecated use new methods set
+siplimacoreCtBufferParameters.cpp
+deprecated use new methods set
+siplimacoreCtBuffer.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreCtAcquisitionAutoExposureModeList.cpp
+deprecated use new methods set
+siplimacoreCtAcquisitionParameters.cpp
+deprecated use new methods set
+siplimacoreCtAcquisition.cpp
+deprecated use new methods set
+siplimacoreCtAccumulationThresholdCallback.cpp
+deprecated use new methods set
+siplimacoreCtAccumulationParameters.cpp
+deprecated use new methods set
+siplimacoreCtAccumulation.cpp
+deprecated use new methods set
+siplimacoreHwSyncCtrlObjValidRangesCallback.cpp
+deprecated use new methods set
+siplimacoreHwSyncCtrlObjValidRangesType.cpp
+deprecated use new methods set
+siplimacoreHwSyncCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwShutterCtrlObj.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacoreHwSerialLine.cpp
+deprecated use new methods set
+siplimacoreHwSavingCtrlObjCallback.cpp
+deprecated use new methods set
+siplimacoreHwSavingCtrlObj.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwRoiCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwMaxImageSizeCallbackGen.cpp
+deprecated use new methods set
+siplimacoreHwMaxImageSizeCallback.cpp
+deprecated use new methods set
+siplimacoreHwInterfaceStatusType.cpp
+deprecated use new methods set
+siplimacoreHwInterface.cpp
+deprecated use new methods set
+siplimacorestdvector0100HwCap.cpp
+deprecated use new methods set
+siplimacoreHwFrameInfoType.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwFrameCallback.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwFlipCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwEventCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwDetInfoCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwCap.cpp
+deprecated use new methods set
+siplimacoreHwBufferSave.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreBufferCtrlMgr.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreStdBufferCbMgr.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreBufferCbMgr.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwFrameCallbackGen.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacoreSoftBufferAllocMgr.cpp
+deprecated use new methods set
+siplimacoreBufferAllocMgr.cpp
+deprecated use new methods set
+siplimacoreHwBufferCtrlObj.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwBinCtrlObj.cpp
+deprecated use new methods set
+siplimacoreTimestamp.cpp
+deprecated use new methods set
+siplimacoreCond.cpp
+deprecated use new methods set
+siplimacoreMutex.cpp
+deprecated use new methods set
+siplimacoreMutexAttr.cpp
+deprecated use new methods set
+siplimacoreArcRoi.cpp
+deprecated use new methods set
+siplimacoreFrameDim.cpp
+deprecated use new methods set
+siplimacorestdlist0100Roi.cpp
+deprecated use new methods set
+siplimacoreRoi.cpp
+deprecated use new methods set
+siplimacoreFlip.cpp
+deprecated use new methods set
+siplimacoreBin.cpp
+deprecated use new methods set
+siplimacoreSize.cpp
+deprecated use new methods set
+siplimacoreCorner.cpp
+deprecated use new methods set
+siplimacorePoint.cpp
+deprecated use new methods set
+siplimacoreEventCallbackGen.cpp
+deprecated use new methods set
+siplimacoreEventCallback.cpp
+deprecated use new methods set
+siplimacoreEvent.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacoreDebObj.cpp
+deprecated use new methods set
+siplimacoreDebParams.cpp
+deprecated use new methods set
+siplimacoreRotationModeList.cpp
+deprecated use new methods set
+siplimacorestdlist0100VideoMode.cpp
+deprecated use new methods set
+siplimacoreShutterModeList.cpp
+deprecated use new methods set
+siplimacoreTrigModeList.cpp
+deprecated use new methods set
+siplimacoreAcqState.cpp
+deprecated use new methods set
+siplimacorestdlist0600stdlist3800.cpp
+deprecated use new methods set
+siplimacorestdlist1411.cpp
+deprecated use new methods set
+siplimacorestdlist0100stdstring.cpp
+deprecated use new methods set
+siplimacorestdmap18000600stdlist0100stdstring.cpp
+deprecated use new methods set
+siplimacorestdmap18000100stdstring.cpp
+deprecated use new methods set
+siplimacorestdlist1800.cpp
+deprecated use new methods set
+siplimacorestdlist2400.cpp
+deprecated use new methods set
+siplimacorestdvector2400.cpp
+deprecated use new methods set
+siplimacorestdvector2000.cpp
+deprecated use new methods set
+siplimacorestdvector1800.cpp
+deprecated use new methods set
+siplimacorestdvector0100stdstring.cpp
+deprecated use new methods set
+siplimacorestdstring.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+	link /NOLOGO /DLL /MANIFEST /MANIFESTFILE:limacore.pyd.manifest /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" /INCREMENTAL:NO /OUT:limacore.pyd @C:\Users\PCServer\AppData\Local\Temp\nm17D0.tmp
+   Création de la bibliothèque limacore.lib et de l'objet limacore.exp
+	mt -nologo -manifest limacore.pyd.manifest -outputresource:limacore.pyd;2
+	cl -c /EHsc /DWITH_CONFIG -DUSE_GIGE -I"." -I"..\core" -I"..\..\third-party\Processlib\sip" -I"C:\Python27\lib\site-packages\numpy\core\include" -I"C:\Python27\Lib\site-packages\PyQt4\include" -I"..\..\third-party\Processlib\core\include" -I"..\..\third-party\Processlib\tasks\include" -I"..\..\third-party\Processlib\core\include\WindowSpecific" -I"..\..\common\include" -I"..\..\hardware\include" -I"..\..\control\include" -I"..\..\control\software_operation\include" -I"C:\Program Files\Basler\pylon 4\genicam\library\cpp\include" -I"C:\Program Files\Basler\pylon 4\pylon\include" -I"..\..\camera\basler\include" -nologo -Zm200 -Zc:wchar_t- -O2 -MD -W3 -w34100 -w34189 -DNDEBUG -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -I. -I..\core -I..\..\third-party\Processlib\sip -IC:\Python27\lib\site-packages\numpy\core\include -IC:\Python27\Lib\site-packages\PyQt4\include -I..\..\third-party\Processlib\core\include -I..\..\third-party\Processlib\tasks\include -I..\..\third-party\Processlib\core\include\WindowSpecific -I..\..\common\include -I..\..\hardware\include -I..\..\control\include -I..\..\control\software_operation\include -I"C:\Program Files\Basler\pylon 4\genicam\library\cpp\include" -I"C:\Program Files\Basler\pylon 4\pylon\include" -I..\..\camera\basler\include -IC:\Python27\include -Fo @C:\Users\PCServer\AppData\Local\Temp\nm1AFA.tmp
+lima_init_numpy.cpp
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimabaslercmodule.cpp
+siplimabaslerBaslerInterface.cpp
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(40) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(41) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(42) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(43) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(44) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+siplimabaslerBaslerCamera.cpp
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(40) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(41) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(42) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(43) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(44) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+siplimabaslerBasler.cpp
+G‚n‚ration de code en cours...
+	link /NOLOGO /DLL /MANIFEST /MANIFESTFILE:limabasler.pyd.manifest /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" /INCREMENTAL:NO /OUT:limabasler.pyd @C:\Users\PCServer\AppData\Local\Temp\nm2ED9.tmp
+   Création de la bibliothèque limabasler.lib et de l'objet limabasler.exp
+	mt -nologo -manifest limabasler.pyd.manifest -outputresource:limabasler.pyd;2
+Create empty file C:\Python27\Lib\site-packages\Lima\__init__.py
+Copy common/python/Core.py C:\Python27\Lib\site-packages\Lima
+Copy common/python/Debug.py C:\Python27\Lib\site-packages\Lima
+Setting environment for using Microsoft Visual Studio 2008 x86 tools.
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+Using solution cache file "libprocesslib.sln.cache" for configuration "Release|Win32" and tools version "3.5".
+Build started 16/09/2014 14:36:58.
+Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln" on node 0 (build target(s)).
+Building with tools version "3.5".
+Target "ValidateSolutionConfiguration" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln":
+Task "Error" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' != 'true')).
+Task "Warning" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' == 'true')).
+Using "Message" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Building solution configuration "Release|Win32".
+Done executing task "Message".
+Done building target "ValidateSolutionConfiguration" in project "libprocesslib.sln".
+Target "ValidateToolsVersions" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln":
+Task "Error" skipped, due to false condition; ('$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')) was evaluated as ('3.5' == '2.0' and ('' != '2.0' and '' != '')).
+Done building target "ValidateToolsVersions" in project "libprocesslib.sln".
+Target "Build" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln":
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel0) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel0) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel0) != '') was evaluated as ( != '').
+Using "CallTarget" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Using "VCBuild" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libprocesslib, Configurationÿ: Release|Win32
+  libprocesslib - … jour
+
+Done executing task "VCBuild".
+Done building target "libprocesslib" in project "libprocesslib.sln".
+Done executing task "CallTarget".
+Done building target "Build" in project "libprocesslib.sln".
+Done Building Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.sln" (build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.67
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+Using solution cache file "LimaCore.sln.cache" for configuration "Release|Win32" and tools version "3.5".
+Build started 16/09/2014 14:36:59.
+Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln" on node 0 (build target(s)).
+Building with tools version "3.5".
+Target "ValidateSolutionConfiguration" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "Error" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{A4B703A6-C50F-442F-8952-54FB8EA51FF3}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' != 'true')).
+Task "Warning" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{A4B703A6-C50F-442F-8952-54FB8EA51FF3}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' == 'true')).
+Using "Message" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Building solution configuration "Release|Win32".
+Done executing task "Message".
+Done building target "ValidateSolutionConfiguration" in project "LimaCore.sln".
+Target "ValidateToolsVersions" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "Error" skipped, due to false condition; ('$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')) was evaluated as ('3.5' == '2.0' and ('' != '2.0' and '' != '')).
+Done building target "ValidateToolsVersions" in project "LimaCore.sln".
+Target "Build" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel0) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel0) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel0) != '') was evaluated as ( != '').
+Using "CallTarget" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Using "VCBuild" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libprocesslib, Configurationÿ: Release|Win32
+  libprocesslib - … jour
+
+Done executing task "VCBuild".
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Done building target "libprocesslib" in project "LimaCore.sln".
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libconfig++" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libconfig++, Configurationÿ: Release|Win32
+  libconfig++ - … jour
+
+Done executing task "VCBuild".
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Done building target "libconfig++" in project "LimaCore.sln".
+Done executing task "CallTarget".
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel1) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel1) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel1) != '') was evaluated as ( != '').
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" skipped. Previously built successfully.
+Target "libconfig++" skipped. Previously built successfully.
+Target "LibLimaCore" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln":
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Using "CreateItem" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'x64') ).
+Using "ResolveVCProjectOutput" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\Release\libprocesslib.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\libconfig\lib\libconfig++.Release\libconfig++.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Using "CreateTemporaryVCProject" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateTemporaryVCProject"
+  MSBuild cr‚e un fichier projet VC temporaire "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj" pour le projet "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.vcproj" en rempla‡ant les r‚f‚rences de projet par des r‚f‚rences d'assembly. Cette ‚tape est n‚cessaire pour r‚soudre les r‚f‚rences de projet contenues dans ce projet. Pour ‚viter cette ‚tape … l'avenir, utilisez des r‚f‚rences de fichier et non des r‚f‚rences de projet dans ce projet.
+Done executing task "CreateTemporaryVCProject".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: LibLimaCore, Configurationÿ: Release|Win32
+  LibLimaCore - … jour
+
+Done executing task "VCBuild".
+Using "Delete" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Delete"
+  Suppression du fichier "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj".
+  Commandeÿ:
+  del "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj"
+Done executing task "Delete".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x64') ) was evaluated as ( ('Release' == 'Release') and ('Win32' == 'x64') ).
+Done building target "LibLimaCore" in project "LimaCore.sln".
+Done executing task "CallTarget".
+Done building target "Build" in project "LimaCore.sln".
+Done Building Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\LimaCore.sln" (build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.75
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+MSBUILD : error MSB1009: Le fichier projet n'existe pas.
+Commutateurÿ:ÿLibLimaSPS_IMAGE.sln
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+Using solution cache file "LibLimaBASLER.sln.cache" for configuration "Release|Win32" and tools version "3.5".
+Build started 16/09/2014 14:37:01.
+Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln" on node 0 (build target(s)).
+Building with tools version "3.5".
+Target "ValidateSolutionConfiguration" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "Error" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{3E1490E7-66C0-4E77-9746-0632466FF270}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{A4B703A6-C50F-442F-8952-54FB8EA51FF3}">Release_Win7_Sync|Win32</ProjectConfiguration><ProjectConfiguration Project="{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' != 'true')).
+Task "Warning" skipped, due to false condition; (('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')) was evaluated as (('<SolutionConfiguration xmlns=""><ProjectConfiguration Project="{3E1490E7-66C0-4E77-9746-0632466FF270}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{F6556656-D091-43AF-B46F-355F4ABA5DB6}">Release|Win32</ProjectConfiguration><ProjectConfiguration Project="{A4B703A6-C50F-442F-8952-54FB8EA51FF3}">Release_Win7_Sync|Win32</ProjectConfiguration><ProjectConfiguration Project="{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}">Release|Win32</ProjectConfiguration></SolutionConfiguration>' == '') and ('' == 'true')).
+Using "Message" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Building solution configuration "Release|Win32".
+Done executing task "Message".
+Done building target "ValidateSolutionConfiguration" in project "LibLimaBASLER.sln".
+Target "ValidateToolsVersions" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "Error" skipped, due to false condition; ('$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')) was evaluated as ('3.5' == '2.0' and ('' != '2.0' and '' != '')).
+Done building target "ValidateToolsVersions" in project "LibLimaBASLER.sln".
+Target "Build" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel0) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel0) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel0) != '') was evaluated as ( != '').
+Using "CallTarget" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Using "VCBuild" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libprocesslib, Configurationÿ: Release|Win32
+  libprocesslib - … jour
+
+Done executing task "VCBuild".
+Done building target "libprocesslib" in project "LibLimaBASLER.sln".
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libconfig++" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: libconfig++, Configurationÿ: Release|Win32
+  libconfig++ - … jour
+
+Done executing task "VCBuild".
+Done building target "libconfig++" in project "LibLimaBASLER.sln".
+Done executing task "CallTarget".
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel1) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel1) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel1) != '') was evaluated as ( != '').
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" skipped. Previously built successfully.
+Target "libconfig++" skipped. Previously built successfully.
+Target "LibLimaCore" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Using "CreateItem" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Using "ResolveVCProjectOutput" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\Release\libprocesslib.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\libconfig\lib\libconfig++.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\libconfig\lib\libconfig++.Release\libconfig++.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Using "CreateTemporaryVCProject" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "CreateTemporaryVCProject"
+  MSBuild cr‚e un fichier projet VC temporaire "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj" pour le projet "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.vcproj" en rempla‡ant les r‚f‚rences de projet par des r‚f‚rences d'assembly. Cette ‚tape est n‚cessaire pour r‚soudre les r‚f‚rences de projet contenues dans ce projet. Pour ‚viter cette ‚tape … l'avenir, utilisez des r‚f‚rences de fichier et non des r‚f‚rences de projet dans ce projet.
+Done executing task "CreateTemporaryVCProject".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj "Release_Win7_Sync|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: LibLimaCore, Configurationÿ: Release_Win7_Sync|Win32
+  LibLimaCore - … jour
+
+Done executing task "VCBuild".
+Using "Delete" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Delete"
+  Suppression du fichier "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj".
+  Commandeÿ:
+  del "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.tmp_Release_Win32.vcproj"
+Done executing task "Delete".
+Done building target "LibLimaCore" in project "LibLimaBASLER.sln".
+Done executing task "CallTarget".
+Task "MSBuild" skipped, due to false condition; (@(BuildLevel2) != '') was evaluated as ( != '').
+Task "Message" skipped, due to false condition; (@(SkipLevel2) != '') was evaluated as ( != '').
+Task "Warning" skipped, due to false condition; (@(MissingConfigLevel2) != '') was evaluated as ( != '').
+Task "CallTarget"
+Target "ValidateSolutionConfiguration" skipped. Previously built successfully.
+Target "ValidateToolsVersions" skipped. Previously built successfully.
+Target "libprocesslib" skipped. Previously built successfully.
+Target "LibLimaCore" skipped. Previously built successfully.
+Target "LibLimaBasler" in file "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln.cache" from project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln":
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Debug') and ('Win32' == 'Win32') ).
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "VCBuild" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "Delete" skipped, due to false condition; ( ('$(Configuration)' == 'Release_Win7_Sync') and ('$(Platform)' == 'Win32') ) was evaluated as ( ('Release' == 'Release_Win7_Sync') and ('Win32' == 'Win32') ).
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\third-party\Processlib\build\msvc\9.0\libprocesslib\libprocesslib.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\third-party\Processlib\build\msvc\9.0\libprocesslib\Release\libprocesslib.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "ResolveVCProjectOutput"
+  R‚solution de la r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.vcproj".
+  La r‚f‚rence du projet VC "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\..\..\..\..\..\..\build\msvc\9.0\LimaCore\LimaCore.vcproj" a ‚t‚ interpr‚t‚e comme "c:\Users\PCServer\Documents\GitHub\lima\Lima\build\msvc\9.0\LimaCore\Release\LibLimaCore.lib".
+Done executing task "ResolveVCProjectOutput".
+Task "CreateItem"
+Done executing task "CreateItem".
+Task "CreateTemporaryVCProject"
+  MSBuild cr‚e un fichier projet VC temporaire "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.tmp_Release_Win32.vcproj" pour le projet "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.vcproj" en rempla‡ant les r‚f‚rences de projet par des r‚f‚rences d'assembly. Cette ‚tape est n‚cessaire pour r‚soudre les r‚f‚rences de projet contenues dans ce projet. Pour ‚viter cette ‚tape … l'avenir, utilisez des r‚f‚rences de fichier et non des r‚f‚rences de projet dans ce projet.
+Done executing task "CreateTemporaryVCProject".
+Task "VCBuild"
+
+  Localisation de vcbuild.exeÿ: trouv‚ dans "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  Command:
+  C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.tmp_Release_Win32.vcproj "Release|Win32" 
+  The "VCBuild" task is using "VCBuild.exe" from "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".
+  G‚n‚rateur de projet Microsoft (R) Visual C++ - Version de ligne de commande 9.00.21022
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+  G‚n‚rer d‚marr‚eÿ: Projetÿ: LibLimaBasler, Configurationÿ: Release|Win32
+  LibLimaBasler - … jour
+
+Done executing task "VCBuild".
+Task "Delete"
+  Suppression du fichier "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.tmp_Release_Win32.vcproj".
+  Commandeÿ:
+  del "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBasler.tmp_Release_Win32.vcproj"
+Done executing task "Delete".
+Done building target "LibLimaBasler" in project "LibLimaBASLER.sln".
+Done executing task "CallTarget".
+Done building target "Build" in project "LibLimaBASLER.sln".
+Done Building Project "C:\Users\PCServer\Documents\GitHub\lima\Lima\camera\basler\build\msvc\9.0\LibBasler\LibLimaBASLER.sln" (build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.02
+Microsoft (R) Build Engine, Version 3.5.30729.5420
+[Microsoft .NET Framework, Version 2.0.50727.5477]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+MSBUILD : error MSB1009: Le fichier projet n'existe pas.
+Commutateurÿ:ÿLibLimaCONFIG.sln
+C:\Python27\Lib\site-packages\PyQt4\sip -g -e -c . -b processlib.sbf processlib_tmp.sip
+C:\Python27\Lib\site-packages\PyQt4\sip -g -e -c . -t WIN32_PLATFORM -b limacore.sbf limacore_tmp.sip
+C:\Python27\Lib\site-packages\PyQt4\sip -g -e -c . -t WIN32_PLATFORM -b limabasler.sbf limabasler_tmp.sip
+File siplimabaslerBaslerCamera.cpp was modified
+File siplimabaslerBaslerInterface.cpp was modified
+	cl -c /I..\core\include /I..\tasks\include /I..\core\include\WindowSpecific /IC:\Python27\Lib\site-packages\PyQt4\include /IC:\Python27\lib\site-packages\numpy\core\include /EHsc -nologo -Zm200 -Zc:wchar_t- -O2 -MD -W3 -w34100 -w34189 -DNDEBUG -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -I. -I..\core\include -IC:\Python27\include -Fo @C:\Users\PCServer\AppData\Local\Temp\nm49B8.tmp
+sipprocesslibcmodule.cpp
+sipprocesslibTasksSoftRoi.cpp
+sipprocesslibTasksRotation.cpp
+sipprocesslibTasksRoiCounterTask.cpp
+sipprocesslibTasksRoiCounterResult.cpp
+sipprocesslibTasksRoiCounterManager.cpp
+sipprocesslibTasksRoi2SpectrumTask.cpp
+sipprocesslibTasksRoi2SpectrumResult.cpp
+sipprocesslibTasksRoi2SpectrumManager.cpp
+sipprocesslibTasksPeakFinderTask.cpp
+sipprocesslibTasksPeakFinderResult.cpp
+sipprocesslibTasksPeakFinderManager.cpp
+sipprocesslibTasksMask.cpp
+sipprocesslibTasksFlip.cpp
+sipprocesslibTasksFlatfieldCorrection.cpp
+sipprocesslibTasksBpmTask.cpp
+.\sipprocesslibTasksBpmTask.cpp(392) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+.\sipprocesslibTasksBpmTask.cpp(421) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+.\sipprocesslibTasksBpmTask.cpp(450) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+.\sipprocesslibTasksBpmTask.cpp(479) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+.\sipprocesslibTasksBpmTask.cpp(537) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+sipprocesslibTasksBpmResult.cpp
+.\sipprocesslibTasksBpmResult.cpp(149) : warning C4800: 'long'ÿ: valeur forc‚e … la valeur bool‚enne 'true' ou 'false' (avertissement sur les performances)
+sipprocesslibTasksBpmManager.cpp
+sipprocesslibTasksBinning.cpp
+sipprocesslibTasksBackgroundSubstraction.cpp
+G‚n‚ration de code en cours...
+Compilation en cours...
+sipprocesslibTasks.cpp
+sipprocesslibPoolThreadMgr.cpp
+sipprocesslibTaskMgrEventCallback.cpp
+sipprocesslibTaskMgr.cpp
+sipprocesslibSinkTaskBase.cpp
+sipprocesslibLinkTask.cpp
+sipprocesslibTaskEventCallback.cpp
+sipprocesslibDataHeaderContainer.cpp
+sipprocesslibData.cpp
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+sipprocesslibData_HeaderContainer_itemIterator.cpp
+G‚n‚ration de code en cours...
+	link /NOLOGO /DLL /MANIFEST /MANIFESTFILE:processlib.pyd.manifest /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" /INCREMENTAL:NO /OUT:processlib.pyd @C:\Users\PCServer\AppData\Local\Temp\nmA456.tmp
+   Création de la bibliothèque processlib.lib et de l'objet processlib.exp
+	mt -nologo -manifest processlib.pyd.manifest -outputresource:processlib.pyd;2
+	cl -c /EHsc /DWITH_CONFIG -I"." -I"..\core" -I"..\..\third-party\Processlib\sip" -I"C:\Python27\lib\site-packages\numpy\core\include" -I"C:\Python27\Lib\site-packages\PyQt4\include" -I"..\..\third-party\Processlib\core\include" -I"..\..\third-party\Processlib\tasks\include" -I"..\..\third-party\Processlib\core\include\WindowSpecific" -I"..\..\common\include" -I"..\..\hardware\include" -I"..\..\control\include" -I"..\..\control\software_operation\include" -nologo -Zm200 -Zc:wchar_t- -O2 -MD -W3 -w34100 -w34189 -DNDEBUG -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -I. -I..\core -I..\..\third-party\Processlib\sip -IC:\Python27\lib\site-packages\numpy\core\include -IC:\Python27\Lib\site-packages\PyQt4\include -I..\..\third-party\Processlib\core\include -I..\..\third-party\Processlib\tasks\include -I..\..\third-party\Processlib\core\include\WindowSpecific -I..\..\common\include -I..\..\hardware\include -I..\..\control\include -I..\..\control\software_operation\include -IC:\Python27\include -Fo @C:\Users\PCServer\AppData\Local\Temp\nmA59D.tmp
+lima_init_numpy.cpp
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacorecmodule.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreSoftUserSinkTask.cpp
+deprecated use new methods set
+siplimacoreSoftUserLinkTask.cpp
+deprecated use new methods set
+siplimacoreSoftCallback.cpp
+deprecated use new methods set
+siplimacoreSoftOpSoftRoi.cpp
+deprecated use new methods set
+siplimacoreSoftOpRoi2Spectrum.cpp
+deprecated use new methods set
+siplimacoreSoftOpRoiCounter.cpp
+deprecated use new methods set
+siplimacoreSoftOpMask.cpp
+deprecated use new methods set
+siplimacoreSoftOpFlip.cpp
+deprecated use new methods set
+siplimacoreSoftOpFlatfieldCorrection.cpp
+deprecated use new methods set
+siplimacoreSoftOpBpm.cpp
+deprecated use new methods set
+siplimacoreSoftOpBinning.cpp
+deprecated use new methods set
+siplimacoreSoftOpPeakFinder.cpp
+deprecated use new methods set
+siplimacorestdlist0100TasksPeakFinderResult.cpp
+deprecated use new methods set
+siplimacoreSoftOpBackgroundSubstraction.cpp
+deprecated use new methods set
+siplimacoreSoftOpKey.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoi2SpectrumRoiNameAndMode.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoi2SpectrumRoiNameAndTask.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoi2SpectrumRoiNameAndRoi.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacorestdlist0100SoftOpRoi2SpectrumRoiNameAndResults.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndTask.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndType.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndArcRoi.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndRoi.cpp
+deprecated use new methods set
+siplimacorestdlist0100SoftOpRoiCounterRoiNameAndResults.cpp
+deprecated use new methods set
+siplimacoreSoftOpExternalMgr.cpp
+deprecated use new methods set
+siplimacoreCtVideoAutoGainModeList.cpp
+deprecated use new methods set
+siplimacoreCtVideoImageCallback.cpp
+deprecated use new methods set
+siplimacoreCtVideoImage.cpp
+deprecated use new methods set
+siplimacoreCtVideoParameters.cpp
+deprecated use new methods set
+siplimacoreCtVideo.cpp
+deprecated use new methods set
+siplimacoreCtShutter.cpp
+deprecated use new methods set
+siplimacoreCtSavingParameters.cpp
+deprecated use new methods set
+siplimacoreCtSaving.cpp
+deprecated use new methods set
+siplimacoreHeaderValue.cpp
+deprecated use new methods set
+siplimacoreHeaderMap.cpp
+deprecated use new methods set
+siplimacoreCtImage.cpp
+deprecated use new methods set
+siplimacoreCtHwBinRoiFlip.cpp
+deprecated use new methods set
+siplimacoreCtSwBinRoiFlip.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacoreCtEvent.cpp
+deprecated use new methods set
+siplimacoreCtControlStatus.cpp
+deprecated use new methods set
+siplimacoreCtControlImageStatusCallback.cpp
+deprecated use new methods set
+siplimacoreCtControlImageStatus.cpp
+deprecated use new methods set
+siplimacoreCtControl.cpp
+deprecated use new methods set
+siplimacoreCtConfigModuleTypeCallback.cpp
+deprecated use new methods set
+siplimacoreCtConfig.cpp
+deprecated use new methods set
+siplimacoreSetting.cpp
+deprecated use new methods set
+siplimacoreCtBufferParameters.cpp
+deprecated use new methods set
+siplimacoreCtBuffer.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreCtAcquisitionAutoExposureModeList.cpp
+deprecated use new methods set
+siplimacoreCtAcquisitionParameters.cpp
+deprecated use new methods set
+siplimacoreCtAcquisition.cpp
+deprecated use new methods set
+siplimacoreCtAccumulationThresholdCallback.cpp
+deprecated use new methods set
+siplimacoreCtAccumulationParameters.cpp
+deprecated use new methods set
+siplimacoreCtAccumulation.cpp
+deprecated use new methods set
+siplimacoreHwSyncCtrlObjValidRangesCallback.cpp
+deprecated use new methods set
+siplimacoreHwSyncCtrlObjValidRangesType.cpp
+deprecated use new methods set
+siplimacoreHwSyncCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwShutterCtrlObj.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacoreHwSerialLine.cpp
+deprecated use new methods set
+siplimacoreHwSavingCtrlObjCallback.cpp
+deprecated use new methods set
+siplimacoreHwSavingCtrlObj.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwRoiCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwMaxImageSizeCallbackGen.cpp
+deprecated use new methods set
+siplimacoreHwMaxImageSizeCallback.cpp
+deprecated use new methods set
+siplimacoreHwInterfaceStatusType.cpp
+deprecated use new methods set
+siplimacoreHwInterface.cpp
+deprecated use new methods set
+siplimacorestdvector0100HwCap.cpp
+deprecated use new methods set
+siplimacoreHwFrameInfoType.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwFrameCallback.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwFlipCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwEventCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwDetInfoCtrlObj.cpp
+deprecated use new methods set
+siplimacoreHwCap.cpp
+deprecated use new methods set
+siplimacoreHwBufferSave.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreBufferCtrlMgr.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreStdBufferCbMgr.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreBufferCbMgr.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwFrameCallbackGen.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacoreSoftBufferAllocMgr.cpp
+deprecated use new methods set
+siplimacoreBufferAllocMgr.cpp
+deprecated use new methods set
+siplimacoreHwBufferCtrlObj.cpp
+deprecated use new methods set
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimacoreHwBinCtrlObj.cpp
+deprecated use new methods set
+siplimacoreTimestamp.cpp
+deprecated use new methods set
+siplimacoreCond.cpp
+deprecated use new methods set
+siplimacoreMutex.cpp
+deprecated use new methods set
+siplimacoreMutexAttr.cpp
+deprecated use new methods set
+siplimacoreArcRoi.cpp
+deprecated use new methods set
+siplimacoreFrameDim.cpp
+deprecated use new methods set
+siplimacorestdlist0100Roi.cpp
+deprecated use new methods set
+siplimacoreRoi.cpp
+deprecated use new methods set
+siplimacoreFlip.cpp
+deprecated use new methods set
+siplimacoreBin.cpp
+deprecated use new methods set
+siplimacoreSize.cpp
+deprecated use new methods set
+siplimacoreCorner.cpp
+deprecated use new methods set
+siplimacorePoint.cpp
+deprecated use new methods set
+siplimacoreEventCallbackGen.cpp
+deprecated use new methods set
+siplimacoreEventCallback.cpp
+deprecated use new methods set
+siplimacoreEvent.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+Compilation en cours...
+siplimacoreDebObj.cpp
+deprecated use new methods set
+siplimacoreDebParams.cpp
+deprecated use new methods set
+siplimacoreRotationModeList.cpp
+deprecated use new methods set
+siplimacorestdlist0100VideoMode.cpp
+deprecated use new methods set
+siplimacoreShutterModeList.cpp
+deprecated use new methods set
+siplimacoreTrigModeList.cpp
+deprecated use new methods set
+siplimacoreAcqState.cpp
+deprecated use new methods set
+siplimacorestdlist0600stdlist3800.cpp
+deprecated use new methods set
+siplimacorestdlist1411.cpp
+deprecated use new methods set
+siplimacorestdlist0100stdstring.cpp
+deprecated use new methods set
+siplimacorestdmap18000600stdlist0100stdstring.cpp
+deprecated use new methods set
+siplimacorestdmap18000100stdstring.cpp
+deprecated use new methods set
+siplimacorestdlist1800.cpp
+deprecated use new methods set
+siplimacorestdlist2400.cpp
+deprecated use new methods set
+siplimacorestdvector2400.cpp
+deprecated use new methods set
+siplimacorestdvector2000.cpp
+deprecated use new methods set
+siplimacorestdvector1800.cpp
+deprecated use new methods set
+siplimacorestdvector0100stdstring.cpp
+deprecated use new methods set
+siplimacorestdstring.cpp
+deprecated use new methods set
+G‚n‚ration de code en cours...
+	link /NOLOGO /DLL /MANIFEST /MANIFESTFILE:limacore.pyd.manifest /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" /INCREMENTAL:NO /OUT:limacore.pyd @C:\Users\PCServer\AppData\Local\Temp\nm2FD3.tmp
+   Création de la bibliothèque limacore.lib et de l'objet limacore.exp
+	mt -nologo -manifest limacore.pyd.manifest -outputresource:limacore.pyd;2
+	cl -c /EHsc /DWITH_CONFIG -DUSE_GIGE -I"." -I"..\core" -I"..\..\third-party\Processlib\sip" -I"C:\Python27\lib\site-packages\numpy\core\include" -I"C:\Python27\Lib\site-packages\PyQt4\include" -I"..\..\third-party\Processlib\core\include" -I"..\..\third-party\Processlib\tasks\include" -I"..\..\third-party\Processlib\core\include\WindowSpecific" -I"..\..\common\include" -I"..\..\hardware\include" -I"..\..\control\include" -I"..\..\control\software_operation\include" -I"C:\Program Files\Basler\pylon 4\genicam\library\cpp\include" -I"C:\Program Files\Basler\pylon 4\pylon\include" -I"..\..\camera\basler\include" -nologo -Zm200 -Zc:wchar_t- -O2 -MD -W3 -w34100 -w34189 -DNDEBUG -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -I. -I..\core -I..\..\third-party\Processlib\sip -IC:\Python27\lib\site-packages\numpy\core\include -IC:\Python27\Lib\site-packages\PyQt4\include -I..\..\third-party\Processlib\core\include -I..\..\third-party\Processlib\tasks\include -I..\..\third-party\Processlib\core\include\WindowSpecific -I..\..\common\include -I..\..\hardware\include -I..\..\control\include -I..\..\control\software_operation\include -I"C:\Program Files\Basler\pylon 4\genicam\library\cpp\include" -I"C:\Program Files\Basler\pylon 4\pylon\include" -I..\..\camera\basler\include -IC:\Python27\include -Fo @C:\Users\PCServer\AppData\Local\Temp\nm32FD.tmp
+lima_init_numpy.cpp
+c:\python27\lib\site-packages\numpy\core\include\numpy\npy_1_7_deprecated_api.h(12) : Warning Msg: Using deprecated NumPy API, disable it by #defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+siplimabaslercmodule.cpp
+siplimabaslerBaslerInterface.cpp
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(40) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(41) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(42) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(43) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(44) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+siplimabaslerBaslerCamera.cpp
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(40) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(41) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(42) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(43) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+c:\program files\basler\pylon 4\genicam\library\cpp\include\genapi\GenApiLinkage.h(44) : warning C4081: attendu ')'ÿ; rencontr‚ '('
+siplimabaslerBasler.cpp
+G‚n‚ration de code en cours...
+	link /NOLOGO /DLL /MANIFEST /MANIFESTFILE:limabasler.pyd.manifest /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" /INCREMENTAL:NO /OUT:limabasler.pyd @C:\Users\PCServer\AppData\Local\Temp\nm44F8.tmp
+   Création de la bibliothèque limabasler.lib et de l'objet limabasler.exp
+	mt -nologo -manifest limabasler.pyd.manifest -outputresource:limabasler.pyd;2
+Create empty file C:\Python27\Lib\site-packages\Lima\__init__.py
+Copy common/python/Core.py C:\Python27\Lib\site-packages\Lima
+Copy common/python/Debug.py C:\Python27\Lib\site-packages\Lima
+Copy build/msvc/9.0/LimaCore/Release/LibLimaCore.dll C:\Python27\Lib\site-packages\Lima
+Copy third-party\libconfig\lib\libconfig++.Release\libconfig++.dll C:\Python27\Lib\site-packages\Lima
+Copy sip/core/limacore.pyd C:\Python27\Lib\site-packages\Lima
+Copy third-party/Processlib/sip/processlib.pyd C:\Python27\Lib\site-packages\Lima
+Copy third-party/Processlib/build/msvc/9.0/libprocesslib/Release/libprocesslib.dll C:\Python27\Lib\site-packages\Lima
+Copy applications/tango/LimaCCDs.py C:\Python27\Lib\site-packages\
+Copy applications/tango/AttrHelper.py C:\Python27\Lib\site-packages\
+Copy applications/tango/EnvHelper.py C:\Python27\Lib\site-packages\
+Copy applications/tango/camera/__init__.py C:\Python27\Lib\site-packages\camera
+Copytree applications/tango/plugins C:\Python27\Lib\site-packages\plugins
+Copy camera/basler/python/Basler.py C:\Python27\Lib\site-packages\Lima
+Copy camera/basler/build/msvc/9.0/LibBasler/Release/liblimabasler.dll C:\Python27\Lib\site-packages\Lima
+Copy sip/basler/limabasler.pyd C:\Python27\Lib\site-packages\Lima

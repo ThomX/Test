@@ -2,8 +2,8 @@ Fonctionnement d'une caméra sous LIMA :
 =======================================
 
 
-Configuration :
----------------
+Configuration sous linux :
+--------------------------
 
 - ouvrir Jive
 - lancer Tools/Server Wizard :
@@ -49,8 +49,9 @@ Configuration :
 
 
 
-Erreurs :
----------
+Erreurs sous linux :
+--------------------
+
 - Le message suivant s'affiche après configuration de la classe Basler :
   | server restart : Would you like to reinitialize the server
 

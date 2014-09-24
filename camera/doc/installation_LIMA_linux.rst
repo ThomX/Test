@@ -1,16 +1,21 @@
-Contexte:
+Contexte :
+----------
 
 - tango v.7...
 - archi: Linux 2.6.32-41-generic #90-Ubuntu SMP Tue May 22 11:31:25 UTC 2012 i686 GNU/Linux
 - camera Basler Scout (non plugged)
 
 Prérequis :
+-----------
 
 - python 2.6.5 installé
 - gcc 4.4.3
 - git 1.7.0.4
 
-Actions (p9-11 doc http://lima.blissgarden.org/latex/Lima.pdf):
+Actions :
+---------
+
+Source : p9-11 doc http://lima.blissgarden.org/latex/Lima.pdf
 
 - Pylon:
 |  get pylon-3.2.1-x68.tar.gz

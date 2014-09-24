@@ -9,7 +9,7 @@ Configuration
 - caméra Basler ACE acA640-100gm (renommée par Basler dernièrement acA640-120gm)
 
 Essais précédents faits :
---------------------
+-------------------------
 - nous arrivons à voir des images avec Pylon sous windows et sous linux, ce n'est donc a priori ni un problème de matériel, ni de système
 
 
@@ -64,7 +64,21 @@ Essais précédents faits :
 --------
 
 - installation de LIMA sous Windows afin de comparer le fonctionnement
-- DÉCRIRE ICI LES ÉVENTUELLES DIFFÉRENCES DE COMPORTEMENT ENTRE LIMA SOUS LINUX ET WINDOWS
+- Après enregistrement du server LimaCCDS avec le "Tools server Wizard" de jive et le démarrage en ligne de commande, nous obtenons une erreur :
+
+C:\Python27\Lib\site-packages>python.exe LimaCCDs.py 1
+Failed to import EventChannelFactory notifd/factory/controlthomx1.lal.in2p3.fr from the Tango database
+Warning optional plugin bpm_server.beam_viewer can't be load, dependency not satisfied.
+Warning optional plugin bpm_server.TangoBridge can't be load, dependency not satisfied.
+Warning optional plugin bpm_server.webserver can't be load, dependency not satisfied.
+Warning optional plugin bpm_server.xbpmds can't be load, dependency not satisfied.
+Warning optional plugin bpm_server.xbpmds_webserver can't be load, dependency not satisfied.
+For more pulgins dependency  information start server with -v4
+
+
+Clique sur next du server wizard mais problème, la class LimaCCDS est bien créée mais pas la class Balser ! 
+Après un clic sur "déclaration device" et modification de la propriété "LimaCameraType" avec la valeur "Basler", il n'y a toujours pas de classe Basler.
+
 
 Interprétation
 --------------

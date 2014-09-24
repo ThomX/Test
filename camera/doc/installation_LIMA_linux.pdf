@@ -1,54 +1,65 @@
 %PDF-1.4
 %“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
 1 0 obj
-<< /F1 2 0 R /F2 4 0 R >>
+<< /F1 2 0 R /F2 3 0 R >>
 endobj
 2 0 obj
 << /BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font >>
 endobj
 3 0 obj
-<< /A << /S /URI /Type /Action /URI (http://lima.blissgarden.org/latex/Lima.pdf) >> /Border [ 0 0 0 ] /Rect [ 148.8429 609.7736 328.3629 621.7736 ] /Subtype /Link /Type /Annot >>
-endobj
-4 0 obj
 << /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font >>
 endobj
+4 0 obj
+<< /A << /S /URI /Type /Action /URI (http://lima.blissgarden.org/latex/Lima.pdf) >> /Border [ 0 0 0 ] /Rect [ 149.9629 540.7736 329.4829 552.7736 ] /Subtype /Link /Type /Annot >>
+endobj
 5 0 obj
-<< /Annots [ 3 0 R ] /Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 
+<< /Annots [ 4 0 R ] /Contents 14 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 
   /Trans <<  >> /Type /Page >>
 endobj
 6 0 obj
-<< /Contents 11 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+<< /Contents 15 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 13 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
   /Type /Page >>
 endobj
 7 0 obj
-<< /Outlines 12 0 R /PageLabels 13 0 R /PageMode /UseNone /Pages 9 0 R /Type /Catalog >>
+<< /Outlines 9 0 R /PageLabels 16 0 R /PageMode /UseNone /Pages 13 0 R /Type /Catalog >>
 endobj
 8 0 obj
-<< /Author () /CreationDate (D:20140804160247-01'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
+<< /Author () /CreationDate (D:20140924113705-01'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
   /Title () >>
 endobj
 9 0 obj
-<< /Count 2 /Kids [ 5 0 R 6 0 R ] /Type /Pages >>
+<< /Count 3 /First 10 0 R /Last 12 0 R /Type /Outlines >>
 endobj
 10 0 obj
-<< /Length 8825 >>
+<< /Dest [ 5 0 R /XYZ 62.69291 765.0236 0 ] /Next 11 0 R /Parent 9 0 R /Title (Contexte :) >>
+endobj
+11 0 obj
+<< /Dest [ 5 0 R /XYZ 62.69291 672.0236 0 ] /Next 12 0 R /Parent 9 0 R /Prev 10 0 R /Title (Pr\351requis :) >>
+endobj
+12 0 obj
+<< /Dest [ 5 0 R /XYZ 62.69291 579.0236 0 ] /Parent 9 0 R /Prev 11 0 R /Title (Actions :) >>
+endobj
+13 0 obj
+<< /Count 2 /Kids [ 5 0 R 6 0 R ] /Type /Pages >>
+endobj
+14 0 obj
+<< /Length 9071 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 62.69291 753.0236 cm
+1 0 0 1 62.69291 744.0236 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Contexte:) Tj T* ET
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Contexte :) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 747.0236 cm
+1 0 0 1 62.69291 732.0236 cm
 Q
 q
-1 0 0 1 62.69291 747.0236 cm
+1 0 0 1 62.69291 732.0236 cm
 Q
 q
-1 0 0 1 62.69291 735.0236 cm
+1 0 0 1 62.69291 720.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -69,10 +80,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 729.0236 cm
+1 0 0 1 62.69291 714.0236 cm
 Q
 q
-1 0 0 1 62.69291 717.0236 cm
+1 0 0 1 62.69291 702.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -93,10 +104,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 711.0236 cm
+1 0 0 1 62.69291 696.0236 cm
 Q
 q
-1 0 0 1 62.69291 699.0236 cm
+1 0 0 1 62.69291 684.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -117,23 +128,22 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 699.0236 cm
+1 0 0 1 62.69291 684.0236 cm
 Q
 q
-1 0 0 1 62.69291 681.0236 cm
+1 0 0 1 62.69291 651.0236 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Pr\351requis :) Tj T* ET
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Pr\351requis :) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 675.0236 cm
+1 0 0 1 62.69291 639.0236 cm
 Q
 q
-1 0 0 1 62.69291 675.0236 cm
+1 0 0 1 62.69291 639.0236 cm
 Q
 q
-1 0 0 1 62.69291 663.0236 cm
+1 0 0 1 62.69291 627.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -154,10 +164,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 657.0236 cm
+1 0 0 1 62.69291 621.0236 cm
 Q
 q
-1 0 0 1 62.69291 645.0236 cm
+1 0 0 1 62.69291 609.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -178,10 +188,10 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 639.0236 cm
+1 0 0 1 62.69291 603.0236 cm
 Q
 q
-1 0 0 1 62.69291 627.0236 cm
+1 0 0 1 62.69291 591.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -202,22 +212,28 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 627.0236 cm
-Q
-q
-1 0 0 1 62.69291 609.0236 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Actions \(p9-11 doc ) Tj 0 0 .501961 rg (http://lima.blissgarden.org/latex/Lima.pdf) Tj 0 0 0 rg (\):) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 603.0236 cm
-Q
-q
-1 0 0 1 62.69291 603.0236 cm
-Q
-q
 1 0 0 1 62.69291 591.0236 cm
+Q
+q
+1 0 0 1 62.69291 558.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Actions :) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 540.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Source : p9-11 doc ) Tj 0 0 .501961 rg (http://lima.blissgarden.org/latex/Lima.pdf) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 534.0236 cm
+Q
+q
+1 0 0 1 62.69291 534.0236 cm
+Q
+q
+1 0 0 1 62.69291 522.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -238,33 +254,33 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 591.0236 cm
+1 0 0 1 62.69291 522.0236 cm
 Q
 q
-1 0 0 1 62.69291 585.0236 cm
+1 0 0 1 62.69291 516.0236 cm
 Q
 q
-1 0 0 1 62.69291 573.0236 cm
+1 0 0 1 62.69291 504.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 5 2 Tm /F1 10 Tf 12 TL (get pylon-3.2.1-x68.tar.gz * d\351compresser dans /opt) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 561.0236 cm
+1 0 0 1 62.69291 492.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (/opt/pylon/pylon-setup-env.sh /opt/pylon) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 561.0236 cm
+1 0 0 1 62.69291 492.0236 cm
 Q
 q
-1 0 0 1 62.69291 555.0236 cm
+1 0 0 1 62.69291 486.0236 cm
 Q
 q
-1 0 0 1 62.69291 525.0236 cm
+1 0 0 1 62.69291 456.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 BT 1 0 0 1 0 2 Tm  T* ET
@@ -302,47 +318,47 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 525.0236 cm
+1 0 0 1 62.69291 456.0236 cm
 Q
 q
-1 0 0 1 62.69291 519.0236 cm
+1 0 0 1 62.69291 450.0236 cm
 Q
 q
-1 0 0 1 62.69291 507.0236 cm
+1 0 0 1 62.69291 438.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 5 2 Tm /F1 10 Tf 12 TL (source /opt/bin/pylon-setup-env.sh) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 495.0236 cm
+1 0 0 1 62.69291 426.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 5 2 Tm /F1 10 Tf 12 TL (git clone --recursive git://github.com/esrf-bliss/Lima.git) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 483.0236 cm
+1 0 0 1 62.69291 414.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 5 2 Tm /F1 10 Tf 12 TL (cd Lima) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 471.0236 cm
+1 0 0 1 62.69291 402.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 5 2 Tm /F1 10 Tf 12 TL (make \(ne fonctionne pas avant l'\351dition de config.inc\)) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 471.0236 cm
+1 0 0 1 62.69291 402.0236 cm
 Q
 q
-1 0 0 1 62.69291 465.0236 cm
+1 0 0 1 62.69291 396.0236 cm
 Q
 q
-1 0 0 1 62.69291 447.0236 cm
+1 0 0 1 62.69291 378.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 BT 1 0 0 1 0 2 Tm  T* ET
@@ -380,103 +396,103 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 447.0236 cm
+1 0 0 1 62.69291 378.0236 cm
 Q
 q
-1 0 0 1 62.69291 441.0236 cm
+1 0 0 1 62.69291 372.0236 cm
 Q
 q
-1 0 0 1 62.69291 429.0236 cm
+1 0 0 1 62.69291 360.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_CORE=1) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 417.0236 cm
+1 0 0 1 62.69291 348.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_SIMULATOR=0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 405.0236 cm
+1 0 0 1 62.69291 336.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_SPS_IMAGE=1) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 393.0236 cm
+1 0 0 1 62.69291 324.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_ESPIA=0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 381.0236 cm
+1 0 0 1 62.69291 312.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_FRELON=0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 369.0236 cm
+1 0 0 1 62.69291 300.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_MAXIPIX=0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 357.0236 cm
+1 0 0 1 62.69291 288.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_PILATUS=0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 345.0236 cm
+1 0 0 1 62.69291 276.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_BASLER=1) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 333.0236 cm
+1 0 0 1 62.69291 264.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (COMPILE_CBF_SAVING=0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 321.0236 cm
+1 0 0 1 62.69291 252.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (export COMPILE_CORE COMPILE_SPS_IMAGE COMPILE_SIMULATOR) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 309.0236 cm
+1 0 0 1 62.69291 240.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 35 2 Tm /F1 10 Tf 12 TL (COMPILE_ESPIA COMPILE_FRELON COMPILE_MAXIPIX COMPILE_PILATUS) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 297.0236 cm
+1 0 0 1 62.69291 228.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 35 2 Tm /F1 10 Tf 12 TL (COMPILE_BASLER COMPILE_CBF_SAVING") Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 297.0236 cm
+1 0 0 1 62.69291 228.0236 cm
 Q
 q
-1 0 0 1 62.69291 291.0236 cm
+1 0 0 1 62.69291 222.0236 cm
 Q
 q
-1 0 0 1 62.69291 237.0236 cm
+1 0 0 1 62.69291 168.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 BT 1 0 0 1 0 2 Tm  T* ET
@@ -513,26 +529,26 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 237.0236 cm
+1 0 0 1 62.69291 168.0236 cm
 Q
 q
-1 0 0 1 62.69291 231.0236 cm
+1 0 0 1 62.69291 162.0236 cm
 Q
 q
-1 0 0 1 62.69291 219.0236 cm
+1 0 0 1 62.69291 150.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (make config) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 219.0236 cm
+1 0 0 1 62.69291 150.0236 cm
 Q
 q
-1 0 0 1 62.69291 213.0236 cm
+1 0 0 1 62.69291 144.0236 cm
 Q
 q
-1 0 0 1 62.69291 183.0236 cm
+1 0 0 1 62.69291 114.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 BT 1 0 0 1 0 2 Tm  T* ET
@@ -569,42 +585,50 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 183.0236 cm
+1 0 0 1 62.69291 114.0236 cm
 Q
 q
-1 0 0 1 62.69291 177.0236 cm
+1 0 0 1 62.69291 108.0236 cm
 Q
 q
-1 0 0 1 62.69291 165.0236 cm
+1 0 0 1 62.69291 96.02362 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (make install) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 165.0236 cm
+1 0 0 1 62.69291 96.02362 cm
 Q
 q
-1 0 0 1 62.69291 159.0236 cm
+1 0 0 1 62.69291 90.02362 cm
 Q
- 
-endstream
-endobj
-11 0 obj
-<< /Length 2229 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 62.69291 681.0236 cm
+1 0 0 1 287.6378 78.02362 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 BT 1 0 0 1 0 2 Tm  T* ET
 q
-1 0 0 1 20 78 cm
+1 0 0 1 20 0 cm
 Q
 q
-1 0 0 1 20 78 cm
+1 0 0 1 20 0 cm
 Q
+q
+Q
+Q
+ 
+endstream
+endobj
+15 0 obj
+<< /Length 2181 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 687.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
 q
 1 0 0 1 20 42 cm
 0 0 0 rg
@@ -656,43 +680,43 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 681.0236 cm
+1 0 0 1 62.69291 687.0236 cm
 Q
 q
-1 0 0 1 62.69291 663.0236 cm
+1 0 0 1 62.69291 669.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (make -C sip -j3) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 657.0236 cm
+1 0 0 1 62.69291 663.0236 cm
 Q
 q
-1 0 0 1 62.69291 645.0236 cm
+1 0 0 1 62.69291 651.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (export INSTALL_DIR=~/SW_tango/) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 633.0236 cm
+1 0 0 1 62.69291 639.0236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (make config) Tj T* ET
 Q
 Q
 q
+1 0 0 1 62.69291 639.0236 cm
+Q
+q
 1 0 0 1 62.69291 633.0236 cm
 Q
 q
-1 0 0 1 62.69291 627.0236 cm
+1 0 0 1 62.69291 633.0236 cm
 Q
 q
-1 0 0 1 62.69291 627.0236 cm
-Q
-q
-1 0 0 1 62.69291 615.0236 cm
+1 0 0 1 62.69291 621.0236 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -713,46 +737,46 @@ q
 Q
 Q
 q
-1 0 0 1 62.69291 615.0236 cm
+1 0 0 1 62.69291 621.0236 cm
 Q
  
 endstream
 endobj
-12 0 obj
-<< /Count 0 /Type /Outlines >>
+16 0 obj
+<< /Nums [ 0 17 0 R 1 18 0 R ] >>
 endobj
-13 0 obj
-<< /Nums [ 0 14 0 R 1 15 0 R ] >>
-endobj
-14 0 obj
+17 0 obj
 << /S /D /St 1 >>
 endobj
-15 0 obj
+18 0 obj
 << /S /D /St 2 >>
 endobj
 xref
-0 16
+0 19
 0000000000 65535 f
 0000000075 00000 n
 0000000119 00000 n
 0000000229 00000 n
-0000000426 00000 n
+0000000344 00000 n
 0000000541 00000 n
-0000000767 00000 n
-0000000975 00000 n
-0000001082 00000 n
-0000001292 00000 n
-0000001360 00000 n
-0000010242 00000 n
-0000012528 00000 n
-0000012578 00000 n
-0000012631 00000 n
-0000012668 00000 n
+0000000768 00000 n
+0000000977 00000 n
+0000001084 00000 n
+0000001294 00000 n
+0000001370 00000 n
+0000001483 00000 n
+0000001613 00000 n
+0000001725 00000 n
+0000001794 00000 n
+0000010922 00000 n
+0000013160 00000 n
+0000013213 00000 n
+0000013250 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com)
- [(\005\330'\017x'\276\177\021Kd\202h\026nd) (\005\330'\017x'\276\177\021Kd\202h\026nd)]
- /Info 8 0 R /Root 7 0 R /Size 16 >>
+ [(\357\010\311/\237\313\012\022\)\302\322\214o@\202?) (\357\010\311/\237\313\012\022\)\302\322\214o@\202?)]
+ /Info 8 0 R /Root 7 0 R /Size 19 >>
 startxref
-12705
+13287
 %%EOF

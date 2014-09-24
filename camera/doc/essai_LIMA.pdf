@@ -1,0 +1,781 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<< /F1 2 0 R /F2 3 0 R >>
+endobj
+2 0 obj
+<< /BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font >>
+endobj
+3 0 obj
+<< /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font >>
+endobj
+4 0 obj
+<< /Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 15 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+5 0 obj
+<< /Contents 17 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 15 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
+endobj
+6 0 obj
+<< /Outlines 8 0 R /PageLabels 18 0 R /PageMode /UseNone /Pages 15 0 R /Type /Catalog >>
+endobj
+7 0 obj
+<< /Author () /CreationDate (D:20140924120318-01'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
+  /Title (essais LIMA \(10/09/2014\)) >>
+endobj
+8 0 obj
+<< /Count 6 /First 9 0 R /Last 14 0 R /Type /Outlines >>
+endobj
+9 0 obj
+<< /Dest [ 4 0 R /XYZ 62.69291 729.0236 0 ] /Next 10 0 R /Parent 8 0 R /Title (Configuration) >>
+endobj
+10 0 obj
+<< /Dest [ 4 0 R /XYZ 62.69291 606.0236 0 ] /Next 11 0 R /Parent 8 0 R /Prev 9 0 R /Title (Essais pr\351c\351dents faits :) >>
+endobj
+11 0 obj
+<< /Dest [ 4 0 R /XYZ 62.69291 537.0236 0 ] /Next 12 0 R /Parent 8 0 R /Prev 10 0 R /Title (1er essai) >>
+endobj
+12 0 obj
+<< /Dest [ 4 0 R /XYZ 62.69291 336.0236 0 ] /Next 13 0 R /Parent 8 0 R /Prev 11 0 R /Title (2e essai) >>
+endobj
+13 0 obj
+<< /Dest [ 5 0 R /XYZ 62.69291 387.0236 0 ] /Next 14 0 R /Parent 8 0 R /Prev 12 0 R /Title (3e essai) >>
+endobj
+14 0 obj
+<< /Dest [ 5 0 R /XYZ 62.69291 300.0236 0 ] /Parent 8 0 R /Prev 13 0 R /Title (Interpr\351tation) >>
+endobj
+15 0 obj
+<< /Count 2 /Kids [ 4 0 R 5 0 R ] /Type /Pages >>
+endobj
+16 0 obj
+<< /Length 8323 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 117.6649 0 Td (essais LIMA \(10/09/2014\)) Tj T* -117.6649 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 708.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Configuration) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 696.0236 cm
+Q
+q
+1 0 0 1 62.69291 696.0236 cm
+Q
+q
+1 0 0 1 62.69291 672.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 3.689069 Tw (Linux tangoserver 2.6.32-65-generic #131-Ubuntu SMP Fri Aug 15 20:39:11 UTC 2014 i686) Tj T* 0 Tw (GNU/Linux) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 666.0236 cm
+Q
+q
+1 0 0 1 62.69291 654.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (00:19.0 Ethernet controller: Intel Corporation 82578DM Gigabit Network Connection \(rev 05\)) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 648.0236 cm
+Q
+q
+1 0 0 1 62.69291 636.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (version LIMA compil\351e en respectant la doc LIMA 1.3) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 630.0236 cm
+Q
+q
+1 0 0 1 62.69291 618.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (cam\351ra Basler ACE acA640-100gm \(renomm\351e par Basler derni\350rement acA640-120gm\)) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 618.0236 cm
+Q
+q
+1 0 0 1 62.69291 585.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Essais pr\351c\351dents faits :) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 573.0236 cm
+Q
+q
+1 0 0 1 62.69291 573.0236 cm
+Q
+q
+1 0 0 1 62.69291 549.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .457356 Tw (nous arrivons \340 voir des images avec Pylon sous windows et sous linux, ce n'est donc a priori ni un) Tj T* 0 Tw (probl\350me de mat\351riel, ni de syst\350me) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 549.0236 cm
+Q
+q
+1 0 0 1 62.69291 516.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (1er essai) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 504.0236 cm
+Q
+q
+1 0 0 1 62.69291 504.0236 cm
+Q
+q
+1 0 0 1 62.69291 492.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (lancement des DS LimaViewer et LimaCCDs dans un terminal :) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 486.0236 cm
+Q
+q
+1 0 0 1 62.69291 474.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (lancement de Astor) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 468.0236 cm
+Q
+q
+1 0 0 1 62.69291 444.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.11528 Tw (on peut arr\352ter les DS via Astor mais pas les d\351marrer : lorsqu'on arr\352te le DS LimaCCDs ou) Tj T* 0 Tw (LimaViewer, le message suivant s'affiche :) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 444.0236 cm
+Q
+q
+1 0 0 1 62.69291 438.0236 cm
+Q
+q
+1 0 0 1 62.69291 426.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (LimaCCDs : not found in 'StartDsPath' property:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 414.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (- /home/tangosrv/SW_tango/ArchivingRoot12.4.2/device/linux) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 402.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (- /home/tangosrv/SW_tango/ArchivingRoot/device/linux) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 390.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (- /home/tangosrv/SW_tango/DeviceServers) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 378.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (- /usr/lib/tango) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 378.0236 cm
+Q
+q
+1 0 0 1 62.69291 372.0236 cm
+Q
+q
+1 0 0 1 62.69291 348.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 0 2 Tm  T* ET
+q
+1 0 0 1 20 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .866457 Tw (Cliquer sur \253Details\273 affiche un seconde fois le m\352me message. Il faut alors red\351marrer le DS \340 la) Tj T* 0 Tw (main \(dans le terminal\).) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 348.0236 cm
+Q
+q
+1 0 0 1 62.69291 315.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (2e essai) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 303.0236 cm
+Q
+q
+1 0 0 1 62.69291 303.0236 cm
+Q
+q
+1 0 0 1 62.69291 291.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (lancement des ATKpanel de LimaViewer et LimaCCDs via Jive) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 285.0236 cm
+Q
+q
+1 0 0 1 62.69291 213.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 57 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 62 Tm /F1 10 Tf 12 TL 1.485814 Tw (quand on change le param\350tre acq_nb_frames dans LimaCCDs, il est r\351percut\351 sur LimaViewer,) Tj T* 0 Tw .454597 Tw (mais pas pris en compte avant de red\351marrer l'acquisition \(stopAcq, prepareAcq, startAcq\). * quand) Tj T* 0 Tw 2.453314 Tw (acq_nb_frames est n\351gatif, on obtiend une exception ; * quand acq_nb_frames est strictement) Tj T* 0 Tw .432651 Tw (positif, le red\351marrage met le LimaViewer dans l'\351tat FAULT \(rouge, mais dans Astor, il est toujours) Tj T* 0 Tw 1.836647 Tw (vert\) ; * repasser acq_nb_frames \340 0 et red\351marrer l'acquisition \(stopAcq, prepareAcq, startAcq\)) Tj T* 0 Tw (remet LimaViewer \340 l'\351tat ON \(vert\).) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 207.0236 cm
+Q
+q
+1 0 0 1 62.69291 171.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 21 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 2.096136 Tw (quand on change un autre param\350tre dans LimaCCDs que acq_nb_frames, il est r\351percut\351 sur) Tj T* 0 Tw 2.759976 Tw (LimaCCDs, sans poser de probl\350me apr\350s red\351marrage de l'acquisition \(stopAcq, prepareAcq,) Tj T* 0 Tw (startAcq\).) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 165.0236 cm
+Q
+q
+1 0 0 1 62.69291 93.02362 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 57 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 62 Tm /F1 10 Tf 12 TL 1.160814 Tw (quand on change le param\350tre acq_nb_frames dans LimaViewer, il est r\351percut\351 sur LimaViewer,) Tj T* 0 Tw .454597 Tw (mais pas pris en compte avant de red\351marrer l'acquisition \(stopAcq, prepareAcq, startAcq\). * quand) Tj T* 0 Tw 2.453314 Tw (acq_nb_frames est n\351gatif, on obtiend une exception ; * quand acq_nb_frames est strictement) Tj T* 0 Tw .385697 Tw (positif, le red\351marrage de LimaViewer \(init, start\) met le LimaViewer dans l'\351tat FAULT \(rouge, mais) Tj T* 0 Tw .594985 Tw (dans Astor, il est toujours vert\) ; * repasser acq_nb_frames \340 0 et red\351marrer LimaViewer \(iit, start\)) Tj T* 0 Tw (remet LimaViewer \340 l'\351tat ON \(vert\).) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 87.02362 cm
+Q
+ 
+endstream
+endobj
+17 0 obj
+<< /Length 6946 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 753.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (quand LimaViewer est \340 l'\351tat FAULT et LimaCCDs \340 l'\351tat ON, la sortie du DS LimaCCDs est :) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 753.0236 cm
+Q
+q
+1 0 0 1 62.69291 747.0236 cm
+Q
+q
+1 0 0 1 62.69291 735.0236 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:20:57.0bd823] b29deb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Control*Control::Shutter::getMode) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 723.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 20 2 Tm /F1 10 Tf 12 TL (\(CtShutter.cpp:115\)-Error: Exception\(Error\): No shutter capability [thrown]) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 699.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 144.5949 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:20:57.794258] b29deb70) Tj T* 0 Tw 1 0 0 rg (*) Tj 0 0 0 rg (Application*LimaCCDs::LimaCCDs::read_acc_saturated_cblevel-Error:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 687.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 15 2 Tm /F1 10 Tf 12 TL (Accumulation threshold plugins not loaded) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 663.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 25.99992 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:20:57.803187] b31dfb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Camera*_AcqThread::Camera::threadFunction) Tj T* 0 Tw (\(BaslerCamera.cpp:560\)-Error:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 651.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 20 2 Tm /F1 10 Tf 12 TL (No image acquired! Error code : 0xhex= e1000014 Error description : GX status 0xe1000014) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 627.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 36.56325 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:20:57.0c96a2] b29deb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Control*Control::Shutter::getCloseTime) Tj T* 0 Tw (\(CtShutter.cpp:151\)-Error: Exception\(Error\): No shutter capability [thrown]) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 603.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 36.74325 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:20:57.835558] b29deb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Control*Control::Shutter::getOpenTime) Tj T* 0 Tw (\(CtShutter.cpp:139\)-Error: Exception\(Error\): No shutter capability [thrown]) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 567.0236 cm
+q
+BT 1 0 0 1 0 26 Tm 25.99992 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:20:57.863893] b31dfb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Camera*_AcqThread::Camera::threadFunction) Tj T* 0 Tw .55498 Tw (\(BaslerCamera.cpp:560\)-Error: No image acquired! Error code : 0xhex= e1000014 Error description : GX) Tj T* 0 Tw (status 0xe1000014) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 567.0236 cm
+Q
+q
+1 0 0 1 62.69291 561.0236 cm
+Q
+q
+1 0 0 1 62.69291 561.0236 cm
+Q
+q
+1 0 0 1 62.69291 549.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (quand LimaCCDs et LimaViewer sont \340 l'\351tat ON, la sortie du DS LimaCCDs est :) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 549.0236 cm
+Q
+q
+1 0 0 1 62.69291 543.0236 cm
+Q
+q
+1 0 0 1 62.69291 519.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 3.382441 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:23:08.0763d3] b29deb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Control*Control::Shutter::getMode \(CtShutter.cpp:115\)-Error:) Tj T* 0 Tw (Exception\(Error\): No shutter capability [thrown]) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 483.0236 cm
+q
+BT 1 0 0 1 0 26 Tm 144.5949 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:23:08.501949] b29deb70) Tj T* 0 Tw 3.619921 Tw 1 0 0 rg (*) Tj 0 0 0 rg (Application*LimaCCDs::LimaCCDs::read_acc_saturated_cblevel-Error: Accumulation threshold plugins) Tj T* 0 Tw (not loaded) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 447.0236 cm
+q
+BT 1 0 0 1 0 26 Tm 25.99992 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:23:08.503732] b31dfb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Camera*_AcqThread::Camera::threadFunction) Tj T* 0 Tw .55498 Tw (\(BaslerCamera.cpp:560\)-Error: No image acquired! Error code : 0xhex= e1000014 Error description : GX) Tj T* 0 Tw (status 0xe1000014) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 423.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 36.37659 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:23:08.082403] b29deb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Control*Control::Shutter::getCloseTime) Tj T* 0 Tw (\(CtShutter.cpp:151\)-Error: Exception\(Error\): No shutter capability [thrown]) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 399.0236 cm
+q
+BT 1 0 0 1 0 14 Tm 36.74325 Tw 12 TL /F1 10 Tf 0 0 0 rg ([2014/09/10 11:23:08.544642] b29deb70 ) Tj 1 0 0 rg (*) Tj 0 0 0 rg (Control*Control::Shutter::getOpenTime) Tj T* 0 Tw (\(CtShutter.cpp:139\)-Error: Exception\(Error\): No shutter capability [thrown]) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 399.0236 cm
+Q
+q
+1 0 0 1 62.69291 366.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (3e essai) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 354.0236 cm
+Q
+q
+1 0 0 1 62.69291 354.0236 cm
+Q
+q
+1 0 0 1 62.69291 342.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (installation de LIMA sous Windows afin de comparer le fonctionnement) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 336.0236 cm
+Q
+q
+1 0 0 1 62.69291 312.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.929974 Tw (D\311CRIRE ICI LES \311VENTUELLES DIFF\311RENCES DE COMPORTEMENT ENTRE LIMA SOUS) Tj T* 0 Tw (LINUX ET WINDOWS) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 312.0236 cm
+Q
+q
+1 0 0 1 62.69291 279.0236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Interpr\351tation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 267.0236 cm
+Q
+q
+1 0 0 1 62.69291 267.0236 cm
+Q
+q
+1 0 0 1 62.69291 255.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Il est possible qu'un param\351trage soit n\351cessaire avant de pouvoir utiliser la cam\351ra en acquisition.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 249.0236 cm
+Q
+q
+1 0 0 1 62.69291 225.0236 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .842126 Tw (D\311CRIRE ICI LES DIFF\311RENCES ENTRE LES INFOS DE LA DOC LIMA ET CE QUI APPARAIT) Tj T* 0 Tw (EN SALLE MAQUETTE) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 225.0236 cm
+Q
+ 
+endstream
+endobj
+18 0 obj
+<< /Nums [ 0 19 0 R 1 20 0 R ] >>
+endobj
+19 0 obj
+<< /S /D /St 1 >>
+endobj
+20 0 obj
+<< /S /D /St 2 >>
+endobj
+xref
+0 21
+0000000000 65535 f
+0000000075 00000 n
+0000000119 00000 n
+0000000229 00000 n
+0000000344 00000 n
+0000000553 00000 n
+0000000762 00000 n
+0000000869 00000 n
+0000001105 00000 n
+0000001180 00000 n
+0000001295 00000 n
+0000001441 00000 n
+0000001566 00000 n
+0000001690 00000 n
+0000001814 00000 n
+0000001934 00000 n
+0000002003 00000 n
+0000010383 00000 n
+0000017386 00000 n
+0000017439 00000 n
+0000017476 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com)
+ [(f\306=\326\251\247\021\010Q\004:\275qK\021$) (f\306=\326\251\247\021\010Q\004:\275qK\021$)]
+ /Info 7 0 R /Root 6 0 R /Size 21 >>
+startxref
+17513
+%%EOF

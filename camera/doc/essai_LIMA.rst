@@ -64,7 +64,7 @@ Essais précédents faits :
 --------
 
 - installation de LIMA sous Windows afin de comparer le fonctionnement
-- Après enregistrement du server LimaCCDS avec le "Tools server Wizard" de jive et le démarrage en ligne de commande, nous obtenons une erreur :
+- Après enregistrement du server LimaCCDS avec le "Tools server Wizard" de jive et le démarrage en ligne de commande, nous obtenons le comportement suivant :
 
 C:\Python27\Lib\site-packages>python.exe LimaCCDs.py 1
 Failed to import EventChannelFactory notifd/factory/controlthomx1.lal.in2p3.fr from the Tango database
@@ -76,11 +76,10 @@ Warning optional plugin bpm_server.xbpmds_webserver can't be load, dependency no
 For more pulgins dependency  information start server with -v4
 
 
-Clique sur next du server wizard mais problème, la class LimaCCDS est bien créée mais pas la class Balser ! 
+En cliquant sur next dans le server wizard, on obtient un problème : la classe LimaCCDS est bien présente mais pas la classe Basler !
 Après un clic sur "déclaration device" et modification de la propriété "LimaCameraType" avec la valeur "Basler", il n'y a toujours pas de classe Basler.
+On ne peut donc pas continuer.
 
+Lorsqu'on arrête LimaCCDs puis qu'on le relance en ligne de commande, il ne trouve pas la bibliothèque Basler («no module named Basler»). Pour information, le fichier Basler.py du répertoire Python27/Lib/site-packages/Lima fait 3 lignes.  
 
-Interprétation
---------------
-- Il est possible qu'un paramétrage soit nécessaire avant de pouvoir utiliser la caméra en acquisition.
-- DÉCRIRE ICI LES DIFFÉRENCES ENTRE LES INFOS DE LA DOC LIMA ET CE QUI APPARAIT EN SALLE MAQUETTE
+Lorsqu'on met dans site-packages/camera le contenu du répertoire site-packages/Lima, on obtient un message d'erreur disant «from lima import Basler as _B» (Basler n'existe pas dans le répertoire).

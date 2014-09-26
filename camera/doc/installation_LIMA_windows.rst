@@ -9,15 +9,19 @@ Prérequis :
 - Python 2.7.2 installé
 - GnuWin32: gsl-1.8
 - Microsoft visual C++ 2008 Express
+- GitHub
 
 Installation :
 --------------
 
 Source : p3-9 doc http://lima.blissgarden.org/latex/Lima.pdf
 
-clone de lima à l'adresse https://github.com/esrf-bliss/Lima
+Dans la doc windows, pour la récupération du .zip, il faut préciser de récupérer les modules propres aux caméra et third-party (cf. p10).
 
-Modif du fichier config.inc pour une caméra Basler
+On fait un clone intégral de lima à l'adresse https://github.com/esrf-bliss/Lima via le bouton clone du site (à droite).
+
+On modifie du fichier config.inc pour une caméra Basler :
+
 COMPILE_CORE=1
 COMPILE_SIMULATOR=0
 COMPILE_SPS_IMAGE=1
@@ -69,9 +73,9 @@ export COMPILE_CORE COMPILE_SPS_IMAGE COMPILE_SIMULATOR \
 Erreurs rencontrées :
 ---------------------
 
-Lors de l'exécution de install.bat, une erreur se produit :
+Lors de l'exécution de install.bat, un premier message d'erreur indique que le compilateur n'a pas trouvé la solution LibBasler.sln
 
-Dans le fichier install.bat, le script de compilation de la caméra Basler est le suivant :
+Dans le fichier install.bat, le script de compilation est le suivant :
 
 rem compilation des plugins des cameras actives dans le fichier config.inc
 for /f "delims=:" %%i in ('type %CurrentPath%\config.inc') do (
@@ -90,8 +94,15 @@ for /f "delims=:" %%i in ('type %CurrentPath%\config.inc') do (
 	)
 )
 
-La raison semble être que dans !CurrentPath!\camera\!ligne:~8,-2!\build\msvc\9.0\libBasler, la bibliothèque ne s'appelle pas  "LibBasler.sln" mais "LibLimaBasler.sln"
+La raison semble être que dans !CurrentPath!\camera\!ligne:~8,-2!\build\msvc\9.0\libBasler, la bibliothèque devrait s'appeller "LibBasler.sln" au lieu de "LibLimaBasler.sln"
 Il faudrait donc soit renommer la solution en "LibBasler.sln", soit modifier install.bat et mettre "msbuild.exe LibLima!ligne:~8,-2!.sln"
 
-Nous avons choisi la seconde solution (modification de install.bat). Les bibliothèque Basler sont copiées dans "C:\Python27\Lib\site-packages\Lima" (voir la sortie dans le fichier sortie_compilation_limaCCDs_windows.txt)
-Cela permet visiblement de terminer la compilation.
+Nous avons choisi la seconde solution (modification de install.bat). Les bibliothèques Basler sont copiées dans "C:\Python27\Lib\site-packages\Lima" (voir la sortie dans le fichier sortie_compilation_limaCCDs_windows.txt)
+La sortie indique une compilation sans erreur et sans warning.
+
+
+
+Afin de vérifier ce comportement, quelqu'un a-t-il récemment utilisé le script install.bat 
+ ? 
+Quelqu'un pourrait-il nous indiquer si ces modifications sont correctes pour utiliser Lima ?
+Savez-vous comment faire construire et apparaître la classe Basler ?

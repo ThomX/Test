@@ -27,7 +27,7 @@ for /f "delims=:" %%i in ('type %CurrentPath%\config.inc') do (
 			if not "!ligne:~8,-2!" == "CORE" (
 				rem compilation du plugin active
 				cd /D !CurrentPath!\camera\!ligne:~8,-2!\build\msvc\9.0\lib!ligne:~8,-2!
-				msbuild.exe Lib!ligne:~8,-2!.sln /t:build /fl /flp:logfile=MyProjectOutput.log /p:Configuration=Release;Plateform=Win32 /v:d
+				msbuild.exe LibLima!ligne:~8,-2!.sln /t:build /fl /flp:logfile=MyProjectOutput.log /p:Configuration=Release_Win7_Sync;Plateform=Win32 /v:d
 			)
 		)
 	)

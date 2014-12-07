@@ -1,0 +1,3 @@
+[submodule "camera/src/Lima"]
+	path = camera/src/Lima
+	url = git://github.com/esrf-bliss/Lima.git

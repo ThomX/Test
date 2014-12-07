@@ -1,9 +1,0 @@
-#!/bin/ksh
-#
-
-. blissrc
-
-if [ "${BLISSADM}" = "" ]; then BLISSADM=~blissadm; fi
-application=${BLISSADM}'/server/src/bpm-server/xbpmds.py'
-exec python ${application} $*
-

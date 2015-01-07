@@ -141,7 +141,7 @@ _BaslerInterface = None
 # directory for for details about network optimization.
 
 def get_control(cam_ip_address = "0", frame_transmission_delay = 0,
-                inter_packet_delay = 0, packet_size = 8000,**keys) :
+                inter_packet_delay = 0, packet_size = 1500,**keys) :
     print "cam_ip_address",cam_ip_address
     global _BaslerCam
     global _BaslerInterface

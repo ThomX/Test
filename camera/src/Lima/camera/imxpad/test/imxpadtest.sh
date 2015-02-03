@@ -1,2 +1,0 @@
-./imxpadtest
-./imxpadtest

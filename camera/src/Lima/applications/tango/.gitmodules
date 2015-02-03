@@ -1,3 +1,0 @@
-[submodule "plugins/bpm_server"]
-	path = plugins/bpm_server
-	url = git://git.epn-campus.eu/repositories/bpm-server

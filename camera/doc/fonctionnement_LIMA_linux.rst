@@ -5,6 +5,9 @@ Fonctionnement d'une caméra sous LIMA :
 Configuration sous linux :
 --------------------------
 
+- lancer /opt/pylon/bin/IpConfigurator et mémoriser l'adresse IP 
+- vérifier dans Lima/applications/tango/camera/Basler.py que la méthode get_control utilise un MTU compatible (1500 octets par défaut en ethernet)
+  attribuée à la caméra
 - ouvrir Jive
 - lancer Tools/Server Wizard :
 
@@ -13,21 +16,29 @@ Configuration sous linux :
     + Server name : LimaCCDs
     + Instance name : 1
 
-  * ne cliquer sur «Next» que après avoir lancé «python $PYTHONPATH/Ressources/Lima/applications/tango/LimaCCDs.py 1»
+  * ne cliquer sur «Next» que après avoir lancé 
+    «python $PYTHONPATH/Ressources/Lima/applications/tango/LimaCCDs.py 1»
   * cliquer sur «Next» dans Tools/Server Wizard
-  * dans «Class Selection», sélectionner LimaCCDs puis cliquer sur «Declare device» et entrer:
+  * dans «Class Selection», sélectionner LimaCCDs puis cliquer sur 
+    «Declare device» et entrer:
 
     + Device name : Maquette/diagnostics/1
     + LimaCameraType : Basler
     + autres : laisser les valeurs par défaut
 
-  * une fois le message «Configuration done» affiché, cliquer sur «New Class» puis sélectionner «Basler» et cliquer sur «Declare device» et entrer:
+  * une fois le message «Configuration done» affiché, cliquer sur 
+    «New Class» puis sélectionner «Basler» et cliquer sur 
+    «Declare device» et entrer:
 
     + Device name : Maquette/diagnostics/basler
     + cam_ip_address : 192.168.1.104 (une IP libre)
     + autres : laisser les valeurs par défaut
-
-  * quand le message «Server restart : Would you like to reinitialize the server» s'affiche, cliquer sur «Oui» (une Segmentation fault apparaît mais ça semble «normal»). Dans le terminal LimaCCDs, relancer «python $PYTHONPATH/Ressources/Lima/applications/tango/LimaCCDs.py 1»
+  * une fois le message «Configuration done» affiché, cliquer sur «Finish»
+  * quand le message 
+    «Server restart : Would you like to reinitialize the server» 
+    s'affiche, cliquer sur «Oui» (une Segmentation fault apparaît mais 
+    ça semble «normal»). Dans le terminal LimaCCDs, relancer
+    «python $PYTHONPATH/Ressources/Lima/applications/tango/LimaCCDs.py 1»
   * cliquer sur «Finish»
 
 - lancer Tools/Server Wizard :
@@ -36,15 +47,21 @@ Configuration sous linux :
     + Server name : LimaViewer
     + Instance name : 1
 
-  * ne cliquer sur «Next» que après avoir lancé «python $PYTHONPATH/Ressources/Lima/applications/tango/LimaViewer.py 1»
+  * ne cliquer sur «Next» que après avoir lancé 
+    «python $PYTHONPATH/Ressources/Lima/applications/tango/LimaViewer.py 1»
   * cliquer sur «Next» dans Tools/Server Wizard
-  * dans «Class Selection», sélectionner LimaViewer puis cliquer sur «Declare device» et entrer :
+  * dans «Class Selection», sélectionner LimaViewer puis cliquer sur 
+    «Declare device» et entrer :
 
     + Device name : Maquette/diagnostics/viewer
     + Dev_Ccd_name : Maquette/diagnostics/1
 
   * cliquer sur «Next» puis «Finish»
-  * quand le message «Server restart : Would you like to reinitialize the server» s'affiche, cliquer sur «Oui» puis dans le terminal LimaCCDs, relancer «python $PYTHONPATH/Ressources/Lima/applications/tango/LimaViewer.py 1»
+  * quand le message 
+    «Server restart : Would you like to reinitialize the server» 
+    s'affiche, cliquer sur «Oui» puis dans le terminal LimaCCDs, 
+    relancer 
+    «python $PYTHONPATH/Ressources/Lima/applications/tango/LimaViewer.py 1»
 
 
 
@@ -69,7 +86,17 @@ Erreurs sous linux :
 
   lorsque Pylon viewer fonctionne en parallèle et empêche l'accès à la caméra.
 
-- lorsque LimaViewer est arrêté, les messages d'acquisition cessent. -> LimaViewer est juste un objet appelant une fonction de l'objet LIMA qui instancie un module de type Basler. Si aucun LimaViewer ne fonctionne, il n'y a aucun client pour l'objet LIMA (donc aucune erreur d'acquisition).
+- lorsque LimaViewer est arrêté, les messages d'acquisition cessent. 
+  -> LimaViewer est juste un objet appelant une fonction de l'objet LIMA
+  qui instancie un module de type Basler. Si aucun LimaViewer ne 
+  fonctionne, il n'y a aucun client pour l'objet LIMA (donc aucune 
+  erreur d'acquisition).
+
+- pour l'acquisition, lancer dans Jive/Device l'instance de limaviewer, 
+  l'image est dans l'onglet Image.
+
+
+FAQ :
 
 - Le message suivant s'affiche :
   | <AcquisitionStatus=AcqReady, ImageCounters=<LastImageAcquired=0, 
@@ -78,4 +105,11 @@ Erreurs sous linux :
   |   timestamp=1.06024, header=< >, buffer=<owner=Mapped, refcount=1, 
   |   data=0xa219940>>
 
-  -> la caméra fonctionne et une image a été acquise
+tandis que les exécutions suivantes affichent :
+  | 2014/07/31 14:59:01.679245] b5caeb70 
+  |   *Camera*_AcqThread::Camera::threadFunction (BaslerCamera.cpp:560)-Error: 
+  |     No image acquired! 
+  |   Error code : 0xhex= e1000014 
+  |   Error description : GX status 0xe1000014
+
+  -> la caméra fonctionne et une image a été acquise, mais le MTU est sans doute incorrect
